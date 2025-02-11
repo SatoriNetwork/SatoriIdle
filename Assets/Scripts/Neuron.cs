@@ -11,6 +11,7 @@ public class Neuron : MonoBehaviour
 	bool working = false;
 	bool stake = false;
 	[SerializeField] float worth = 1;
+	[SerializeField] float worthENMultiplier = 1;
 
 	private void Start() {
 		neuron.onClick.AddListener(() => {
@@ -25,7 +26,7 @@ public class Neuron : MonoBehaviour
 			progress.value = 1 - (progressTimer / progressTimerMax);
 			if (progressTimer <= 0) {
 				working = false;
-				// add worth
+				GameManager.instance.addPoints(worth);
 				neuron.interactable = true;
 				progressTimer = progressTimerMax;
 			}
