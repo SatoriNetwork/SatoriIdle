@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class Neuron : MonoBehaviour
 	[SerializeField] float progressTimer = 5;
 	[SerializeField] float progressTimerMax = 5;
 	bool working = false;
+	bool stake = false;
 	[SerializeField] float worth = 1;
 
 	private void Start() {
@@ -18,7 +20,7 @@ public class Neuron : MonoBehaviour
 	}
 
 	void Update() {
-		if (working) {
+		if (working || stake) {
 			progressTimer -= Time.deltaTime;
 			progress.value = 1 - (progressTimer / progressTimerMax);
 			if (progressTimer <= 0) {
@@ -28,5 +30,9 @@ public class Neuron : MonoBehaviour
 				progressTimer = progressTimerMax;
 			}
 		}
+	}
+
+	public void CreateStake() {
+		stake = true;
 	}
 }
