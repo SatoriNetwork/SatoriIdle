@@ -7,7 +7,7 @@ public class Hardware : MonoBehaviour
     public List<Neuron> NeuronList = new List<Neuron>();
     public List<Neuron> PlacedNeuronList = new List<Neuron>();
     public RectTransform rect;
-    public GameObject connector;
+    public List<GameObject> connector = new List<GameObject>();
     public float neighborhoodThreshhold = 10000;
 
     private void Start()
@@ -185,11 +185,11 @@ public class Hardware : MonoBehaviour
         Vector2 midpoint = Vector2.Lerp(bestAPoint, bestBPoint, 0.5f);
         Vector2 direction = bestBPoint - bestAPoint;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        GameObject go = Instantiate(connector, new Vector3(midpoint.x, midpoint.y, 0), Quaternion.Euler(0, 0, angle),transform);
-        go.transform.localScale = new Vector3(0.1f*(Dist/2)/5, 0.1f, 0.1f);
+        GameObject go = Instantiate(connector[Random.Range(0,connector.Count)], new Vector3(midpoint.x, midpoint.y, 0), Quaternion.Euler(0, 0, angle),transform);
+        go.transform.localScale = new Vector3(0.1f*(Dist/2)/5, 0.5f, 0.5f);
     }
 
-    List<Vector2> GetPerimeterPointsExCorner(Neuron neuron, float segmentLength = 1f, float cornerOffset = 5f)
+    List<Vector2> GetPerimeterPointsExCorner(Neuron neuron, float segmentLength = 10f, float cornerOffset = 25f)
     {
         List<Vector2> points = new List<Vector2>();
         RectTransform rect = neuron.GetComponent<RectTransform>();

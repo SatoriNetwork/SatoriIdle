@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3501308142806657910}
   - component: {fileID: 6876419766142334904}
   m_Layer: 5
-  m_Name: Connector
+  m_Name: Connector 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d96d35e78105d0540872a3ee357f9829, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46ea3e704b0353a4abe5cf99525fdceb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
