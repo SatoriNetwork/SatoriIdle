@@ -9,7 +9,7 @@ public class Neuron : MonoBehaviour
 	[SerializeField] float progressTimer = 5;
 	[SerializeField] float progressTimerMax = 5;
 	bool working = false;
-	bool stake = false;
+	public bool stake = false;
 	[SerializeField] BGN worth = new BGN(1);
 
 	private void Start() {

@@ -4,17 +4,79 @@ using UnityEngine;
 
 public class Hardware : MonoBehaviour
 {
-    public List<Neuron> NeuronList = new List<Neuron>();
+    public List<Neuron> NeuronList = new List<Neuron>(); //neurons
     public List<Neuron> PlacedNeuronList = new List<Neuron>();
     public RectTransform rect;
-    public List<GameObject> connector = new List<GameObject>();
+    public List<GameObject> connectorPrefabs = new List<GameObject>();
+    public List<GameObject> connections = new List<GameObject>();
     public float neighborhoodThreshhold = 10000;
+    public int connectionAmount = 5;
+
+    [SerializeField] GameObject NeuronPrefab;
+
+    public int MemorySlots = 1; //max amount of neurons
+    public float RAM = 10f; //progress speed
+    public int disk = 1; //offline idle time
+    
 
     private void Start()
     {
         rect = GetComponent<RectTransform>();
         PlaceNeuronsInHardware();
     }
+
+    public void UpgradeMemory()
+    {
+        if (MemorySlots < 16)
+        {
+            MemorySlots += 1;
+        }
+        else
+        {
+            Debug.Log("Fully Upgraded");
+        }
+
+    }
+    public void UpgradeRAM()
+    {
+        
+    }
+    public void UpgradeDisk()
+    { 
+
+        disk += 1;
+    }
+    public void addNeuron()
+    {
+        if (NeuronList.Count < MemorySlots)
+        {
+            NeuronList.Add(Instantiate(NeuronPrefab, transform).GetComponent<Neuron>());
+            PlacedNeuronList.Clear();
+            foreach (GameObject connection in connections)
+            {
+                Destroy(connection.gameObject);
+
+            }
+            connections.Clear();
+            PlaceNeuronsInHardware();
+        }
+        else
+        {
+            Debug.Log("Not Enough Memory!");
+        }
+    }
+    public void StakeNeuron()
+    {
+        foreach (Neuron neuron in NeuronList)
+        {
+            if (!neuron.stake)
+            { 
+                neuron.CreateStake();
+                continue;
+            }
+        }
+    }
+
     public void PlaceNeuronsInHardware()
     {
         foreach (Neuron neuron in NeuronList)
@@ -165,28 +227,48 @@ public class Hardware : MonoBehaviour
     }
     void ConnectNeurons(Neuron neuronA, Neuron neuronB)
     {
-        List<Vector2> Apoints = GetPerimeterPointsExCorner(neuronA);
-        List<Vector2> Bpoints = GetPerimeterPointsExCorner(neuronB);
-        float Dist = float.MaxValue;
-        Vector2 bestAPoint = Vector2.zero;
-        Vector2 bestBPoint = Vector2.zero;
-        foreach (Vector2 point in Apoints)
+        List<Vector2> aPoints = GetPerimeterPointsExCorner(neuronA);
+        List<Vector2> bPoints = GetPerimeterPointsExCorner(neuronB);
+
+        // Generate all possible pairs with their distances
+        List<(Vector2 a, Vector2 b, float dist)> allPairs = new List<(Vector2, Vector2, float)>();
+
+        foreach (Vector2 aPoint in aPoints)
         {
-            foreach (Vector2 point2 in Bpoints)
+            foreach (Vector2 bPoint in bPoints)
             {
-                if (Vector2.Distance(point, point2) < Dist)
-                {
-                    Dist = Vector2.Distance(point, point2);
-                    bestAPoint = point;
-                    bestBPoint = point2;
-                }
+                float distance = Vector2.Distance(aPoint, bPoint);
+                allPairs.Add((aPoint, bPoint, distance));
             }
         }
-        Vector2 midpoint = Vector2.Lerp(bestAPoint, bestBPoint, 0.5f);
-        Vector2 direction = bestBPoint - bestAPoint;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        GameObject go = Instantiate(connector[Random.Range(0,connector.Count)], new Vector3(midpoint.x, midpoint.y, 0), Quaternion.Euler(0, 0, angle),transform);
-        go.transform.localScale = new Vector3(0.1f*(Dist/2)/5, 0.5f, 0.5f);
+
+        // Sort pairs by distance
+        allPairs.Sort((x, y) => x.dist.CompareTo(y.dist));
+
+        HashSet<Vector2> usedAPoints = new HashSet<Vector2>();
+        HashSet<Vector2> usedBPoints = new HashSet<Vector2>();
+        int connectionsMade = 0;
+
+        foreach (var pair in allPairs)
+        {
+            if (connectionsMade >= connectionAmount) break;
+
+            if (!usedAPoints.Contains(pair.a) && !usedBPoints.Contains(pair.b))
+            {
+                // Create connection
+                Vector2 midpoint = Vector2.Lerp(pair.a, pair.b, 0.5f);
+                Vector2 direction = pair.b - pair.a;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+                GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),transform);
+                connections.Add(connector);
+                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.2f,0.5f);
+
+                usedAPoints.Add(pair.a);
+                usedBPoints.Add(pair.b);
+                connectionsMade++;
+            }
+        }
     }
 
     List<Vector2> GetPerimeterPointsExCorner(Neuron neuron, float segmentLength = 10f, float cornerOffset = 25f)
