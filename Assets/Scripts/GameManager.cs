@@ -4,14 +4,13 @@ using UnityEngine.Rendering;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
 
-	[SerializeField] double SatoriPoints;
-	[SerializeField] int ENMultiplier = 1; // SatoriPoints * 10^ENMultiplier // this is to handle larger numbers then the integer limit
+	[SerializeField] BGN SatoriPoints;
 
 	private void Start() {
 		instance = this;
 	}
 
-	public void addPoints(double sp, int spEN) {
+	public void addPoints(BGN sp) {
 		SatoriPoints += sp;
 	}
 
