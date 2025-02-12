@@ -69,7 +69,8 @@ public class MathTesting : MonoBehaviour
 		});
 
 		Load.onClick.AddListener(() => {
-			BGN A = new BGN(Output.text);
+			BGN A = new BGN(StringValue.text);
+			A.Load(StringValue.text);
 			Output.text = A.ToString();
 		});
 	}

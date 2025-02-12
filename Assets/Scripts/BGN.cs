@@ -58,6 +58,7 @@ public class BGN {
 
 	public void Save(string SaveName) {
 		int index = 0;
+		PlayerPrefs.SetInt(SaveName + "Count", list.Count);
 		foreach (var item in list) {
 			PlayerPrefs.SetInt(SaveName + index.ToString(), item);
 			index++;
@@ -66,11 +67,10 @@ public class BGN {
 	}
 
 	public void Load(string SaveName) {
-		int index = 0;
+		int count = PlayerPrefs.GetInt(SaveName + "Count", 0);
 		list.Clear();
-		foreach (var item in list) {
-			list.Add((short)PlayerPrefs.GetInt(SaveName + index.ToString(), 0));
-			index++;
+		for (int i = 0; i < count; i++) {
+			list.Add((short)PlayerPrefs.GetInt(SaveName + i.ToString(), 0));
 		}
 	}
 
