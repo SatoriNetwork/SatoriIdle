@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,8 @@ public class Neuron : MonoBehaviour
 	[SerializeField] float progressTimer = 5;
 	[SerializeField] float progressTimerMax = 5;
 	bool working = false;
-	[SerializeField] float worth = 1;
+	bool stake = false;
+	[SerializeField] BGN worth = new BGN(1);
 
 	private void Start() {
 		neuron.onClick.AddListener(() => {
@@ -18,15 +20,19 @@ public class Neuron : MonoBehaviour
 	}
 
 	void Update() {
-		if (working) {
+		if (working || stake) {
 			progressTimer -= Time.deltaTime;
 			progress.value = 1 - (progressTimer / progressTimerMax);
 			if (progressTimer <= 0) {
 				working = false;
-				// add worth
+				GameManager.instance.addPoints(worth);
 				neuron.interactable = true;
 				progressTimer = progressTimerMax;
 			}
 		}
+	}
+
+	public void CreateStake() {
+		stake = true;
 	}
 }
