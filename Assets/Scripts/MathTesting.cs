@@ -61,5 +61,17 @@ public class MathTesting : MonoBehaviour
 			Output.text = Total.ToString();
 
 		});
+
+		Save.onClick.AddListener(() => {
+			BGN A = new BGN(Convert.ToInt32(AValue.text));
+			A.Save(StringValue.text);
+			Output.text = "Saved";
+		});
+
+		Load.onClick.AddListener(() => {
+			BGN A = new BGN(StringValue.text);
+			A.Load(StringValue.text);
+			Output.text = A.ToString();
+		});
 	}
 }

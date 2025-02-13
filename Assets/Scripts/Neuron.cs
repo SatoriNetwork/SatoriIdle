@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,15 @@ public class Neuron : MonoBehaviour
 	public bool working = false;
 	public bool stake = false;
 	[SerializeField] BGN worth = new BGN(1);
+
+	//events
+
+	public static event EventHandler OnNeuronPressed;
+	private void Awake() {
+		neuron.onClick.AddListener(() => {
+			OnNeuronPressed?.Invoke(this, EventArgs.Empty);
+		});
+	}
 
 	private void Start() {
 		neuron.onClick.AddListener(() => {

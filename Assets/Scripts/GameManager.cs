@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
 	[SerializeField] BGN SatoriPoints = new BGN();
 
+
 	private void Start() {
 		instance = this;
 	}
