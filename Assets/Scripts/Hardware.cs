@@ -16,6 +16,7 @@ public class Hardware : MonoBehaviour
 
     public int MemorySlots = 1; //max amount of neurons
     public float RAM = 0f; //progress speed
+    public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
     
 
@@ -44,7 +45,7 @@ public class Hardware : MonoBehaviour
             RAM += 1;
             foreach (Neuron neuron in NeuronList)
             {
-                neuron.progressTimerMax-=1;
+                neuron.progressTimerMax-= RAMDecreaseAmount;
                 if (neuron.working == false)
                 {
                     neuron.progressTimer = neuron.progressTimerMax;
@@ -68,7 +69,9 @@ public class Hardware : MonoBehaviour
     {
         if (NeuronList.Count < MemorySlots)
         {
-            NeuronList.Add(Instantiate(NeuronPrefab, transform).GetComponent<Neuron>());
+            Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
+            newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
+            NeuronList.Add(newNeuron);
             PlacedNeuronList.Clear();
             foreach (GameObject connection in connections)
             {
@@ -90,7 +93,7 @@ public class Hardware : MonoBehaviour
             if (!neuron.stake)
             { 
                 neuron.CreateStake();
-                continue;
+                break;
             }
         }
     }
