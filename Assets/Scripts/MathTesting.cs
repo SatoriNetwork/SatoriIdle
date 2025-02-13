@@ -7,11 +7,14 @@ public class MathTesting : MonoBehaviour
 {
     [SerializeField] TMP_InputField AValue;
     [SerializeField] TMP_InputField BValue;
+    [SerializeField] TMP_InputField StringValue;
     [SerializeField] TextMeshProUGUI Output;
     [SerializeField] Button Format;
     [SerializeField] Button ADD;
     [SerializeField] Button Subtract;
     [SerializeField] Button Multiply;
+    [SerializeField] Button Save;
+    [SerializeField] Button Load;
     [SerializeField] Button GreaterThan;
     [SerializeField] Button LessThan;
 
@@ -57,6 +60,18 @@ public class MathTesting : MonoBehaviour
 			bool Total = A < B;
 			Output.text = Total.ToString();
 
+		});
+
+		Save.onClick.AddListener(() => {
+			BGN A = new BGN(Convert.ToInt32(AValue.text));
+			A.Save(StringValue.text);
+			Output.text = "Saved";
+		});
+
+		Load.onClick.AddListener(() => {
+			BGN A = new BGN(StringValue.text);
+			A.Load(StringValue.text);
+			Output.text = A.ToString();
 		});
 	}
 }

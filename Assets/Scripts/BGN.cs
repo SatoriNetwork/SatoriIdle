@@ -31,6 +31,10 @@ public class BGN {
         addInt(num);
 	}
 
+	public BGN(string saveName) {
+		Load(saveName);
+	}
+
     public void addInt(int num) {
         bool adding = true;
         int index = 0;
@@ -51,6 +55,24 @@ public class BGN {
             }
         }
     }
+
+	public void Save(string SaveName) {
+		int index = 0;
+		PlayerPrefs.SetInt(SaveName + "Count", list.Count);
+		foreach (var item in list) {
+			PlayerPrefs.SetInt(SaveName + index.ToString(), item);
+			index++;
+		}
+		PlayerPrefs.Save();
+	}
+
+	public void Load(string SaveName) {
+		int count = PlayerPrefs.GetInt(SaveName + "Count", 0);
+		list.Clear();
+		for (int i = 0; i < count; i++) {
+			list.Add((short)PlayerPrefs.GetInt(SaveName + i.ToString(), 0));
+		}
+	}
 
     public static BGN operator +(BGN lhs, BGN rhs) {
 		int maxLength = Math.Max(lhs.list.Count, rhs.list.Count);
