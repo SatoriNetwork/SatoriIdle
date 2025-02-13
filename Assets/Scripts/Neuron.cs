@@ -7,10 +7,10 @@ public class Neuron : MonoBehaviour
 {
 	[SerializeField] Button neuron;
 	[SerializeField] Slider progress;
-	[SerializeField] float progressTimer = 5;
-	[SerializeField] float progressTimerMax = 5;
-	bool working = false;
-	bool stake = false;
+	[SerializeField] public float progressTimer = 5;
+	[SerializeField] public float progressTimerMax = 5;
+	public bool working = false;
+	public bool stake = false;
 	[SerializeField] BGN worth = new BGN(1);
 
 	//events
