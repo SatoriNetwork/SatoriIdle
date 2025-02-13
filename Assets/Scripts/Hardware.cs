@@ -15,7 +15,7 @@ public class Hardware : MonoBehaviour
     [SerializeField] GameObject NeuronPrefab;
 
     public int MemorySlots = 1; //max amount of neurons
-    public float RAM = 10f; //progress speed
+    public float RAM = 0f; //progress speed
     public int disk = 1; //offline idle time
     
 
@@ -39,6 +39,24 @@ public class Hardware : MonoBehaviour
     }
     public void UpgradeRAM()
     {
+        if (RAM < 4)
+        {
+            RAM += 1;
+            foreach (Neuron neuron in NeuronList)
+            {
+                neuron.progressTimerMax-=1;
+                if (neuron.working == false)
+                {
+                    neuron.progressTimer = neuron.progressTimerMax;
+                }
+            }
+            Debug.Log("Upgraded RAM");
+        }
+        else
+        {
+            Debug.Log("Fully Upgraded");
+        }
+        
         
     }
     public void UpgradeDisk()
