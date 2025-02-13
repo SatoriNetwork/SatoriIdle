@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Connect 2 Hops Big_0: -5886967012219060183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a691bad72ba4f44986fb2c029476993
+guid: d4486acf152ac5244a522bd08675c187
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5818436697975147694
-    second: Blue_Loading_Small_0
+      213: -4067843345727029029
+    second: Connect 1 Straight Big_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue_Loading_Small_0
+      name: Connect 1 Straight Big_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 28
-        height: 22
+        y: 0
+        width: 98
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eacc7e2795d3fb050800000000000000
-      internalID: 5818436697975147694
+      spriteID: bd00108870e1c87c0800000000000000
+      internalID: -4067843345727029029
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blue_Loading_Small_0: 5818436697975147694
+      Connect 1 Straight Big_0: -4067843345727029029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
