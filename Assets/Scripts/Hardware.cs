@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hardware : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class Hardware : MonoBehaviour
     public BGN RamCost = new BGN(1); //max amount of neurons
     public BGN DiskCost = new BGN(1); //max amount of neurons
     public BGN StakeCost = new BGN(1); //max amount of neurons
-    
+
+    [SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
 
     private void Start()
     {
@@ -36,8 +38,8 @@ public class Hardware : MonoBehaviour
 
 	private void Update() {
 		updateShopVisuals();
-	}
 
+	}
 	public void updateShopVisuals() {
         NeuronCostText.text = NeuronCost.ToString();
         MemoryCostText.text = MemoryCost.ToString();
@@ -50,6 +52,14 @@ public class Hardware : MonoBehaviour
         RamMaxText.text = RAM + "/" + MaxRam;
         DiskMaxText.text = disk + "/" + MaxDisk;
         StakeMaxText.text = stakedNeurons + "/" + NeuronList.Count;
+
+        UpgradeMemoryBtn.interactable = (GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
+        UpgradeRAMBtn.interactable = (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) ? true : false;
+        UpgradeDiskBtn.interactable = (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) ? true : false;
+        StakeBtn.interactable = (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) ? true : false;
+        AddNeuronBtn.interactable = (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost) ? true : false;
+
+
     }
 
     public BGN CalculateCost(BGN OldCost) {// make this more complicated later
