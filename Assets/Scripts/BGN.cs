@@ -175,6 +175,15 @@ public class BGN {
 		return false;
 	}
 
+	public static bool operator >=(BGN lhs, BGN rhs) {
+		return lhs > rhs || lhs == rhs;
+	}
+
+	public static bool operator <=(BGN lhs, BGN rhs) {
+		return lhs < rhs || lhs == rhs;
+	}
+
+
 	public static BGN operator *(BGN lhs, BGN rhs) {
 		int lhsLen = lhs.list.Count;
 		int rhsLen = rhs.list.Count;
@@ -202,6 +211,43 @@ public class BGN {
 		}
 
 		return new BGN { list = result };
+	}
+
+
+	public static bool operator ==(BGN lhs, BGN rhs) {
+		// Check for null references
+		if (ReferenceEquals(lhs, rhs)) return true;
+		if (lhs is null || rhs is null) return false;
+
+		// Compare list counts first
+		if (lhs.list.Count != rhs.list.Count) return false;
+
+		// Compare all digits
+		for (int i = 0; i < lhs.list.Count; i++) {
+			if (lhs.list[i] != rhs.list[i]) return false;
+		}
+
+		return true;
+	}
+
+	public static bool operator !=(BGN lhs, BGN rhs) {
+		return !(lhs == rhs);
+	}
+
+	// Override Equals and GetHashCode for proper object comparisons
+	public override bool Equals(object obj) {
+		if (obj is BGN other) {
+			return this == other;
+		}
+		return false;
+	}
+
+	public override int GetHashCode() {
+		int hash = 17;
+		foreach (short num in list) {
+			hash = hash * 31 + num.GetHashCode();
+		}
+		return hash;
 	}
 
 
