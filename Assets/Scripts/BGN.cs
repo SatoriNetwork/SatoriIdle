@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 public class BGN {
     public List<short> list = new List<short>();
 
-    enum Structures {
+    public enum Structures {
         NONE,
         K,
         M,
@@ -26,7 +26,29 @@ public class BGN {
     public BGN() {
     }
 
-    public BGN(int num) {
+	public BGN(float amount, Structures structure) {
+		list = new List<short>();
+
+		// Determine the power of 1000 based on the structure
+		int power = (int)structure; // Enum value corresponds to 1000^power
+
+		// Convert amount to an integer representation in base 1000
+		double scaledAmount = amount * Math.Pow(1000, power);
+
+		// Extract digits into the list (similar to addInt but from a float)
+		while (scaledAmount >= 1) {
+			list.Add((short)(scaledAmount % 1000));
+			scaledAmount /= 1000;
+		}
+
+		// Ensure at least one entry (even if it's zero)
+		if (list.Count == 0) {
+			list.Add(0);
+		}
+	}
+
+
+	public BGN(int num) {
         list.Add(0);
         addInt(num);
 	}
