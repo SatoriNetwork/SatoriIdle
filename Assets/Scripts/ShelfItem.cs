@@ -9,6 +9,7 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] TextMeshProUGUI PurchaseCostText;
     [SerializeField] GameObject Hardware;
     [SerializeField] CanvasGroup HardwareCG;
+    [SerializeField] Canvas HardwareC;
 
     [SerializeField] bool Purchased;
     [SerializeField] float cost;
@@ -25,6 +26,7 @@ public class ShelfItem : MonoBehaviour
         HardwareButton.onClick.AddListener(() => {
             shelf.Instance.gameObject.SetActive(false);
             HardwareCG.alpha = 1;
+            HardwareC.sortingOrder = 2;
         });
 
         PurchaseButton.onClick.AddListener(() => {
@@ -49,6 +51,7 @@ public class ShelfItem : MonoBehaviour
 		PurchaseButton.gameObject.SetActive(false);
         Hardware = Instantiate(Hardware);
         HardwareCG = Hardware.GetComponent<CanvasGroup>();
+        HardwareC = Hardware.GetComponent<Canvas>();
         HardwareCG.alpha = 0;
 	}
 
