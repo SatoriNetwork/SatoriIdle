@@ -11,7 +11,9 @@ public class Neuron : MonoBehaviour
 	[SerializeField] public float progressTimerMax = 5;
 	public bool working = false;
 	public bool stake = false;
+	public float critChance = 0;
 	[SerializeField] BGN worth = new BGN(1);
+	[SerializeField] public BGN GPUMultiplier = new BGN(1);
 
 
 	//visuals
@@ -42,7 +44,16 @@ public class Neuron : MonoBehaviour
 			progress.value = 1 - (progressTimer / progressTimerMax);
 			if (progressTimer <= 0) {
 				working = false;
-				GameManager.instance.addPoints(worth);
+				if (UnityEngine.Random.Range(0, 100) <= critChance)
+				{
+                    GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier);
+                }
+				else
+				{
+					GameManager.instance.addPoints(worth*GPUMultiplier);
+
+                }
+				
 				neuron.interactable = true;
 				progressTimer = progressTimerMax;
 				if (stake) {
