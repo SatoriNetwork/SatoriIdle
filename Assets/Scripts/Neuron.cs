@@ -13,6 +13,7 @@ public class Neuron : MonoBehaviour
 	public bool stake = false;
 	public float critChance = 0;
 	[SerializeField] BGN worth = new BGN(1);
+	[SerializeField] public BGN GPUMultiplier = new BGN(1);
 
 
 	//visuals
@@ -45,11 +46,11 @@ public class Neuron : MonoBehaviour
 				working = false;
 				if (UnityEngine.Random.Range(0, 100) <= critChance)
 				{
-                    GameManager.instance.addPoints(worth*(new BGN(2)));
+                    GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier);
                 }
 				else
 				{
-					GameManager.instance.addPoints(worth);
+					GameManager.instance.addPoints(worth*GPUMultiplier);
 
                 }
 				

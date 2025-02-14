@@ -22,7 +22,8 @@ public class Hardware : MonoBehaviour
     public float RAM = 0f; //progress speed
     public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
-    public float maxCritChance = 75; //offline idle time
+    public float maxCritChance = 75; //Max Crit Chance allowed 
+    public int GPUMultiplier = 1; //GPU Multiplier value
     public BGN NeuronCost = new BGN(1); //max amount of neurons
     public BGN MemoryCost = new BGN(1); //max amount of neurons
     public BGN RamCost = new BGN(1); //max amount of neurons
@@ -123,6 +124,7 @@ public class Hardware : MonoBehaviour
         {
             Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
+            newNeuron.GPUMultiplier = new BGN(GPUMultiplier);
             NeuronList.Add(newNeuron);
             updateCritChance();
             PlacedNeuronList.Clear();
