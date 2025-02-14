@@ -22,6 +22,7 @@ public class Hardware : MonoBehaviour
     public float RAM = 0f; //progress speed
     public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
+    public float maxCritChance = 75; //offline idle time
     public BGN NeuronCost = new BGN(1); //max amount of neurons
     public BGN MemoryCost = new BGN(1); //max amount of neurons
     public BGN RamCost = new BGN(1); //max amount of neurons
@@ -123,6 +124,7 @@ public class Hardware : MonoBehaviour
             Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
             NeuronList.Add(newNeuron);
+            updateCritChance();
             PlacedNeuronList.Clear();
             foreach (GameObject connection in connections)
             {
@@ -137,6 +139,14 @@ public class Hardware : MonoBehaviour
         else
         {
             Debug.Log("Not Enough Memory!");
+        }
+    }
+    public void updateCritChance()
+    {
+        foreach (Neuron neuron in NeuronList)
+        {
+            if (NeuronList.Count > 1) neuron.critChance = maxCritChance/NeuronList.Count-1;
+
         }
     }
     public void StakeNeuron()
