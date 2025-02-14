@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f73928cefac14284fa6a660b77202990
+guid: d86492d9084b615428efb1bda91cfdfb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4829435805098385177
-    second: Example_0
+      213: 5357939107004490918
+    second: SERVER RACK SLOT_2.0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Example_0
+      name: SERVER RACK SLOT_2.0_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 488
-        height: 48
+        width: 400
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e0ee8309b56afcb0800000000000000
-      internalID: -4829435805098385177
+      spriteID: 6a42d21fa393b5a40800000000000000
+      internalID: 5357939107004490918
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Example_0: -4829435805098385177
+      SERVER RACK SLOT_2.0_0: 5357939107004490918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

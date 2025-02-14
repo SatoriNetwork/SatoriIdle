@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hardware : MonoBehaviour
 {
@@ -14,11 +16,19 @@ public class Hardware : MonoBehaviour
 
     [SerializeField] GameObject NeuronPrefab;
 
+    [SerializeField] TextMeshProUGUI NeuronCostText, NeuronMaxText, MemoryCostText, MemoryMaxText, RamCostText, RamMaxText, DiskCostText, DiskMaxText, StakeCostText, StakeMaxText;
+    public int MaxMemory = 16, MaxRam = 4, MaxDisk = 8, stakedNeurons = 0;
     public int MemorySlots = 1; //max amount of neurons
     public float RAM = 0f; //progress speed
     public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
-    
+    public BGN NeuronCost = new BGN(1); //max amount of neurons
+    public BGN MemoryCost = new BGN(1); //max amount of neurons
+    public BGN RamCost = new BGN(1); //max amount of neurons
+    public BGN DiskCost = new BGN(1); //max amount of neurons
+    public BGN StakeCost = new BGN(1); //max amount of neurons
+
+    [SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
 
     private void Start()
     {
@@ -26,21 +36,56 @@ public class Hardware : MonoBehaviour
         PlaceNeuronsInHardware();
     }
 
+	private void Update() {
+		updateShopVisuals();
+
+	}
+	public void updateShopVisuals() {
+        NeuronCostText.text = NeuronCost.ToString();
+        MemoryCostText.text = MemoryCost.ToString();
+        RamCostText.text = RamCost.ToString();
+        DiskCostText.text = DiskCost.ToString();
+        StakeCostText.text = StakeCost.ToString();
+
+        NeuronMaxText.text = NeuronList.Count + "/" + MemorySlots;
+        MemoryMaxText.text = MemorySlots + "/" + MaxMemory;
+        RamMaxText.text = RAM + "/" + MaxRam;
+        DiskMaxText.text = disk + "/" + MaxDisk;
+        StakeMaxText.text = stakedNeurons + "/" + NeuronList.Count;
+
+        UpgradeMemoryBtn.interactable = (GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
+        UpgradeRAMBtn.interactable = (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) ? true : false;
+        UpgradeDiskBtn.interactable = (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) ? true : false;
+        StakeBtn.interactable = (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) ? true : false;
+        AddNeuronBtn.interactable = (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost) ? true : false;
+
+
+    }
+
+    public BGN CalculateCost(BGN OldCost) {// make this more complicated later
+        BGN newCost = new BGN(2);
+        newCost *= OldCost;
+        return newCost;
+    }
+
     public void UpgradeMemory()
     {
-        if (MemorySlots < 16)
-        {
-            MemorySlots += 1;
-        }
-        else
-        {
-            Debug.Log("Fully Upgraded");
+        if (GameManager.instance.SatoriPoints >= MemoryCost) {
+            if (MemorySlots < MaxMemory) {
+                MemorySlots += 1; 
+                GameManager.instance.SatoriPoints -= MemoryCost;
+				MemoryCost = CalculateCost(MemoryCost);
+			} else {
+                Debug.Log("Fully Upgraded");
+            }
+
         }
 
     }
     public void UpgradeRAM()
     {
-        if (RAM < 4)
+
+        if (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost)
         {
             RAM += 1;
             foreach (Neuron neuron in NeuronList)
@@ -52,7 +97,10 @@ public class Hardware : MonoBehaviour
                 }
             }
             Debug.Log("Upgraded RAM");
-        }
+
+			GameManager.instance.SatoriPoints -= RamCost;
+			RamCost = CalculateCost(RamCost);
+		}
         else
         {
             Debug.Log("Fully Upgraded");
@@ -61,13 +109,16 @@ public class Hardware : MonoBehaviour
         
     }
     public void UpgradeDisk()
-    { 
-
-        disk += 1;
+    {
+        if (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) {
+            disk += 1;
+			GameManager.instance.SatoriPoints -= DiskCost;
+			DiskCost = CalculateCost(DiskCost);
+		}
     }
     public void addNeuron()
     {
-        if (NeuronList.Count < MemorySlots)
+        if (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost)
         {
             Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
@@ -80,7 +131,9 @@ public class Hardware : MonoBehaviour
             }
             connections.Clear();
             PlaceNeuronsInHardware();
-        }
+			GameManager.instance.SatoriPoints -= NeuronCost;
+			NeuronCost = CalculateCost(NeuronCost);
+		}
         else
         {
             Debug.Log("Not Enough Memory!");
@@ -88,14 +141,18 @@ public class Hardware : MonoBehaviour
     }
     public void StakeNeuron()
     {
-        foreach (Neuron neuron in NeuronList)
-        {
-            if (!neuron.stake)
-            { 
-                neuron.CreateStake();
-                break;
-            }
-        }
+        if (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) {
+
+            foreach (Neuron neuron in NeuronList) {
+                if (!neuron.stake) {
+                    neuron.CreateStake();
+                    stakedNeurons++;
+                    break;
+                }
+			}
+			GameManager.instance.SatoriPoints -= StakeCost;
+			StakeCost = CalculateCost(StakeCost);
+		}
     }
 
     public void PlaceNeuronsInHardware()
