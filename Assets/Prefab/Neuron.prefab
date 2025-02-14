@@ -97,7 +97,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -140,6 +140,10 @@ MonoBehaviour:
   progressTimerMax: 5
   working: 0
   stake: 0
+  NeuronImage: {fileID: 5126626221196430416}
+  DefaultNeuronSprite: {fileID: 21300000, guid: 2cb262aac3b37874ba2c10f4cefe2579, type: 3}
+  ClickedNeuronSprite: {fileID: 21300000, guid: 0e875aafd0371944988c65569aec7bf0, type: 3}
+  StakedNeuronSprite: {fileID: 2955675294773621344, guid: c2d23aa2b68c65b4fa2d05e15c7609ab, type: 3}
 --- !u!1 &4872626869718172460
 GameObject:
   m_ObjectHideFlags: 0

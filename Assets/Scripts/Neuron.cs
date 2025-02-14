@@ -13,12 +13,19 @@ public class Neuron : MonoBehaviour
 	public bool stake = false;
 	[SerializeField] BGN worth = new BGN(1);
 
+
+	//visuals
+	[SerializeField] Image NeuronImage;
+	[SerializeField] Sprite DefaultNeuronSprite;
+	[SerializeField] Sprite ClickedNeuronSprite;
+	[SerializeField] Sprite StakedNeuronSprite;
 	//events
 
 	public static event EventHandler OnNeuronPressed;
 	private void Awake() {
 		neuron.onClick.AddListener(() => {
 			OnNeuronPressed?.Invoke(this, EventArgs.Empty);
+			NeuronImage.sprite = ClickedNeuronSprite;
 		});
 	}
 
@@ -38,11 +45,17 @@ public class Neuron : MonoBehaviour
 				GameManager.instance.addPoints(worth);
 				neuron.interactable = true;
 				progressTimer = progressTimerMax;
+				if (stake) {
+					NeuronImage.sprite = StakedNeuronSprite;
+				} else {
+					NeuronImage.sprite = DefaultNeuronSprite;
+				}
 			}
 		}
 	}
 
 	public void CreateStake() {
 		stake = true;
+		NeuronImage.sprite = StakedNeuronSprite;
 	}
 }
