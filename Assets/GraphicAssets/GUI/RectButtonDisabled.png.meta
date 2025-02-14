@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 99d08c52f71b8694b8141df056b075df
+guid: 95e7352d118798b47abab29ff0438103
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 835488655766442913
-    second: RectButtonHover_0
+      213: 8250645291183839988
+    second: RectButtonDisabled_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RectButtonHover_0
+      name: RectButtonDisabled_0
       rect:
         serializedVersion: 2
         x: 0
@@ -135,14 +135,14 @@ TextureImporter:
         height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 15, y: 19, z: 15, w: 11}
+      border: {x: 16, y: 19, z: 16, w: 11}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a3d3dc7180489b00800000000000000
-      internalID: 835488655766442913
+      spriteID: 4fa13c4bd2e208270800000000000000
+      internalID: 8250645291183839988
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 32d3e0e72d263c24d95cfa4c54127c94
+    spriteID: 96e0c684d3f973344bdfbb3e67d3a5b9
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RectButtonHover_0: 835488655766442913
+      RectButtonDisabled_0: 8250645291183839988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
