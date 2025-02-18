@@ -7,24 +7,24 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] Button HardwareButton;
     [SerializeField] Button PurchaseButton;
     [SerializeField] TextMeshProUGUI PurchaseCostText;
-    [SerializeField] GameObject Hardware;
+    [SerializeField] GameObject hardware;
     [SerializeField] CanvasGroup HardwareCG;
     [SerializeField] Canvas HardwareC;
 
-    [SerializeField] bool Purchased;
+    [SerializeField] public bool Purchased = false;
     [SerializeField] float cost;
     [SerializeField] BGN.Structures costStructure;
     BGN Cost;
-
+    public BGN Multiplier;
 	private void Awake() {
-		Cost = new BGN(cost, costStructure);
+        Cost = new BGN(cost, costStructure);
 	}
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
     {
         HardwareButton.onClick.AddListener(() => {
-            shelf.Instance.gameObject.SetActive(false);
+            shelfCanvas.Instance.gameObject.SetActive(false);
             HardwareCG.alpha = 1;
             HardwareC.sortingOrder = 2;
         });
@@ -49,11 +49,17 @@ public class ShelfItem : MonoBehaviour
         Purchased = true;
 		HardwareButton.interactable = true;
 		PurchaseButton.gameObject.SetActive(false);
-        Hardware = Instantiate(Hardware);
-        HardwareCG = Hardware.GetComponent<CanvasGroup>();
-        HardwareC = Hardware.GetComponent<Canvas>();
+        hardware = Instantiate(hardware);
+        Hardware hwScript = hardware.GetComponentInChildren<Hardware>();
+        HardwareCG = hardware.GetComponent<CanvasGroup>();
+        HardwareC = hardware.GetComponent<Canvas>();
         HardwareCG.alpha = 0;
+        hwScript.SetGPUMultiplier(Multiplier);
 	}
+
+    public void setPrice(BGN price) {
+        Cost = price;
+    }
 
 
     // Update is called once per frame

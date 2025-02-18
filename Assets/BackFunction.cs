@@ -4,6 +4,6 @@ public class BackFunction : MonoBehaviour
 {
 
 	public void Back() {
-		shelf.Instance.gameObject.SetActive(true);
+		shelfCanvas.Instance.gameObject.SetActive(true);
 	}
 }

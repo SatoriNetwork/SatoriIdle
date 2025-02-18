@@ -1,29 +1,30 @@
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class BGN {
     public List<short> list = new List<short>();
 
-    public enum Structures {
-        NONE,
-        K,
-        M,
-        B,
-        T,
-        Qa,
-        Qi,
-        Sx,
-        Sp,
-        Oc,
-        No,
-        Dec
-    }
+	public enum Structures {
+		NONE, K, M, B, T, Qa, Qi, Sx, Sp, Oc, No,
+		Dec, Und, Ddu, Tdu, Qdu, Qidu, Sdu, Spdu, Odu, Ndu,
+		Vig, UnVig, DuVig, TrVig, QaVig, QiVig, SxVig, SpVig, OcVig, NoVig,
+		Tri, UnTri, DuTri, TrTri, QaTri, QiTri, SxTri, SpTri, OcTri, NoTri,
+		Qua, UnQua, DuQua, TrQua, QaQua, QiQua, SxQua, SpQua, OcQua, NoQua,
+		Qui, UnQui, DuQui, TrQui, QaQui, QiQui, SxQui, SpQui, OcQui, NoQui,
+		Sex, UnSex, DuSex, TrSex, QaSex, QiSex, SxSex, SpSex, OcSex, NoSex,
+		Sep, UnSep, DuSep, TrSep, QaSep, QiSep, SxSep, SpSep, OcSep, NoSep,
+		Oct, UnOct, DuOct, TrOct, QaOct, QiOct, SxOct, SpOct, OcOct, NoOct,
+		Nov, UnNov, DuNov, TrNov, QaNov, QiNov, SxNov, SpNov, OcNov, NoNov,
+		Cent
+	}
 
 
-    public BGN() {
+
+	public BGN() {
     }
 
 	public BGN(float amount, Structures structure) {
@@ -77,6 +78,31 @@ public class BGN {
             }
         }
     }
+
+	public static BGN Pow(float baseValue, int exponent) {
+		if (exponent < 0) {
+			throw new ArgumentException("Exponent cannot be negative for BGN calculations.");
+		}
+
+		double result = Math.Pow(baseValue, exponent); // Compute power using double precision
+
+		BGN output = new BGN();
+		double temp = result;
+
+		// Convert the result into base-1000 representation
+		while (temp >= 1) {
+			output.list.Add((short)(temp % 1000));
+			temp /= 1000;
+		}
+
+		// Ensure at least one entry (even if result is zero)
+		if (output.list.Count == 0) {
+			output.list.Add(0);
+		}
+
+		return output;
+	}
+
 
 	public void Save(string SaveName) {
 		int index = 0;
@@ -280,11 +306,18 @@ public class BGN {
 		int temp = list.Count - 1;
 		double mainValue = list[temp]; // Most significant part
 		double fraction = (temp > 0) ? list[temp - 1] / 1000.0 : 0; // Next part as fraction
-
 		double finalValue = mainValue + fraction; // Merge both parts
-		string formatted = finalValue.ToString("0.0#"); // Keeps up to 2 decimal places but max 3 digits total
 
-		return temp > 0 ? $"{formatted}{(Structures)temp}" : formatted; // Append suffix if needed
+		string formatted = finalValue.ToString("0.0#"); // Keeps up to 2 decimal places, max 3 digits total
+		int enumlen = Enum.GetNames(typeof(Structures)).Length;
+		if (temp < enumlen) {
+			return temp > 0 ? $"{formatted}{(Structures)temp}" : formatted; // Append suffix if in range
+		} else {
+			// Engineering notation: "E" followed by the exponent
+			int exponent = temp * 3; // Each index represents an increase of 1000 (10^3)
+			return $"{formatted}E{exponent}";
+		}
 	}
+
 
 }
