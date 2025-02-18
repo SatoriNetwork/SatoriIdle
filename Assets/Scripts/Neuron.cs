@@ -54,11 +54,11 @@ public class Neuron : MonoBehaviour
 
                 }
 				
-				neuron.interactable = true;
 				progressTimer = progressTimerMax;
 				if (stake) {
 					NeuronImage.sprite = StakedNeuronSprite;
 				} else {
+					neuron.interactable = true;
 					NeuronImage.sprite = DefaultNeuronSprite;
 				}
 			}
@@ -68,5 +68,6 @@ public class Neuron : MonoBehaviour
 	public void CreateStake() {
 		stake = true;
 		NeuronImage.sprite = StakedNeuronSprite;
+		neuron.interactable = false;
 	}
 }

@@ -93,7 +93,7 @@ public class Hardware : MonoBehaviour
             foreach (Neuron neuron in NeuronList)
             {
                 neuron.progressTimerMax-= RAMDecreaseAmount;
-                if (neuron.working == false)
+                if (neuron.working == false || neuron.progressTimer > neuron.progressTimerMax)
                 {
                     neuron.progressTimer = neuron.progressTimerMax;
                 }
@@ -124,6 +124,7 @@ public class Hardware : MonoBehaviour
         {
             Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
+            newNeuron.progressTimer = newNeuron.progressTimerMax;
             newNeuron.GPUMultiplier = new BGN(GPUMultiplier);
             NeuronList.Add(newNeuron);
             updateCritChance();
@@ -206,6 +207,7 @@ public class Hardware : MonoBehaviour
                         validPlace = false;
                         break;
                     }
+
                 }
 
                 if (validPlace || PlacedNeuronList.Count == 0)
