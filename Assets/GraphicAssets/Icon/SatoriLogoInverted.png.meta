@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SatoriLogoInverted_0: -8238380332210643377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
