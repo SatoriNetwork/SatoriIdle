@@ -26,15 +26,30 @@ public class Hardware : MonoBehaviour
     //public int GPUMultiplier = 1; //GPU Multiplier value
     BGN GPUMultiplier = new BGN(1);
     public BGN NeuronCost = new BGN(1); //max amount of neurons
-    public BGN MemoryCost = new BGN(1); //max amount of neurons
-    public BGN RamCost = new BGN(1); //max amount of neurons
+    public BGN MemoryCost = new BGN(2); //max amount of neurons
+    public BGN RamCost = new BGN(8); //max amount of neurons
     public BGN DiskCost = new BGN(1); //max amount of neurons
-    public BGN StakeCost = new BGN(1); //max amount of neurons
+    public BGN StakeCost = new BGN(10); //max amount of neurons
+	public BGN InitNeuronCost = new BGN(1); //max amount of neurons
+	public BGN InitMemoryCost = new BGN(2); //max amount of neurons
+	public BGN InitRamCost = new BGN(8); //max amount of neurons
+	public BGN InitDiskCost = new BGN(1); //max amount of neurons
+	public BGN InitStakeCost = new BGN(10); //max amount of neurons
 
-    [SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
+	[SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
 
     public void SetGPUMultiplier(BGN multiplier) {
         GPUMultiplier = multiplier;
+		InitNeuronCost *= multiplier * multiplier;
+		InitMemoryCost *= multiplier * multiplier;
+		InitRamCost *= multiplier * multiplier;
+		InitDiskCost *= multiplier * multiplier;
+		InitStakeCost *= multiplier * multiplier;
+        NeuronCost = InitNeuronCost;
+        MemoryCost = InitMemoryCost;
+        RamCost = InitRamCost; 
+        DiskCost = InitDiskCost;
+        StakeCost = InitStakeCost;
     }
 
     private void Start()
@@ -69,9 +84,8 @@ public class Hardware : MonoBehaviour
 
     }
 
-    public BGN CalculateCost(BGN OldCost) {// make this more complicated later
-        BGN newCost = new BGN(2);
-        newCost *= OldCost;
+    public BGN CalculateCost(int upgradeLevel, BGN initialCost) {// make this more complicated later
+        BGN newCost = BGN.PowMultiply(initialCost, 1.25f, upgradeLevel);
         return newCost;
     }
 
@@ -81,7 +95,7 @@ public class Hardware : MonoBehaviour
             if (MemorySlots < MaxMemory) {
                 MemorySlots += 1; 
                 GameManager.instance.SatoriPoints -= MemoryCost;
-				MemoryCost = CalculateCost(MemoryCost);
+				MemoryCost = CalculateCost(MemorySlots, InitMemoryCost);
 			} else {
                 Debug.Log("Fully Upgraded");
             }
@@ -106,7 +120,7 @@ public class Hardware : MonoBehaviour
             Debug.Log("Upgraded RAM");
 
 			GameManager.instance.SatoriPoints -= RamCost;
-			RamCost = CalculateCost(RamCost);
+			RamCost = CalculateCost((int)RAM, InitRamCost);
 		}
         else
         {
@@ -120,7 +134,7 @@ public class Hardware : MonoBehaviour
         if (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) {
             disk += 1;
 			GameManager.instance.SatoriPoints -= DiskCost;
-			DiskCost = CalculateCost(DiskCost);
+			DiskCost = CalculateCost(disk, InitDiskCost);
 		}
     }
     public void addNeuron()
@@ -142,7 +156,7 @@ public class Hardware : MonoBehaviour
             connections.Clear();
             PlaceNeuronsInHardware();
 			GameManager.instance.SatoriPoints -= NeuronCost;
-			NeuronCost = CalculateCost(NeuronCost);
+			NeuronCost = CalculateCost(NeuronList.Count, InitNeuronCost);
 		}
         else
         {
@@ -169,7 +183,7 @@ public class Hardware : MonoBehaviour
                 }
 			}
 			GameManager.instance.SatoriPoints -= StakeCost;
-			StakeCost = CalculateCost(StakeCost);
+			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
 		}
     }
 

@@ -22,6 +22,17 @@ public class BGN {
 		Cent
 	}
 
+	public static BGN PowMultiply(BGN baseValue, float multiplier, int exponent) {
+		if (exponent < 0) throw new ArgumentException("Exponent must be non-negative.");
+
+		// Compute multiplier^exponent as a double
+		double powerResult = Math.Pow(multiplier, exponent);
+
+		// Multiply baseValue by the computed power
+		BGN result = baseValue * powerResult;
+
+		return result;
+	}
 
 
 	public BGN() {
@@ -152,6 +163,27 @@ public class BGN {
 
 		return Value;
 
+	}
+
+	public static BGN operator *(BGN lhs, double rhs) {
+		if (rhs == 0) return new BGN(0); // If multiplying by 0, return 0
+
+		BGN result = new BGN();
+		double carry = 0;
+
+		for (int i = 0; i < lhs.list.Count; i++) {
+			double product = lhs.list[i] * rhs + carry;
+			result.list.Add((short)(product % 1000));
+			carry = Math.Floor(product / 1000);
+		}
+
+		// Handle any remaining carry
+		while (carry >= 1) {
+			result.list.Add((short)(carry % 1000));
+			carry = Math.Floor(carry / 1000);
+		}
+
+		return result;
 	}
 
 	//subtract Values
