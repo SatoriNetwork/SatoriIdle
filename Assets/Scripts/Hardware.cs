@@ -40,11 +40,11 @@ public class Hardware : MonoBehaviour
 
     public void SetGPUMultiplier(BGN multiplier) {
         GPUMultiplier = multiplier;
-		InitNeuronCost *= multiplier * multiplier;
-		InitMemoryCost *= multiplier * multiplier;
-		InitRamCost *= multiplier * multiplier;
-		InitDiskCost *= multiplier * multiplier;
-		InitStakeCost *= multiplier * multiplier;
+		InitNeuronCost *= multiplier * 1.5;
+		InitMemoryCost *= multiplier * 1.5;
+		InitRamCost *= multiplier * 1.5;
+		InitDiskCost *= multiplier * 1.5;
+		InitStakeCost *= multiplier * 1.5;
         NeuronCost = InitNeuronCost;
         MemoryCost = InitMemoryCost;
         RamCost = InitRamCost; 
@@ -84,8 +84,8 @@ public class Hardware : MonoBehaviour
 
     }
 
-    public BGN CalculateCost(int upgradeLevel, BGN initialCost) {// make this more complicated later
-        BGN newCost = BGN.PowMultiply(initialCost, 1.25f, upgradeLevel);
+    public BGN CalculateCost(int upgradeLevel, BGN initialCost, float rate = 1.25f) {// make this more complicated later
+        BGN newCost = BGN.PowMultiply(initialCost, rate, upgradeLevel);
         return newCost;
     }
 
@@ -120,7 +120,7 @@ public class Hardware : MonoBehaviour
             Debug.Log("Upgraded RAM");
 
 			GameManager.instance.SatoriPoints -= RamCost;
-			RamCost = CalculateCost((int)RAM, InitRamCost);
+			RamCost = CalculateCost((int)RAM, InitRamCost, 2f);
 		}
         else
         {

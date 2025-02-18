@@ -461,10 +461,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  costIncrease: 3.15
+  costIncrease: 2.8
   costInital: 200
-  multiIncrease: 1.55
-  multiInital: 2
+  multiIncrease: 2.2
+  multiInital: 3
 --- !u!1 &1185152871
 GameObject:
   m_ObjectHideFlags: 0
