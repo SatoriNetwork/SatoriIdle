@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
 
-	[SerializeField] public BGN SatoriPoints = new BGN(5);
+	[SerializeField] public BGN SatoriPoints = new BGN(4);
 	[SerializeField] TextMeshProUGUI SPText;
 
 

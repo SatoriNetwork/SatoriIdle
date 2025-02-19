@@ -33,7 +33,7 @@ public class Hardware : MonoBehaviour
 	public BGN InitNeuronCost = new BGN(1); //max amount of neurons
 	public BGN InitMemoryCost = new BGN(2); //max amount of neurons
 	public BGN InitRamCost = new BGN(8); //max amount of neurons
-	public BGN InitDiskCost = new BGN(1); //max amount of neurons
+	public BGN InitDiskCost = new BGN(5); //max amount of neurons
 	public BGN InitStakeCost = new BGN(10); //max amount of neurons
 
 	[SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
@@ -75,7 +75,7 @@ public class Hardware : MonoBehaviour
         DiskMaxText.text = disk + "/" + MaxDisk;
         StakeMaxText.text = stakedNeurons + "/" + NeuronList.Count;
 
-        UpgradeMemoryBtn.interactable = (GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
+        UpgradeMemoryBtn.interactable = (MaxMemory > MemorySlots && GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
         UpgradeRAMBtn.interactable = (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) ? true : false;
         UpgradeDiskBtn.interactable = (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) ? true : false;
         StakeBtn.interactable = (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) ? true : false;
