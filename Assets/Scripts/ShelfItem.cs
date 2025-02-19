@@ -16,6 +16,7 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] BGN.Structures costStructure;
     BGN Cost;
     public BGN Multiplier;
+    public int RebirthMultiplier;
 	private void Awake() {
         Cost = new BGN(cost, costStructure);
 	}
@@ -55,6 +56,7 @@ public class ShelfItem : MonoBehaviour
         HardwareC = hardware.GetComponent<Canvas>();
         HardwareCG.alpha = 0;
         hwScript.SetGPUMultiplier(Multiplier);
+        hwScript.RebirthMultiplier = RebirthMultiplier;
 	}
 
     public void setPrice(BGN price) {
