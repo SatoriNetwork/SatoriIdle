@@ -463,7 +463,7 @@ MonoBehaviour:
   - {fileID: 0}
   costIncrease: 2.8
   costInital: 200
-  multiIncrease: 2.2
+  multiIncrease: 2.1
   multiInital: 3
 --- !u!1 &1185152871
 GameObject:

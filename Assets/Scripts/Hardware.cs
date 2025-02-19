@@ -40,11 +40,11 @@ public class Hardware : MonoBehaviour
 
     public void SetGPUMultiplier(BGN multiplier) {
         GPUMultiplier = multiplier;
-		InitNeuronCost *= multiplier * 1.5;
-		InitMemoryCost *= multiplier * 1.5;
-		InitRamCost *= multiplier * 1.5;
-		InitDiskCost *= multiplier * 1.5;
-		InitStakeCost *= multiplier * 1.5;
+		InitNeuronCost *= multiplier * 2.8;
+		InitMemoryCost *= multiplier * 2.8;
+		InitRamCost *= multiplier * 2.8;
+		InitDiskCost *= multiplier * 2.8;
+		InitStakeCost *= multiplier * 2.8;
         NeuronCost = InitNeuronCost;
         MemoryCost = InitMemoryCost;
         RamCost = InitRamCost; 
@@ -63,11 +63,11 @@ public class Hardware : MonoBehaviour
 
 	}
 	public void updateShopVisuals() {
-        NeuronCostText.text = NeuronCost.ToString();
-        MemoryCostText.text = MemoryCost.ToString();
-        RamCostText.text = RamCost.ToString();
-        DiskCostText.text = DiskCost.ToString();
-        StakeCostText.text = StakeCost.ToString();
+        NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
+        MemoryCostText.text = (MaxMemory > MemorySlots) ? MemoryCost.ToString() : "Maxed";
+        RamCostText.text = (RAM < MaxRam) ? RamCost.ToString() : "Maxed";
+        DiskCostText.text = (disk < MaxDisk) ? DiskCost.ToString() : "Maxed";
+        StakeCostText.text = (stakedNeurons < NeuronList.Count) ? StakeCost.ToString() : "Maxed";
 
         NeuronMaxText.text = NeuronList.Count + "/" + MemorySlots;
         MemoryMaxText.text = MemorySlots + "/" + MaxMemory;
@@ -167,7 +167,7 @@ public class Hardware : MonoBehaviour
     {
         foreach (Neuron neuron in NeuronList)
         {
-            if (NeuronList.Count > 1) neuron.critChance = maxCritChance/NeuronList.Count-1;
+            if (NeuronList.Count > 1) neuron.critChance = (maxCritChance/16) * (NeuronList.Count-1);
 
         }
     }
