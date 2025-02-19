@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour {
 	public void addPoints(BGN sp) {
 		SatoriPoints += sp;
 		SatoriPointsTotal += sp;
-	}
+        Debug.Log(SatoriPointsTotal);
+    }
 
 	private void FixedUpdate() {
 		SPText.text = SatoriPoints.ToString();
