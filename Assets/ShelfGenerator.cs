@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShelfGenerator : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class ShelfGenerator : MonoBehaviour
 		BGN multiplier = new BGN(1);
         for (int i = 0; i < GPUSprites.Count; i++) {
 			GameObject go = Instantiate(shelfItemPrefab, gameObject.transform);
+			Image[] imgs = go.GetComponentsInChildren<Image>();
+			imgs[2].sprite = GPUSprites[i];
 			ShelfGO.Add(go);
 			ShelfItem  si = go.GetComponent<ShelfItem>();
 			si.RebirthMultiplier = gameManager.getRebirthMultiplier();

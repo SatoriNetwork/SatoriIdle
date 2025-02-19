@@ -57,7 +57,9 @@ public class ShelfItem : MonoBehaviour
         HardwareCG.alpha = 0;
         hwScript.SetGPUMultiplier(Multiplier);
         hwScript.RebirthMultiplier = RebirthMultiplier;
-	}
+        Image[] imgs = this.GetComponentsInChildren<Image>();
+        imgs[2].color = new Color(1, 1, 1, 1);
+    }
 
     public void setPrice(BGN price) {
         Cost = price;
