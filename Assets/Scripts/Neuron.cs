@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,9 @@ public class Neuron : MonoBehaviour
 	[SerializeField] Sprite DefaultNeuronSprite;
 	[SerializeField] Sprite ClickedNeuronSprite;
 	[SerializeField] Sprite StakedNeuronSprite;
+
+	[SerializeField] GameObject floatingTextPrefab;
+	[SerializeField] GameObject CritfloatingTextPrefab;
 	//events
 
 	public static event EventHandler OnNeuronPressed;
@@ -47,12 +51,17 @@ public class Neuron : MonoBehaviour
 				if (UnityEngine.Random.Range(0, 100) <= critChance)
 				{
                     GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier);
-                }
+					GameObject textGO = Instantiate(CritfloatingTextPrefab, gameObject.transform);
+					textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * (new BGN(2)) * GPUMultiplier).ToString();
+					Destroy(textGO, 1);
+				}
 				else
 				{
 					GameManager.instance.addPoints(worth*GPUMultiplier);
-
-                }
+					GameObject textGO = Instantiate(floatingTextPrefab, gameObject.transform);
+					textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * GPUMultiplier).ToString();
+					Destroy(textGO, 1);
+				}
 				
 				progressTimer = progressTimerMax;
 				if (stake) {
