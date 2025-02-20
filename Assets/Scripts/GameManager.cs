@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 		if (calc > 0)
 		{
 			RebirthButton.SetActive(true);
-			RebirthText.text = "Rebirth: " + calc;
+			RebirthText.text = "Rebirth: " + calc + "X";
 		}
 		else
 		{
