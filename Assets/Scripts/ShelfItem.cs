@@ -71,4 +71,9 @@ public class ShelfItem : MonoBehaviour
     {
         
     }
+
+    private void OnDestroy()
+    {
+        if (HardwareC) Destroy(HardwareC.gameObject);
+    }
 }

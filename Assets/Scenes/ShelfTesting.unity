@@ -1312,7 +1312,7 @@ MonoBehaviour:
   RebirthButton: {fileID: 378064627}
   shelfGenerator: {fileID: 791731719}
   RebirthMultiplier: 1
-  RebirthCost: 1000
+  RebirthCost: 15000000
 --- !u!4 &1863337266
 Transform:
   m_ObjectHideFlags: 0
