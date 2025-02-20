@@ -38,15 +38,17 @@ public class Hardware : MonoBehaviour
 	public BGN InitDiskCost = new BGN(5); //max amount of neurons
 	public BGN InitStakeCost = new BGN(10); //max amount of neurons
 
+    public BGN upgradeCostMultiplier = new BGN(1);
+
 	[SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
 
     public void SetGPUMultiplier(BGN multiplier) {
         GPUMultiplier = multiplier;
-		InitNeuronCost *= multiplier * 2.8;
-		InitMemoryCost *= multiplier * 2.8;
-		InitRamCost *= multiplier * 2.8;
-		InitDiskCost *= multiplier * 2.8;
-		InitStakeCost *= multiplier * 2.8;
+		InitNeuronCost *= upgradeCostMultiplier;
+		InitMemoryCost *= upgradeCostMultiplier;
+		InitRamCost *= upgradeCostMultiplier;
+		InitDiskCost *= upgradeCostMultiplier;
+		InitStakeCost *= upgradeCostMultiplier;
         NeuronCost = InitNeuronCost;
         MemoryCost = InitMemoryCost;
         RamCost = InitRamCost; 

@@ -734,7 +734,9 @@ MonoBehaviour:
   ShelfGO: []
   costIncrease: 2.8
   costInital: 200
-  multiIncrease: 2.1
+  upgradeCostIncrease: 2.5
+  upgradeCostInital: 3
+  multiIncrease: 1.8
   multiInital: 3
 --- !u!1 &1185152871
 GameObject:
