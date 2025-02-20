@@ -10,12 +10,13 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] GameObject hardware;
     [SerializeField] CanvasGroup HardwareCG;
     [SerializeField] Canvas HardwareC;
-
+    
     [SerializeField] public bool Purchased = false;
     [SerializeField] float cost;
     [SerializeField] BGN.Structures costStructure;
     BGN Cost;
     public BGN Multiplier;
+    public BGN UpgradeCostMultiplier;
     public int RebirthMultiplier;
 	private void Awake() {
         Cost = new BGN(cost, costStructure);
@@ -55,6 +56,7 @@ public class ShelfItem : MonoBehaviour
         HardwareCG = hardware.GetComponent<CanvasGroup>();
         HardwareC = hardware.GetComponent<Canvas>();
         HardwareCG.alpha = 0;
+        hwScript.upgradeCostMultiplier = UpgradeCostMultiplier;
         hwScript.SetGPUMultiplier(Multiplier);
         hwScript.RebirthMultiplier = RebirthMultiplier;
         Image[] imgs = this.GetComponentsInChildren<Image>();

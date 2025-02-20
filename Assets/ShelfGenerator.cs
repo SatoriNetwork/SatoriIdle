@@ -12,6 +12,8 @@ public class ShelfGenerator : MonoBehaviour
 
 	[SerializeField] float costIncrease = 3;
 	[SerializeField] int costInital = 10;
+	[SerializeField] float upgradeCostIncrease = 1.15f;
+	[SerializeField] int upgradeCostInital = 10;
 	[SerializeField] float multiIncrease = 3;
 	[SerializeField] int multiInital = 10;
 
@@ -23,6 +25,7 @@ public class ShelfGenerator : MonoBehaviour
     private void Generate() {
 		BGN cost = new BGN(0);
 		BGN multiplier = new BGN(1);
+		BGN upgradeCost = new BGN(1);
         for (int i = 0; i < GPUSprites.Count; i++) {
 			GameObject go = Instantiate(shelfItemPrefab, gameObject.transform);
 			Image[] imgs = go.GetComponentsInChildren<Image>();
@@ -36,6 +39,10 @@ public class ShelfGenerator : MonoBehaviour
 			si.Multiplier = multiplier; 
 			BGN multitemp = new BGN(multiInital);
 			multiplier = multitemp * BGN.Pow(multiIncrease, i);
+			si.UpgradeCostMultiplier = upgradeCost;
+			BGN upgradeTemp = new BGN(upgradeCostInital);
+			upgradeCost = upgradeTemp * BGN.Pow(upgradeCostIncrease, i);
+
 			
 			//add GPU
 		}
