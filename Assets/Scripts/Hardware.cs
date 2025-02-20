@@ -11,6 +11,7 @@ public class Hardware : MonoBehaviour
     public RectTransform rect;
     public List<GameObject> connectorPrefabs = new List<GameObject>();
     public List<GameObject> connections = new List<GameObject>();
+    public GameObject connectorsHolder;
     public float neighborhoodThreshhold = 10000;
     public int connectionAmount = 5;
 
@@ -23,6 +24,7 @@ public class Hardware : MonoBehaviour
     public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
     public float maxCritChance = 75; //Max Crit Chance allowed 
+    public int RebirthMultiplier = 1;
     //public int GPUMultiplier = 1; //GPU Multiplier value
     BGN GPUMultiplier = new BGN(1);
     public BGN NeuronCost = new BGN(1); //max amount of neurons
@@ -144,7 +146,7 @@ public class Hardware : MonoBehaviour
             Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
             newNeuron.progressTimer = newNeuron.progressTimerMax;
-            newNeuron.GPUMultiplier = GPUMultiplier;
+            newNeuron.GPUMultiplier = GPUMultiplier * RebirthMultiplier;
             NeuronList.Add(newNeuron);
             updateCritChance();
             PlacedNeuronList.Clear();
@@ -371,7 +373,7 @@ public class Hardware : MonoBehaviour
                 Vector2 direction = pair.b - pair.a;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),transform);
+                GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
                 connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.2f,0.5f);
 

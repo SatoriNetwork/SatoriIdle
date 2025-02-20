@@ -3298,6 +3298,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6748390140835490499}
+  - {fileID: 3415206976094638388}
   m_Father: {fileID: 5853582466673040169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -3364,6 +3365,7 @@ MonoBehaviour:
   - {fileID: 5000611747723929222, guid: 1d56002f057dc344f9b829bd42c010eb, type: 3}
   - {fileID: 5000611747723929222, guid: edd5e50e3df385640b72fd4cbb452c07, type: 3}
   connections: []
+  connectorsHolder: {fileID: 9176969965538904345}
   neighborhoodThreshhold: 1000
   connectionAmount: 4
   NeuronPrefab: {fileID: 749861032566126157, guid: 2e8225eda4ddab3409707c3d7971ca95, type: 3}
@@ -3391,3 +3393,38 @@ MonoBehaviour:
   UpgradeRAMBtn: {fileID: 7230308919833362079}
   UpgradeDiskBtn: {fileID: 4160204545831005275}
   StakeBtn: {fileID: 2844140875499769480}
+--- !u!1 &9176969965538904345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3415206976094638388}
+  m_Layer: 5
+  m_Name: Connectors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3415206976094638388
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176969965538904345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 320263552694887975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
