@@ -14,7 +14,9 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] public bool Purchased = false;
     [SerializeField] float cost;
     [SerializeField] BGN.Structures costStructure;
-    BGN Cost;
+    Hardware hwScript;
+
+	BGN Cost;
     public BGN Multiplier;
     public BGN UpgradeCostMultiplier;
     public int RebirthMultiplier;
@@ -29,6 +31,7 @@ public class ShelfItem : MonoBehaviour
             shelfCanvas.Instance.gameObject.SetActive(false);
             HardwareCG.alpha = 1;
             HardwareC.sortingOrder = 2;
+            hwScript.enableNeurons();
         });
 
         PurchaseButton.onClick.AddListener(() => {
@@ -52,7 +55,7 @@ public class ShelfItem : MonoBehaviour
 		HardwareButton.interactable = true;
 		PurchaseButton.gameObject.SetActive(false);
         hardware = Instantiate(hardware);
-        Hardware hwScript = hardware.GetComponentInChildren<Hardware>();
+        hwScript = hardware.GetComponentInChildren<Hardware>();
         HardwareCG = hardware.GetComponent<CanvasGroup>();
         HardwareC = hardware.GetComponent<Canvas>();
         HardwareCG.alpha = 0;
