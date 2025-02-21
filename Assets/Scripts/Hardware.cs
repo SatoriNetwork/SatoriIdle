@@ -43,6 +43,18 @@ public class Hardware : MonoBehaviour
 
 	[SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
 
+    public void disablNeurons() {
+        foreach (Neuron n in NeuronList) {
+            n.enableVisuals = false;
+        }
+    }
+
+    public void enableNeurons() {
+		foreach (Neuron n in NeuronList) {
+			n.enableVisuals = true;
+		}
+	}
+
     public void SetGPUMultiplier(BGN multiplier) {
         GPUMultiplier = multiplier;
 		InitNeuronCost *= upgradeCostMultiplier;

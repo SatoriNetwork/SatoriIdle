@@ -15,7 +15,7 @@ public class Neuron : MonoBehaviour
 	public float critChance = 0;
 	[SerializeField] BGN worth = new BGN(1);
 	[SerializeField] public BGN GPUMultiplier = new BGN(1);
-
+	public bool enableVisuals = true;
 
 	//visuals
 	[SerializeField] Image NeuronImage;
@@ -51,16 +51,20 @@ public class Neuron : MonoBehaviour
 				if (UnityEngine.Random.Range(0, 100) <= critChance)
 				{
                     GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier);
-					GameObject textGO = Instantiate(CritfloatingTextPrefab, gameObject.transform);
-					textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * (new BGN(2)) * GPUMultiplier).ToString();
-					Destroy(textGO, 1);
+					if (enableVisuals) {
+						GameObject textGO = Instantiate(CritfloatingTextPrefab, gameObject.transform);
+						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * (new BGN(2)) * GPUMultiplier).ToString();
+						Destroy(textGO, 1);
+					}
 				}
 				else
 				{
 					GameManager.instance.addPoints(worth*GPUMultiplier);
-					GameObject textGO = Instantiate(floatingTextPrefab, gameObject.transform);
-					textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * GPUMultiplier).ToString();
-					Destroy(textGO, 1);
+					if (enableVisuals) {
+						GameObject textGO = Instantiate(floatingTextPrefab, gameObject.transform);
+						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * GPUMultiplier).ToString();
+						Destroy(textGO, 1);
+					}
 				}
 				
 				progressTimer = progressTimerMax;
