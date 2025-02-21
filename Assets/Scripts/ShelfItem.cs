@@ -18,6 +18,7 @@ public class ShelfItem : MonoBehaviour
     public BGN Multiplier;
     public BGN UpgradeCostMultiplier;
     public int RebirthMultiplier;
+    public Sprite bgTexture;
 	private void Awake() {
         Cost = new BGN(cost, costStructure);
 	}
@@ -56,6 +57,7 @@ public class ShelfItem : MonoBehaviour
         HardwareCG = hardware.GetComponent<CanvasGroup>();
         HardwareC = hardware.GetComponent<Canvas>();
         HardwareCG.alpha = 0;
+        hardware.GetComponentInChildren<Image>().sprite = bgTexture;
         hwScript.upgradeCostMultiplier = UpgradeCostMultiplier;
         hwScript.SetGPUMultiplier(Multiplier);
         hwScript.RebirthMultiplier = RebirthMultiplier;

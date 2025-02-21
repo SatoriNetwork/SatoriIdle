@@ -8,7 +8,9 @@ public class ShelfGenerator : MonoBehaviour
 	[SerializeField] GameManager gameManager;
     [SerializeField] GameObject shelfItemPrefab;
 	[SerializeField] List<Sprite> GPUSprites = new List<Sprite>();
-	[SerializeField] List<GameObject> ShelfGO = new List<GameObject>();
+    [SerializeField] List<Sprite> BGTextures = new List<Sprite>();
+    [SerializeField] List<GameObject> ShelfGO = new List<GameObject>();
+
 
 	[SerializeField] float costIncrease = 3;
 	[SerializeField] int costInital = 10;
@@ -32,6 +34,7 @@ public class ShelfGenerator : MonoBehaviour
 			imgs[2].sprite = GPUSprites[i];
 			ShelfGO.Add(go);
 			ShelfItem  si = go.GetComponent<ShelfItem>();
+			si.bgTexture = BGTextures[i];
 			si.RebirthMultiplier = gameManager.getRebirthMultiplier();
             si.setPrice(cost);
 			BGN costtemp = new BGN(costInital);

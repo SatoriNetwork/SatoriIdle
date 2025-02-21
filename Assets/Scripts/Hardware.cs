@@ -14,6 +14,7 @@ public class Hardware : MonoBehaviour
     public GameObject connectorsHolder;
     public float neighborhoodThreshhold = 10000;
     public int connectionAmount = 5;
+    
 
     [SerializeField] GameObject NeuronPrefab;
 
