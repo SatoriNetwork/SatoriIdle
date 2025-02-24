@@ -34,6 +34,7 @@ public class ShelfGenerator : MonoBehaviour
 			imgs[2].sprite = GPUSprites[i];
 			ShelfGO.Add(go);
 			ShelfItem  si = go.GetComponent<ShelfItem>();
+			si.position = i;
 			si.bgTexture = BGTextures[i];
 			si.RebirthMultiplier = gameManager.getRebirthMultiplier();
             si.setPrice(cost);
@@ -46,6 +47,11 @@ public class ShelfGenerator : MonoBehaviour
 			BGN upgradeTemp = new BGN(upgradeCostInital);
 			upgradeCost = upgradeTemp * BGN.Pow(upgradeCostIncrease, i);
 
+			int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
+			if (purchased == 1) {
+				si.PurchaseHW();
+				si.Load();
+			}
 			
 			//add GPU
 		}
@@ -54,6 +60,11 @@ public class ShelfGenerator : MonoBehaviour
 	public void Rebirth()
 	{
 		clearShelf();
+		for (int i = 0; i < GPUSprites.Count; i++) {
+
+			PlayerPrefs.SetInt("PurchasedHW" + i, 0);
+		}
+		PlayerPrefs.Save();
 		Generate();
 	}
 	private void clearShelf()
