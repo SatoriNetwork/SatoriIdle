@@ -5,8 +5,9 @@ using UnityEngine.Rendering;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
 
-	[SerializeField] public BGN SatoriPoints = new BGN(5);
-	[SerializeField] public BGN SatoriPointsTotal = new BGN(5);
+	[SerializeField] int startingMoneys = 5;
+	[SerializeField] public BGN SatoriPoints;
+	[SerializeField] public BGN SatoriPointsTotal;
 	[SerializeField] TextMeshProUGUI SPText;
 	[SerializeField] TextMeshProUGUI RebirthText;
 	[SerializeField] GameObject RebirthButton;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour {
 		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
 	}
 	public int getRebirthMultiplier()
+
 	{ 
 		return RebirthMultiplier;
 	}

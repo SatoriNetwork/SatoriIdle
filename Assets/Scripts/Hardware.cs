@@ -14,6 +14,8 @@ public class Hardware : MonoBehaviour
     public GameObject connectorsHolder;
     public float neighborhoodThreshhold = 10000;
     public int connectionAmount = 5;
+    public Image[] diskImages;
+    public Image[] RAMImages;
     
 
     [SerializeField] GameObject NeuronPrefab;
@@ -139,11 +141,13 @@ public class Hardware : MonoBehaviour
     private void Start()
     {
         rect = GetComponent<RectTransform>();
+
+        updateDiskImages();
+        updateRAMImages();
     }
 
 	private void Update() {
 		updateShopVisuals();
-
 	}
 	public void updateShopVisuals() {
         NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
@@ -165,6 +169,21 @@ public class Hardware : MonoBehaviour
         AddNeuronBtn.interactable = (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost) ? true : false;
 
 
+    }
+    void updateDiskImages()
+    {
+        for (int i = 0; i < disk; i++)
+        {
+            if (i < diskImages.Length) diskImages[i].color = Color.white;
+        }
+    }
+
+    void updateRAMImages()
+    {
+        for (int i = 0; i < RAM; i++)
+        {
+            if (i < RAMImages.Length) RAMImages[i].color = Color.white;
+        }
     }
 
     public BGN CalculateCost(int upgradeLevel, BGN initialCost, float rate = 1.25f) {// make this more complicated later
@@ -203,13 +222,14 @@ public class Hardware : MonoBehaviour
                     neuron.progressTimer = neuron.progressTimerMax;
                 }
             }
-            Debug.Log("Upgraded RAM");
-
 			GameManager.instance.SatoriPoints -= RamCost;
 			RamCost = CalculateCost((int)RAM, InitRamCost, 2f);
+
             PlayerPrefs.SetInt(RAM_AMOUNT + position, RAM);
             RamCost.Save(RAM_COST + position + "n");
-		}
+		
+            updateRAMImages();
+        }
         else
         {
             Debug.Log("Fully Upgraded");
@@ -225,6 +245,7 @@ public class Hardware : MonoBehaviour
 			DiskCost = CalculateCost(disk, InitDiskCost);
             PlayerPrefs.SetInt(DISK_AMOUNT + position, disk);
             DiskCost.Save(DISK_COST + position + "n");
+            updateDiskImages();
 		}
     }
     public void addNeuron()
@@ -467,7 +488,7 @@ public class Hardware : MonoBehaviour
 
                 GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
-                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.2f,0.5f);
+                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.3f,0.5f);
 
                 usedAPoints.Add(pair.a);
                 usedBPoints.Add(pair.b);
