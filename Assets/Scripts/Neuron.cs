@@ -50,19 +50,19 @@ public class Neuron : MonoBehaviour
 				working = false;
 				if (UnityEngine.Random.Range(0, 100) <= critChance)
 				{
-                    GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier);
+                    GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);
 					if (enableVisuals) {
 						GameObject textGO = Instantiate(CritfloatingTextPrefab, gameObject.transform);
-						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * (new BGN(2)) * GPUMultiplier).ToString();
+						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * (new BGN(2)) * GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier).ToString();
 						Destroy(textGO, 1);
 					}
 				}
 				else
 				{
-					GameManager.instance.addPoints(worth*GPUMultiplier);
+					GameManager.instance.addPoints(worth*GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);
 					if (enableVisuals) {
 						GameObject textGO = Instantiate(floatingTextPrefab, gameObject.transform);
-						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * GPUMultiplier).ToString();
+						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier).ToString();
 						Destroy(textGO, 1);
 					}
 				}

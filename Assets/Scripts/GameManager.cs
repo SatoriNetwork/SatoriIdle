@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour {
 
     }
 	public void addPoints(BGN sp) {
-		sp *= SatoriConnectionMultiplier;
 		SatoriPoints += sp;
 		SatoriPointsTotal += sp;
         Debug.Log(SatoriPointsTotal);
