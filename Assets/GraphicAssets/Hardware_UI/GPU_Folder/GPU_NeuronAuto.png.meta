@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_NeuronAuto_0: -4785576350059720806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

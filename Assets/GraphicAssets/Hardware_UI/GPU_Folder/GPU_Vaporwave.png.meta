@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_Vaporwave_0: 2278045125610000252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

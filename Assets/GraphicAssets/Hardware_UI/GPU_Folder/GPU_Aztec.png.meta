@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_Aztec_0: 6667854769290162992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

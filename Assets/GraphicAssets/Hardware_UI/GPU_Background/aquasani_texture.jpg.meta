@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      aquasani_texture_0: 7790906208389488185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,6 +14,7 @@ public class Hardware : MonoBehaviour
     public GameObject connectorsHolder;
     public float neighborhoodThreshhold = 10000;
     public int connectionAmount = 5;
+    public Image[] diskImages;
     
 
     [SerializeField] GameObject NeuronPrefab;
@@ -73,6 +74,7 @@ public class Hardware : MonoBehaviour
     {
         rect = GetComponent<RectTransform>();
         PlaceNeuronsInHardware();
+        updateDiskImages();
     }
 
 	private void Update() {
@@ -100,7 +102,13 @@ public class Hardware : MonoBehaviour
 
 
     }
-
+    void updateDiskImages()
+    {
+        for (int i = 0; i < disk; i++)
+        {
+            if (i < diskImages.Length) diskImages[i].color = Color.white;
+        }
+    }
     public BGN CalculateCost(int upgradeLevel, BGN initialCost, float rate = 1.25f) {// make this more complicated later
         BGN newCost = BGN.PowMultiply(initialCost, rate, upgradeLevel);
         return newCost;
@@ -152,6 +160,7 @@ public class Hardware : MonoBehaviour
             disk += 1;
 			GameManager.instance.SatoriPoints -= DiskCost;
 			DiskCost = CalculateCost(disk, InitDiskCost);
+            updateDiskImages();
 		}
     }
     public void addNeuron()
@@ -390,7 +399,7 @@ public class Hardware : MonoBehaviour
 
                 GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
-                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.2f,0.5f);
+                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.3f,0.5f);
 
                 usedAPoints.Add(pair.a);
                 usedBPoints.Add(pair.b);

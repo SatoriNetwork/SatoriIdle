@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_AlienHive_0: -5514420370970743717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

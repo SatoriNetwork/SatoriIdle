@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_BlackOps_0: -5956169227933106879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_LegionaryShield_0: -2326119139447452323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3354,7 +3354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5294118}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3395,6 +3395,7 @@ MonoBehaviour:
   connectorsHolder: {fileID: 9176969965538904345}
   neighborhoodThreshhold: 1000
   connectionAmount: 4
+  diskImages: []
   NeuronPrefab: {fileID: 749861032566126157, guid: 2e8225eda4ddab3409707c3d7971ca95, type: 3}
   NeuronCostText: {fileID: 3120105941497300892}
   NeuronMaxText: {fileID: 237876548387770374}
