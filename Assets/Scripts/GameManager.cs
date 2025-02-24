@@ -21,18 +21,18 @@ public class GameManager : MonoBehaviour {
 
     private void Start() {
 		instance = this;
-		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
-		if (firstTime == 0) {
+		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 1);
+		if (firstTime == 1) {
 
 			SatoriPoints = new BGN(5);
 			SatoriPointsTotal = new BGN(5);
-			PlayerPrefs.SetInt("FIRSTTIME", 1);
+			PlayerPrefs.SetInt("FIRSTTIME", 0);
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
 
 		} else {
 			SatoriPoints.Load(SATORI_POINTS_PP);
-		SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
+			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
 	}
