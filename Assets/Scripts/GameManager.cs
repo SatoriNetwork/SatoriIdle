@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] ShelfGenerator shelfGenerator;
     [SerializeField] private int RebirthMultiplier = 1;
     [SerializeField] public int RebirthCost = 10000;
-
+	[SerializeField] public string UserAddress = "";
+	[SerializeField] public int SatoriConnectionMultiplier = 1;
+	[SerializeField] public bool SatoriConnected = false;
 	private const string SATORI_POINTS_PP = "SatoriPointsPP";
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
@@ -26,8 +28,8 @@ public class GameManager : MonoBehaviour {
 		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 1);
 		if (firstTime == 1) {
 
-			SatoriPoints = new BGN(5);
-			SatoriPointsTotal = new BGN(5);
+			SatoriPoints = new BGN(startingMoneys);
+			SatoriPointsTotal = new BGN(startingMoneys);
 			PlayerPrefs.SetInt("FIRSTTIME", 0);
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour {
 			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
-
+		CheckSatoriConnection();
 	}
 	public int getRebirthMultiplier()
 	{ 
