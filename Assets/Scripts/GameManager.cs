@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour {
@@ -14,17 +16,50 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] ShelfGenerator shelfGenerator;
     [SerializeField] private int RebirthMultiplier = 1;
     [SerializeField] public int RebirthCost = 10000;
+	[SerializeField] public int SatoriConnectionMultiplier;
+	[SerializeField] public bool SatoriConnected;
+	[SerializeField] string UserAddress;
     private void Start() {
 		instance = this;
         SatoriPoints = new BGN(startingMoneys);
         SatoriPointsTotal = new BGN(startingMoneys);
-
+		CheckSatoriConnection();
     }
     public int getRebirthMultiplier()
 	{ 
 		return RebirthMultiplier;
 	}
+	public void CheckSatoriConnection()
+	{
+		string url = "https://stage.satorinet.io/api/v0/neuron/activity/" + UserAddress;
+		StartCoroutine(getRequest(url));
+    }
+	IEnumerator getRequest(string url)
+	{
+        UnityWebRequest request = UnityWebRequest.Get(url);
+		yield return request.SendWebRequest();
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            string response = request.downloadHandler.text;
+			Debug.Log(response);
+			//change to whatever true or false is.
+			if (response == "true")
+			{
+				SatoriConnectionMultiplier = 5;
+				SatoriConnected = true;
+			}
+			else
+			{
+				SatoriConnectionMultiplier = 1;
+				SatoriConnected = false;	
+			}
+        }
+		Debug.Log(request.result);
+
+
+    }
 	public void addPoints(BGN sp) {
+		sp *= SatoriConnectionMultiplier;
 		SatoriPoints += sp;
 		SatoriPointsTotal += sp;
         Debug.Log(SatoriPointsTotal);
