@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
 
 	[SerializeField] int startingMoneys = 5;
-	[SerializeField] public BGN SatoriPoints;
-	[SerializeField] public BGN SatoriPointsTotal;
+	[SerializeField] public BGN SatoriPoints = new BGN(5);
+	[SerializeField] public BGN SatoriPointsTotal = new BGN(5);
 	[SerializeField] TextMeshProUGUI SPText;
 	[SerializeField] TextMeshProUGUI RebirthText;
 	[SerializeField] GameObject RebirthButton;
