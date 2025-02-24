@@ -17,7 +17,7 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] GameObject diskImages;
     [SerializeField] GameObject RAMImages;
     Hardware hwScript;
-
+    public int position;
 	BGN Cost;
     public BGN Multiplier;
     public BGN UpgradeCostMultiplier;
@@ -49,11 +49,11 @@ public class ShelfItem : MonoBehaviour
             HardwareButton.interactable = false;
             PurchaseButton.gameObject.SetActive(true);
         } else {
-            PurchaseHW();
+            //PurchaseHW();
         }
     }
 
-    private void PurchaseHW() {
+    public void PurchaseHW() {
         Purchased = true;
 		HardwareButton.interactable = true;
 		PurchaseButton.gameObject.SetActive(false);
@@ -64,21 +64,26 @@ public class ShelfItem : MonoBehaviour
         HardwareCG.alpha = 0;
         hardware.GetComponentInChildren<Image>().sprite = bgTexture;
         hwScript.upgradeCostMultiplier = UpgradeCostMultiplier;
-        hwScript.SetGPUMultiplier(Multiplier);
+        hwScript.SetGPUMultiplier(Multiplier, position);
         hwScript.RebirthMultiplier = RebirthMultiplier;
         hwScript.diskImages = diskImages.GetComponentsInChildren<Image>();
         hwScript.RAMImages = RAMImages.GetComponentsInChildren<Image>();
         Image[] imgs = this.GetComponentsInChildren<Image>();
         imgs[2].color = new Color(1, 1, 1, 1);
-    }
+		PlayerPrefs.SetInt("PurchasedHW" + position, 1);
+        PlayerPrefs.Save();
+	}
 
     public void setPrice(BGN price) {
         Cost = price;
     }
 
+	public void Load() {
+		hwScript.Load(position);
+	}
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         
     }

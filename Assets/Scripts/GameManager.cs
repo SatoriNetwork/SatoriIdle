@@ -16,16 +16,30 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] ShelfGenerator shelfGenerator;
     [SerializeField] private int RebirthMultiplier = 1;
     [SerializeField] public int RebirthCost = 10000;
-	[SerializeField] public int SatoriConnectionMultiplier;
-	[SerializeField] public bool SatoriConnected;
-	[SerializeField] string UserAddress;
+
+	private const string SATORI_POINTS_PP = "SatoriPointsPP";
+	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
+	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
+
     private void Start() {
 		instance = this;
-        SatoriPoints = new BGN(startingMoneys);
-        SatoriPointsTotal = new BGN(startingMoneys);
-		CheckSatoriConnection();
-    }
-    public int getRebirthMultiplier()
+		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 1);
+		if (firstTime == 1) {
+
+			SatoriPoints = new BGN(5);
+			SatoriPointsTotal = new BGN(5);
+			PlayerPrefs.SetInt("FIRSTTIME", 0);
+			SatoriPoints.Save(SATORI_POINTS_PP);
+			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
+
+		} else {
+			SatoriPoints.Load(SATORI_POINTS_PP);
+			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
+		}
+		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
+
+	}
+	public int getRebirthMultiplier()
 	{ 
 		return RebirthMultiplier;
 	}
@@ -63,6 +77,8 @@ public class GameManager : MonoBehaviour {
 		SatoriPoints += sp;
 		SatoriPointsTotal += sp;
         Debug.Log(SatoriPointsTotal);
+		SatoriPoints.Save(SATORI_POINTS_PP);
+		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
     }
 
 	private void FixedUpdate() {
@@ -90,6 +106,11 @@ public class GameManager : MonoBehaviour {
 			SatoriPoints = new BGN(5);
 			SatoriPointsTotal = new BGN(5);
 			shelfGenerator.Rebirth();
+
+			SatoriPoints.Save(SATORI_POINTS_PP);
+			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
+			PlayerPrefs.SetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
+			PlayerPrefs.Save();
 		}
 	}
 	private int calculateRebirth()
@@ -111,4 +132,9 @@ public class GameManager : MonoBehaviour {
         }
         return 0;
     }
+
+	private void Update() {
+		SatoriPoints.Save(SATORI_POINTS_PP);
+		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
+	}
 }
