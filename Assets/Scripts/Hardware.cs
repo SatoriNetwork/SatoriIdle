@@ -488,7 +488,7 @@ public class Hardware : MonoBehaviour
 
                 GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
-                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.3f,0.5f);
+                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.5f,0.5f);
 
                 usedAPoints.Add(pair.a);
                 usedBPoints.Add(pair.b);
