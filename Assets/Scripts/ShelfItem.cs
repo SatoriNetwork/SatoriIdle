@@ -15,6 +15,7 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] float cost;
     [SerializeField] BGN.Structures costStructure;
     [SerializeField] GameObject diskImages;
+    [SerializeField] GameObject RAMImages;
     Hardware hwScript;
 
 	BGN Cost;
@@ -66,6 +67,7 @@ public class ShelfItem : MonoBehaviour
         hwScript.SetGPUMultiplier(Multiplier);
         hwScript.RebirthMultiplier = RebirthMultiplier;
         hwScript.diskImages = diskImages.GetComponentsInChildren<Image>();
+        hwScript.RAMImages = RAMImages.GetComponentsInChildren<Image>();
         Image[] imgs = this.GetComponentsInChildren<Image>();
         imgs[2].color = new Color(1, 1, 1, 1);
     }

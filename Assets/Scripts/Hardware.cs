@@ -15,6 +15,7 @@ public class Hardware : MonoBehaviour
     public float neighborhoodThreshhold = 10000;
     public int connectionAmount = 5;
     public Image[] diskImages;
+    public Image[] RAMImages;
     
 
     [SerializeField] GameObject NeuronPrefab;
@@ -75,11 +76,11 @@ public class Hardware : MonoBehaviour
         rect = GetComponent<RectTransform>();
         PlaceNeuronsInHardware();
         updateDiskImages();
+        updateRAMImages();
     }
 
 	private void Update() {
 		updateShopVisuals();
-
 	}
 	public void updateShopVisuals() {
         NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
@@ -109,6 +110,15 @@ public class Hardware : MonoBehaviour
             if (i < diskImages.Length) diskImages[i].color = Color.white;
         }
     }
+
+    void updateRAMImages()
+    {
+        for (int i = 0; i < RAM; i++)
+        {
+            if (i < RAMImages.Length) RAMImages[i].color = Color.white;
+        }
+    }
+
     public BGN CalculateCost(int upgradeLevel, BGN initialCost, float rate = 1.25f) {// make this more complicated later
         BGN newCost = BGN.PowMultiply(initialCost, rate, upgradeLevel);
         return newCost;
@@ -142,11 +152,10 @@ public class Hardware : MonoBehaviour
                     neuron.progressTimer = neuron.progressTimerMax;
                 }
             }
-            Debug.Log("Upgraded RAM");
-
 			GameManager.instance.SatoriPoints -= RamCost;
 			RamCost = CalculateCost((int)RAM, InitRamCost, 2f);
-		}
+            updateRAMImages();
+        }
         else
         {
             Debug.Log("Fully Upgraded");
