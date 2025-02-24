@@ -111,7 +111,7 @@ public class Hardware : MonoBehaviour
 			foreach (Neuron neuron in NeuronList) {
 				if (!neuron.stake) {
 					neuron.CreateStake();
-					stakedNeurons++;
+					//stakedNeurons++;
 					break;
 				}
 			}
