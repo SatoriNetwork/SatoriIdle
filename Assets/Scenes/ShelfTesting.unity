@@ -3289,7 +3289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30.31084, y: -30.311028}
+  m_AnchoredPosition: {x: -30.310791, y: -30.311035}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &1143683841
@@ -5388,6 +5388,12 @@ MonoBehaviour:
   UserAddress: ETU972nu9naUffZuUkVFoHGpq2AZJdBjFi
   SatoriConnectionMultiplier: 1
   SatoriConnected: 0
+  SettingButtonImg: {fileID: 969905861}
+  ConnectedImages:
+  - {fileID: 21300000, guid: 47035ee2c148ca843b9534ea4ee968a8, type: 3}
+  - {fileID: 21300000, guid: 4b50b63c2558e7148b168b2df623f29d, type: 3}
+  - {fileID: 21300000, guid: 201fa278f9226c649b5cf89117470004, type: 3}
+  playerAddressText: {fileID: 407149427}
 --- !u!4 &1863337266
 Transform:
   m_ObjectHideFlags: 0

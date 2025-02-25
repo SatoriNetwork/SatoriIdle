@@ -111,7 +111,7 @@ public class Hardware : MonoBehaviour
 		}
 		connections.Clear();
 		PlaceNeuronsInHardware();
-		stakedNeurons = PlayerPrefs.GetInt(STAKED_NEURON_COUNT, 0);
+		stakedNeurons = PlayerPrefs.GetInt(STAKED_NEURON_COUNT + position, 0);
         for (int i = 0; i < stakedNeurons; i++) {
 			foreach (Neuron neuron in NeuronList) {
 				if (!neuron.stake) {
@@ -300,7 +300,7 @@ public class Hardware : MonoBehaviour
                 if (!neuron.stake) {
                     neuron.CreateStake();
                     stakedNeurons++;
-                    PlayerPrefs.SetInt(STAKED_NEURON_COUNT, stakedNeurons);
+                    PlayerPrefs.SetInt(STAKED_NEURON_COUNT + position, stakedNeurons);
                     PlayerPrefs.Save();
                     break;
                 }

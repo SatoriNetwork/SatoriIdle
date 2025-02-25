@@ -37,10 +37,7 @@ public class GameManager : MonoBehaviour {
 
 	private void Awake() {
 
-		instance = this;
-	}
-
-	private void Start() {
+		instance = this; 
 		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
 		if (firstTime == 0) {
 
@@ -55,6 +52,10 @@ public class GameManager : MonoBehaviour {
 			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
+	}
+
+	private void Start() {
+
 		UserAddress = PlayerPrefs.GetString("StringUserAddress");
 		playerAddressText.text = UserAddress;
         CheckSatoriConnection();
@@ -113,8 +114,6 @@ public class GameManager : MonoBehaviour {
 		SatoriPoints += sp;
 		SatoriPointsTotal += sp;
         Debug.Log(SatoriPointsTotal);
-		SatoriPoints.Save(SATORI_POINTS_PP);
-		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
     }
 
 	private void FixedUpdate() {
@@ -143,8 +142,6 @@ public class GameManager : MonoBehaviour {
 			SatoriPointsTotal = new BGN(5);
 			shelfGenerator.Rebirth();
 
-			SatoriPoints.Save(SATORI_POINTS_PP);
-			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
 			PlayerPrefs.SetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
 			PlayerPrefs.Save();
 		}
