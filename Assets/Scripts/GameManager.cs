@@ -2,23 +2,35 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
 
+	//base economy setup
 	[SerializeField] int startingMoneys = 5;
 	[SerializeField] public BGN SatoriPoints = new BGN(5);
 	[SerializeField] public BGN SatoriPointsTotal = new BGN(5);
+
+	//ui
 	[SerializeField] TextMeshProUGUI SPText;
 	[SerializeField] TextMeshProUGUI RebirthText;
 	[SerializeField] GameObject RebirthButton;
 	[SerializeField] ShelfGenerator shelfGenerator;
+
+	//rebirth
     [SerializeField] private int RebirthMultiplier = 1;
     [SerializeField] public int RebirthCost = 10000;
+
+	//neuron connection
 	[SerializeField] public string UserAddress = "";
 	[SerializeField] public int SatoriConnectionMultiplier = 1;
 	[SerializeField] public bool SatoriConnected = false;
+	[SerializeField] public Image SettingButtonImg;
+	[SerializeField] public Sprite[] ConnectedImages;
+	[SerializeField] public TMP_InputField playerAddressText;
+
+	//save
 	private const string SATORI_POINTS_PP = "SatoriPointsPP";
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
@@ -43,14 +55,27 @@ public class GameManager : MonoBehaviour {
 			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
-		CheckSatoriConnection();
+		UserAddress = PlayerPrefs.GetString("StringUserAddress");
+		playerAddressText.text = UserAddress;
+        CheckSatoriConnection();
 	}
 	public int getRebirthMultiplier()
 	{ 
 		return RebirthMultiplier;
 	}
+
+	public void changeSatoriConnection(){
+        UserAddress = playerAddressText.text;
+        if (playerAddressText.text.Length == 0)
+        {
+            SettingButtonImg.sprite = ConnectedImages[0];
+        }
+		PlayerPrefs.SetString("StringUserAddress", UserAddress);
+		PlayerPrefs.Save();
+	}
 	public void CheckSatoriConnection()
 	{
+		changeSatoriConnection();
 		string url = "https://stage.satorinet.io/api/v0/neuron/activity/" + UserAddress;
 		StartCoroutine(getRequest(url));
     }
@@ -58,23 +83,29 @@ public class GameManager : MonoBehaviour {
 	{
         UnityWebRequest request = UnityWebRequest.Get(url);
 		yield return request.SendWebRequest();
-        if (request.result == UnityWebRequest.Result.Success)
-        {
-            string response = request.downloadHandler.text;
+		if (request.result == UnityWebRequest.Result.Success)
+		{
+			string response = request.downloadHandler.text;
 			Debug.Log(response);
 			//change to whatever true or false is.
 			if (response == "true")
 			{
 				SatoriConnectionMultiplier = 5;
 				SatoriConnected = true;
-			}
+                SettingButtonImg.sprite = ConnectedImages[1];
+            }
 			else
 			{
 				SatoriConnectionMultiplier = 1;
-				SatoriConnected = false;	
-			}
-        }
-		Debug.Log(request.result);
+				SatoriConnected = false;
+                SettingButtonImg.sprite = ConnectedImages[2];
+            }
+		}
+		else
+		{
+			SettingButtonImg.sprite = ConnectedImages[0];
+		}
+		Debug.Log(request);
 
 
     }
@@ -87,7 +118,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	private void FixedUpdate() {
-		SPText.text = SatoriPoints.ToString();
+        SPText.text = SatoriPoints.ToString();
 		int calc = calculateRebirth();
 		if (calc > 0)
 		{
@@ -142,5 +173,9 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetInt(REBIRTH_MULTIPLIER_PP , RebirthMultiplier);
 		SatoriPoints.Save(SATORI_POINTS_PP);
 		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
-	}
+
+		
+    }
+
+
 }
