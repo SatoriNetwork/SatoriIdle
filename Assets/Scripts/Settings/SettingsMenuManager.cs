@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,10 @@ public class SettingsMenuManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         Open.onClick.AddListener(() => {
-            Menu.SetActive(true);
+            Menu.SetActive(flip());
         });
 		Close.onClick.AddListener(() => {
-			Menu.SetActive(false);
+			Menu.SetActive(flip());
 		});
         Menu.SetActive(false);
 	}
@@ -22,5 +23,10 @@ public class SettingsMenuManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    bool flip()
+    {
+        return !Menu.activeSelf;
     }
 }
