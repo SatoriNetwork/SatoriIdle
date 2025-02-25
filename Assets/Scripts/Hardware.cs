@@ -1,6 +1,8 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -71,7 +73,7 @@ public class Hardware : MonoBehaviour
 		}
 	}
 
-	public void Load(int position) {
+	public void Load(int position, double seconds) {
         MemorySlots = PlayerPrefs.GetInt(MEMORY_SLOTS + position, 1);
         MemoryCost.Load(MEMORY_COST + position + "n");
 
@@ -87,6 +89,9 @@ public class Hardware : MonoBehaviour
         disk = PlayerPrefs.GetInt(DISK_AMOUNT + position, 1);
         DiskCost.Load(DISK_COST + position + "n");
 
+        seconds = Math.Min(disk * 60 * 60, seconds);
+
+        double timesNeuronEarned = seconds / (5 - RAM * RAMDecreaseAmount);
 
 		int neuronCount = PlayerPrefs.GetInt(NEURON_COUNT + position, 0);
         for (int i = 0; i < neuronCount; i++) {
@@ -117,6 +122,9 @@ public class Hardware : MonoBehaviour
 			}
 			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
 		}
+
+        timesNeuronEarned *= stakedNeurons;
+		GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 	}
 
     public void SetGPUMultiplier(BGN multiplier, int position) {
@@ -314,13 +322,13 @@ public class Hardware : MonoBehaviour
             while (!validPlace && attemptCount < maxAttempts)
             {
                 attemptCount++;
-                // Generate random position within parent bounds
-                float yOffset = Random.Range(0, (rect.rect.height / 2 - neuronRect.rect.height));
-                yOffset *= Random.Range(0, 2) == 0 ? 1 : -1;
+                // Generate UnityEngine.Random position within parent bounds
+                float yOffset = UnityEngine.Random.Range(0, (rect.rect.height / 2 - neuronRect.rect.height));
+                yOffset *= UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1;
                 int y = (int)yOffset;
 
-                float xOffset = Random.Range(0, (rect.rect.width / 2 - neuronRect.rect.width));
-                xOffset *= Random.Range(0, 2) == 0 ? 1 : -1;
+                float xOffset = UnityEngine.Random.Range(0, (rect.rect.width / 2 - neuronRect.rect.width));
+                xOffset *= UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1;
                 int x = (int)xOffset;
 
                 validPlace = true;
@@ -486,7 +494,7 @@ public class Hardware : MonoBehaviour
                 Vector2 direction = pair.b - pair.a;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
+                GameObject connector = Instantiate(connectorPrefabs[UnityEngine.Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
                 connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.5f,0.5f);
 

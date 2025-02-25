@@ -13,7 +13,7 @@ public class Neuron : MonoBehaviour
 	public bool working = false;
 	public bool stake = false;
 	public float critChance = 0;
-	[SerializeField] BGN worth = new BGN(1);
+	[SerializeField] public BGN worth = new BGN(1);
 	[SerializeField] public BGN GPUMultiplier = new BGN(1);
 	public bool enableVisuals = true;
 

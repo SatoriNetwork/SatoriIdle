@@ -78,8 +78,8 @@ public class ShelfItem : MonoBehaviour
         Cost = price;
     }
 
-	public void Load() {
-		hwScript.Load(position);
+	public void Load(double seconds) {
+		hwScript.Load(position, seconds);
 	}
 
 	// Update is called once per frame

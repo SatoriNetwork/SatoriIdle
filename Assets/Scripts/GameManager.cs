@@ -23,8 +23,12 @@ public class GameManager : MonoBehaviour {
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
 
-    private void Start() {
+	private void Awake() {
+
 		instance = this;
+	}
+
+	private void Start() {
 		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 1);
 		if (firstTime == 1) {
 

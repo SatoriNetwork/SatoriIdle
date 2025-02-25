@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,8 @@ public class ShelfGenerator : MonoBehaviour
 	[SerializeField] float multiIncrease = 3;
 	[SerializeField] int multiInital = 10;
 
+	private const string PLAYER_PREFS_DATE = "date";
+
     private void Start()
     {
 		Generate();
@@ -28,7 +31,12 @@ public class ShelfGenerator : MonoBehaviour
 		BGN cost = new BGN(0);
 		BGN multiplier = new BGN(1);
 		BGN upgradeCost = new BGN(1);
-        for (int i = 0; i < GPUSprites.Count; i++) {
+
+		DateTime oldtime = DateTime.Parse(PlayerPrefs.GetString(PLAYER_PREFS_DATE, DateTime.Now.ToString()));
+		TimeSpan time = DateTime.Now - oldtime;
+		double seconds = time.TotalSeconds;
+
+		for (int i = 0; i < GPUSprites.Count; i++) {
 			GameObject go = Instantiate(shelfItemPrefab, gameObject.transform);
 			Image[] imgs = go.GetComponentsInChildren<Image>();
 			imgs[2].sprite = GPUSprites[i];
@@ -50,7 +58,7 @@ public class ShelfGenerator : MonoBehaviour
 			int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
 			if (purchased == 1) {
 				si.PurchaseHW();
-				si.Load();
+				si.Load(seconds);
 			}
 			
 			//add GPU
@@ -74,5 +82,10 @@ public class ShelfGenerator : MonoBehaviour
 			Destroy(go);
 		}
 		ShelfGO = new List<GameObject>();	
+	}
+
+	private void Update() {
+		PlayerPrefs.SetString(PLAYER_PREFS_DATE, DateTime.Now.ToString());
+		PlayerPrefs.Save();
 	}
 }
