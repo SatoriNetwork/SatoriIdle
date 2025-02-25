@@ -29,12 +29,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Start() {
-		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 1);
-		if (firstTime == 1) {
+		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
+		if (firstTime == 0) {
 
 			SatoriPoints = new BGN(startingMoneys);
 			SatoriPointsTotal = new BGN(startingMoneys);
-			PlayerPrefs.SetInt("FIRSTTIME", 0);
+			PlayerPrefs.SetInt("FIRSTTIME", 1);
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
 
@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	private void Update() {
+		PlayerPrefs.SetInt(REBIRTH_MULTIPLIER_PP , RebirthMultiplier);
 		SatoriPoints.Save(SATORI_POINTS_PP);
 		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
 	}
