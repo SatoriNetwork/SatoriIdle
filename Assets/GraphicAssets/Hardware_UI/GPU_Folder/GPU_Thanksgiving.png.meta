@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_Thanksgiving_0: 6323130242673827286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

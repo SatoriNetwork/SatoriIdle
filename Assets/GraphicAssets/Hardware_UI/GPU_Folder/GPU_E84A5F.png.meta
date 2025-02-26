@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_E84A5F_0: 9019190068755314955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

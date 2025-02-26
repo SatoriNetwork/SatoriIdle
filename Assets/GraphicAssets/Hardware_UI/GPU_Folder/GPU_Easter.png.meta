@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GPU_Easter_0: 8781177150402896529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
