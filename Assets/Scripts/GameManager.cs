@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
 
 	private void Awake() {
-
+		PlayerPrefs.DeleteAll();
 		instance = this; 
 		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
 		if (firstTime == 0) {

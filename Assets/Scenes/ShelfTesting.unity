@@ -5378,7 +5378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03ffefbada47084cbaa2bfd4fc8ec18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMoneys: 100000000
+  startingMoneys: 5
   SPText: {fileID: 1185152873}
   RebirthText: {fileID: 582092440}
   RebirthButton: {fileID: 378064627}

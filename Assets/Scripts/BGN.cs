@@ -166,25 +166,32 @@ public class BGN {
 	}
 
 	public static BGN operator *(BGN lhs, double rhs) {
-		if (rhs == 0) return new BGN(0); // If multiplying by 0, return 0
+		if (rhs == 0) return new BGN(0); // Multiplication by zero case
 
 		BGN result = new BGN();
 		double carry = 0;
 
 		for (int i = 0; i < lhs.list.Count; i++) {
-			double product = lhs.list[i] * rhs + carry;
-			result.list.Add((short)(product % 1000));
-			carry = Math.Floor(product / 1000);
+			double product = lhs.list[i] * rhs + carry;  // Multiply and add carry
+			result.list.Add((short)(product % 1000));   // Store last 3 digits
+			carry = product / 1000;
+			int j = i;// Carry is full value, including decimals
+
+			for (j = i - 1; j > -1; j--) {
+				product *= 1000;
+				result.list[j] += (short)(product % 1000);
+			}
 		}
 
-		// Handle any remaining carry
+		// Handle any remaining carry (for cases where multiplication increases magnitude)
 		while (carry >= 1) {
 			result.list.Add((short)(carry % 1000));
-			carry = Math.Floor(carry / 1000);
+			carry /= 1000;
 		}
 
 		return result;
 	}
+
 
 	//subtract Values
 	public static BGN operator -(BGN lhs, BGN rhs) {
