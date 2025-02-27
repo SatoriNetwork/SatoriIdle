@@ -21,11 +21,8 @@ public class ShelfItem : MonoBehaviour
 	BGN Cost;
     public BGN Multiplier;
     public BGN UpgradeCostMultiplier;
-    public int RebirthMultiplier;
+    public BGN RebirthMultiplier;
     public Sprite bgTexture;
-	private void Awake() {
-        Cost = new BGN(cost, costStructure);
-	}
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()

@@ -29,7 +29,7 @@ public class Hardware : MonoBehaviour
     public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
     public float maxCritChance = 75; //Max Crit Chance allowed 
-    public int RebirthMultiplier = 1;
+    public BGN RebirthMultiplier = new BGN(1);
     //public int GPUMultiplier = 1; //GPU Multiplier value
     BGN GPUMultiplier = new BGN(1);
     public BGN NeuronCost = new BGN(1); //max amount of neurons
@@ -133,7 +133,7 @@ public class Hardware : MonoBehaviour
 		}
 
         timesNeuronEarned *= stakedNeurons;
-		GameManager.instance.addPoints((new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
+		if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 	}
 
     public void SetGPUMultiplier(BGN multiplier, int position) {
@@ -169,7 +169,7 @@ public class Hardware : MonoBehaviour
             progressTimer -= Time.deltaTime;
             if (progressTimer <= 0) {
 
-				GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons);
+                if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons);
                 progressTimer = progressTimerMax;
 			}
 		}
@@ -287,7 +287,7 @@ public class Hardware : MonoBehaviour
             newNeuron.GPUMultiplier = GPUMultiplier * RebirthMultiplier;
             NeuronList.Add(newNeuron);
             updateCritChance();
-            PlacedNeuronList.Clear();
+            //PlacedNeuronList.Clear(); remove to have it random placement 
             foreach (GameObject connection in connections)
             {
                 Destroy(connection.gameObject);
@@ -335,6 +335,7 @@ public class Hardware : MonoBehaviour
     {
         foreach (Neuron neuron in NeuronList)
         {
+            if (PlacedNeuronList.Contains(neuron)) continue; // Skip if already placed remove to have it random
             RectTransform neuronRect = neuron.GetComponent<RectTransform>();
             bool validPlace = false;
             int attemptCount = 0;

@@ -1,15 +1,20 @@
 using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static BGN;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
 
 	//base economy setup
-	[SerializeField] int startingMoneys = 5;
-	[SerializeField] public BGN SatoriPoints = new BGN(5);
+	[SerializeField] float startingMoneysFloat = 5;
+	[SerializeField] Structures startingMoneysStructure = Structures.NONE;
+    [SerializeField] public BGN SatoriPoints = new BGN(5);
 	[SerializeField] public BGN SatoriPointsTotal = new BGN(5);
 
 	//ui
@@ -19,29 +24,33 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] ShelfGenerator shelfGenerator;
 
 	//rebirth
-    [SerializeField] private int RebirthMultiplier = 1;
+    [SerializeField] private BGN RebirthMultiplier = new BGN(1);
     [SerializeField] public int RebirthCost = 10000;
+    private BGN rebirths = new BGN(0);
+    private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
-	//neuron connection
-	[SerializeField] public string UserAddress = "";
+
+    //neuron connection
+    [SerializeField] public string UserAddress = "";
 	[SerializeField] public int SatoriConnectionMultiplier = 1;
 	[SerializeField] public bool SatoriConnected = false;
 	[SerializeField] public Image SettingButtonImg;
 	[SerializeField] public Sprite[] ConnectedImages;
 	[SerializeField] public TMP_InputField playerAddressText;
 
-	//save
-	private const string SATORI_POINTS_PP = "SatoriPointsPP";
+    //save
+    private const string SATORI_POINTS_PP = "SatoriPointsPP";
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
-
 	private void Awake() {
-		instance = this; 
+        instance = this; 
 		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
 		if (firstTime == 0) {
+			SatoriPoints = new BGN(startingMoneysFloat,startingMoneysStructure);
+			//SatoriPoints = new BGN((int)startingMoneysFloat);
 
-			SatoriPoints = new BGN(startingMoneys);
-			SatoriPointsTotal = new BGN(startingMoneys);
+            SatoriPointsTotal = new BGN(startingMoneysFloat,startingMoneysStructure);
+            //SatoriPointsTotal = new BGN((int)startingMoneysFloat);
 			PlayerPrefs.SetInt("FIRSTTIME", 1);
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
@@ -50,16 +59,18 @@ public class GameManager : MonoBehaviour {
 			SatoriPoints.Load(SATORI_POINTS_PP);
 			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
-		RebirthMultiplier = PlayerPrefs.GetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
-	}
+		RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
+    }
 
 	private void Start() {
 
 		UserAddress = PlayerPrefs.GetString("StringUserAddress");
 		playerAddressText.text = UserAddress;
+        RebirthButton.SetActive(false);
         CheckSatoriConnection();
-	}
-	public int getRebirthMultiplier()
+        _ = RunCalculateRebirthLoop();
+    }
+    public BGN getRebirthMultiplier()
 	{ 
 		return RebirthMultiplier;
 	}
@@ -86,7 +97,6 @@ public class GameManager : MonoBehaviour {
 		if (request.result == UnityWebRequest.Result.Success)
 		{
 			string response = request.downloadHandler.text;
-			Debug.Log(response);
 			//change to whatever true or false is.
 			if (response == "true")
 			{
@@ -105,8 +115,6 @@ public class GameManager : MonoBehaviour {
 		{
 			SettingButtonImg.sprite = ConnectedImages[0];
 		}
-		Debug.Log(request);
-
 
     }
 	public void addPoints(BGN sp) {
@@ -116,57 +124,72 @@ public class GameManager : MonoBehaviour {
 
 	private void FixedUpdate() {
         SPText.text = SatoriPoints.ToString();
-		int calc = calculateRebirth();
-		if (calc > 0)
-		{
-			RebirthButton.SetActive(true);
-			RebirthText.text = "Rebirth: " + calc + "X";
-		}
-		else
-		{
-			RebirthButton.SetActive(false);
-		}
-		
 
-	}
+    }
 	public void Rebirth()
 	{
         BGN rebirthNeeded = new BGN(RebirthCost);
         rebirthNeeded = rebirthNeeded * RebirthMultiplier;
 		if (SatoriPointsTotal >= rebirthNeeded)
 		{
-			RebirthMultiplier += calculateRebirth();
-			SatoriPoints = new BGN(5);
-			SatoriPointsTotal = new BGN(5);
-			shelfGenerator.Rebirth();
-
-			PlayerPrefs.SetInt(REBIRTH_MULTIPLIER_PP, RebirthMultiplier);
-			PlayerPrefs.Save();
-		}
-	}
-	private int calculateRebirth()
-	{
-        BGN rebirthNeeded = new BGN(RebirthCost);
-        rebirthNeeded *= RebirthMultiplier;  
-        if (SatoriPointsTotal >= rebirthNeeded)
-        {
-            int count = 0;
-            BGN satoriTemp = SatoriPointsTotal;
-
-            while (satoriTemp >= rebirthNeeded)
-            {
-                satoriTemp -= rebirthNeeded;
-                count++;
-                rebirthNeeded = new BGN(RebirthCost) * (RebirthMultiplier + count);
-            }
-            return count;
+			cancellationTokenSource.Cancel();
+            cancellationTokenSource = new CancellationTokenSource();
+            RebirthButton.SetActive(false);
+            RebirthMultiplier += rebirths;
+            Debug.Log(RebirthMultiplier);
+            SatoriPoints = new BGN(5);
+            SatoriPointsTotal = new BGN(5);
+            shelfGenerator.Rebirth();
+            RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
+            _ = RunCalculateRebirthLoop();
         }
-        return 0;
+	}
+	public void resetSave()
+	{
+		PlayerPrefs.DeleteAll();
+		SceneManager.LoadScene("ShelfTesting");
+	}
+    private async Task RunCalculateRebirthLoop()
+    {
+        while (true)
+        {
+            await calculateRebirth(cancellationTokenSource.Token);
+            await Task.Delay(1000);
+        }
     }
 
-	private void Update() {
-		PlayerPrefs.SetInt(REBIRTH_MULTIPLIER_PP , RebirthMultiplier);
-		SatoriPoints.Save(SATORI_POINTS_PP);
+    private async Task<BGN> calculateRebirth(CancellationToken cancellationToken)
+    {
+        BGN rebirthNeeded = new BGN(RebirthCost);
+        rebirthNeeded *= RebirthMultiplier;
+		Task<BGN> rebirthsTask = null;
+        if (SatoriPointsTotal >= rebirthNeeded)
+        {
+            BGN count = new BGN(0);
+            BGN satoriTemp = SatoriPointsTotal;
+            count = satoriTemp * (1 / (double)RebirthCost);
+            rebirthsTask = Task.Run(() => BGN.Sqrt(new BGN(2) * count), cancellationToken); ;
+			rebirths = await rebirthsTask;
+
+        }
+        if (rebirths > new BGN(0) && rebirthsTask != null && rebirthsTask.IsCompleted)
+        {
+            rebirths = rebirths - RebirthMultiplier + new BGN(1);
+            RebirthButton.SetActive(true);
+            RebirthText.text = "Rebirth: " + rebirths + " X";
+        }
+        else
+        {
+            RebirthButton.SetActive(false);
+        }
+
+        return rebirths;
+    }
+
+
+    private void Update() {
+		RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
+        SatoriPoints.Save(SATORI_POINTS_PP);
 		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
 
 		
