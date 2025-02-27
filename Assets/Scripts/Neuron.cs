@@ -43,6 +43,7 @@ public class Neuron : MonoBehaviour
 	}
 
 	void Update() {
+		if (!enableVisuals) return;
 		if (working || stake) {
 			progressTimer -= Time.deltaTime;
 			progress.value = 1 - (progressTimer / progressTimerMax);
@@ -50,19 +51,19 @@ public class Neuron : MonoBehaviour
 				working = false;
 				if (UnityEngine.Random.Range(0, 100) <= critChance)
 				{
-                    GameManager.instance.addPoints(worth*(new BGN(2))*GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);
+                    GameManager.instance.addPoints((new BGN(2))*GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);
 					if (enableVisuals) {
 						GameObject textGO = Instantiate(CritfloatingTextPrefab, gameObject.transform);
-						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * (new BGN(2)) * GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier).ToString();
+						textGO.GetComponentInChildren<TextMeshProUGUI>().text = ( (new BGN(2)) * GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier).ToString();
 						Destroy(textGO, 1);
 					}
 				}
 				else
 				{
-					GameManager.instance.addPoints(worth*GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);
+					GameManager.instance.addPoints(GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);
 					if (enableVisuals) {
 						GameObject textGO = Instantiate(floatingTextPrefab, gameObject.transform);
-						textGO.GetComponentInChildren<TextMeshProUGUI>().text = (worth * GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier).ToString();
+						textGO.GetComponentInChildren<TextMeshProUGUI>().text = ( GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier).ToString();
 						Destroy(textGO, 1);
 					}
 				}
