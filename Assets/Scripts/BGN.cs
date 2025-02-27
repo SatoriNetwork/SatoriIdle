@@ -69,7 +69,64 @@ public class BGN {
 		Load(saveName);
 	}
 
-    public void addInt(int num) {
+	public static BGN CalculateY(BGN x) {
+		// Step 1: Multiply by 2
+		BGN twoX = x * 2;
+
+		// Step 2: Add 1/4 (BGN cannot store decimals, so approximate by adding 0)
+		BGN value = twoX + new BGN(0);
+
+		// Step 3: Compute the square root using Newton's method
+		BGN sqrtValue = Sqrt(value);
+
+		// Step 4: Subtract 1/2 (approximate in BGN as just subtracting 0)
+		return sqrtValue - new BGN(0);
+	}
+
+	// Integer-based square root approximation using Newton's method
+	public static BGN Sqrt(BGN n) {
+		if (n == new BGN(0) || n == new BGN(1)) return n;
+
+		BGN x0 = n;
+		BGN x1 = (x0 + (n / x0)) / new BGN(2);
+
+		while (x1 < x0) {
+			x0 = x1;
+			x1 = (x0 + (n/x0)) / new BGN(2);
+		}
+
+		return x0;
+	}
+
+	public static BGN operator /(BGN lhs, BGN rhs) {
+		if (rhs == new BGN(0)) throw new DivideByZeroException("Cannot divide by zero!");
+
+		BGN quotient = new BGN();
+		BGN remainder = lhs;  // Make a copy of lhs for reduction
+		BGN one = new BGN(1);
+
+		// Ensure we are iterating over valid parts
+		while (remainder >= rhs) {
+			BGN multiplier = new BGN(0);
+			BGN temp = rhs;
+
+			// Find the largest multiplier where (rhs * multiplier) <= remainder
+			while (temp <= remainder) {
+				temp = temp + rhs;
+				multiplier = multiplier + one;
+			}
+
+			// Subtract the last valid multiple
+			remainder = remainder - (rhs * (multiplier));
+			quotient = quotient + (multiplier);
+		}
+
+		return quotient;
+	}
+
+
+
+	public void addInt(int num) {
         bool adding = true;
         int index = 0;
         while (adding) {
