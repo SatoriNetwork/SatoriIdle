@@ -65,7 +65,10 @@ public class Hardware : MonoBehaviour
     float progressTimer = 5;
     float progressTimerMax = 5;
 
-    public void disablNeurons() {
+
+	public static event EventHandler OnButtonPressed;
+
+	public void disablNeurons() {
         foreach (Neuron n in NeuronList) {
             n.enableVisuals = false;
         }
@@ -221,7 +224,8 @@ public class Hardware : MonoBehaviour
     public void UpgradeMemory()
     {
         if (GameManager.instance.SatoriPoints >= MemoryCost) {
-            if (MemorySlots < MaxMemory) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			if (MemorySlots < MaxMemory) {
                 MemorySlots += 1; 
                 GameManager.instance.SatoriPoints -= MemoryCost;
 				MemoryCost = CalculateCost(MemorySlots, InitMemoryCost);
@@ -238,9 +242,9 @@ public class Hardware : MonoBehaviour
     public void UpgradeRAM()
     {
 
-        if (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost)
-        {
-            RAM += 1;
+        if (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			RAM += 1;
             foreach (Neuron neuron in NeuronList)
             {
                 neuron.progressTimerMax-= RAMDecreaseAmount;
@@ -269,7 +273,8 @@ public class Hardware : MonoBehaviour
     public void UpgradeDisk()
     {
         if (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) {
-            disk += 1;
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			disk += 1;
 			GameManager.instance.SatoriPoints -= DiskCost;
 			DiskCost = CalculateCost(disk, InitDiskCost);
             PlayerPrefs.SetInt(DISK_AMOUNT + position, disk);
@@ -281,7 +286,8 @@ public class Hardware : MonoBehaviour
     {
         if (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost)
         {
-            Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
             newNeuron.progressTimer = newNeuron.progressTimerMax;
             newNeuron.GPUMultiplier = GPUMultiplier * RebirthMultiplier;
@@ -316,8 +322,8 @@ public class Hardware : MonoBehaviour
     public void StakeNeuron()
     {
         if (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) {
-
-            foreach (Neuron neuron in NeuronList) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			foreach (Neuron neuron in NeuronList) {
                 if (!neuron.stake) {
                     neuron.CreateStake();
                     stakedNeurons++;

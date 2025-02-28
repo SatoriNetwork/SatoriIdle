@@ -28,6 +28,7 @@ public class Neuron : MonoBehaviour
 	//events
 
 	public static event EventHandler OnNeuronPressed;
+	public static event EventHandler OnNeuronComplete;
 	private void Awake() {
 		neuron.onClick.AddListener(() => {
 			OnNeuronPressed?.Invoke(this, EventArgs.Empty);
@@ -49,6 +50,7 @@ public class Neuron : MonoBehaviour
 			progress.value = 1 - (progressTimer / progressTimerMax);
 			if (progressTimer <= 0) {
 				working = false;
+				OnNeuronComplete?.Invoke(this, EventArgs.Empty);
 				if (UnityEngine.Random.Range(0, 100) <= critChance)
 				{
                     GameManager.instance.addPoints((new BGN(2))*GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier);

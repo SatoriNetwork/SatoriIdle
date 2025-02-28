@@ -14,17 +14,35 @@ public class SoundManager : MonoBehaviour {
 	private void Start() {
 		//MainMenuUI.OnButtonPress += OnButtonPress;
 		Neuron.OnNeuronPressed += OnNeuronPress;
+		Neuron.OnNeuronComplete += Neuron_OnNeuronComplete;
+		Hardware.OnButtonPressed += Hardware_OnButtonPressed;
+		ShelfItem.purchase += Hardware_OnButtonPressed;
+		ShelfItem.openHardware += ShelfItem_openHardware;
+	}
+
+	private void Neuron_OnNeuronComplete(object sender, System.EventArgs e) {
+		PlaySound(sounds.coinPickUp, Camera.allCameras[0].transform.position, sounds.coinPickupVolume);
+	}
+
+	private void ShelfItem_openHardware(object sender, System.EventArgs e) {
+		PlaySound(sounds.HardwareSwoosh, Camera.allCameras[0].transform.position, sounds.HardwareSwooshVolume);
+	}
+
+
+
+	private void Hardware_OnButtonPressed(object sender, System.EventArgs e) {
+		PlaySound(sounds.buttonPress, Camera.allCameras[0].transform.position, sounds.buttonPressVolume);
 	}
 
 	//example of what MainMenuUI.OnButtonPress
 	// public static event EventHandler OnButtonPress;
 	//private void Awake() {
-		//PlayButton.onClick.AddListener(() => {
-			//OnButtonPress?.Invoke(this, EventArgs.Empty);
-		//});
+	//PlayButton.onClick.AddListener(() => {
+	//OnButtonPress?.Invoke(this, EventArgs.Empty);
+	//});
 	//}
 
-		//play sounds
+	//play sounds
 	private void OnNeuronPress(object sender, System.EventArgs e) {
 		PlaySound(sounds.neuronPress, Camera.allCameras[0].transform.position, sounds.neuronPressVolume);
 	}

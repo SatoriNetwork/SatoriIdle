@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class ShelfGenerator : MonoBehaviour
 {
@@ -56,8 +58,9 @@ public class ShelfGenerator : MonoBehaviour
 			upgradeCost = upgradeTemp * BGN.Pow(upgradeCostIncrease, i);
 
 			int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
-			if (purchased == 1) {
+			if (purchased == 1 || i == 0) {
 				si.PurchaseHW();
+				PlayerPrefs.SetInt("neuronCount" + 0, PlayerPrefs.GetInt("neuronCount" + 0, 1));
 				si.Load(seconds);
 			}
 			

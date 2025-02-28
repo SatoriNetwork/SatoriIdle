@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neuronPress: {fileID: 8300000, guid: 7f99ebabf4c68e14fa1e225a45fa21f0, type: 3}
   neuronPressVolume: 0.6
+  buttonPress: {fileID: 8300000, guid: 44677e69d3e05ef498f9a3773b1c5c0f, type: 3}
+  buttonPressVolume: 0.6
+  HardwareSwoosh: {fileID: 8300000, guid: d753902a5210e79498b83b45d314ea4f, type: 3}
+  HardwareSwooshVolume: 0.6
+  coinPickUp: {fileID: 8300000, guid: d2f1ab6c64a31a54d80c310e429924a6, type: 3}
+  coinPickupVolume: 0.6

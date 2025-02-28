@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,17 +25,23 @@ public class ShelfItem : MonoBehaviour
     public BGN RebirthMultiplier;
     public Sprite bgTexture;
 
+
+	public static event EventHandler purchase;
+	public static event EventHandler openHardware;
+
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
     {
         HardwareButton.onClick.AddListener(() => {
-            shelfCanvas.Instance.gameObject.SetActive(false);
+			openHardware.Invoke(this, EventArgs.Empty);
+			shelfCanvas.Instance.gameObject.SetActive(false);
             HardwareCG.alpha = 1;
             HardwareC.sortingOrder = 2;
             hwScript.enableNeurons();
         });
 
         PurchaseButton.onClick.AddListener(() => {
+            purchase.Invoke(this, EventArgs.Empty);
             if (GameManager.instance.SatoriPoints >= Cost) {
                 PurchaseHW();
                 GameManager.instance.SatoriPoints -= Cost;
