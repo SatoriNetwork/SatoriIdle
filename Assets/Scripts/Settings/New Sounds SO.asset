@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574e2ff3a79aab443888f13ed066cb0c, type: 3}
   m_Name: New Sounds SO
   m_EditorClassIdentifier: 
-  neuronPress: {fileID: 8300000, guid: 9c5b1da4c8db72b4eac60eada7349e14, type: 3}
+  neuronPress: {fileID: 8300000, guid: 7f99ebabf4c68e14fa1e225a45fa21f0, type: 3}
   neuronPressVolume: 0.6
