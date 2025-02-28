@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Satori_Texture_0: 845164423248286318
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

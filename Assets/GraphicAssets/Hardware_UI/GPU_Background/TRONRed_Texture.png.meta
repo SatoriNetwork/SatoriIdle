@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TRONRed_Texture_0: 2044831505062617199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

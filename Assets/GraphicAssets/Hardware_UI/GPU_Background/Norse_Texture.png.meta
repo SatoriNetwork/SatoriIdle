@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Norse_Texture_0: 2894153257805058435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Aztec_Texture_0: -31359245639519388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

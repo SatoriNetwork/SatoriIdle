@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AlienHive_Texture_0: 7663050359090351717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

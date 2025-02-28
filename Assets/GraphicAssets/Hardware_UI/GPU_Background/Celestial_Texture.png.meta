@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Celestial_Texture_0: -2114051263685893771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

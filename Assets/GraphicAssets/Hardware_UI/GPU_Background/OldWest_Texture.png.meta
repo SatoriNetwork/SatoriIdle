@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      OldWest_Texture_0: 3798740477800971402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

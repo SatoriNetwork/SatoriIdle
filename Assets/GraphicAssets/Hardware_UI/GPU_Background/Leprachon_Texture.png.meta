@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leprachon_Texture_0: -4731974219607419140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

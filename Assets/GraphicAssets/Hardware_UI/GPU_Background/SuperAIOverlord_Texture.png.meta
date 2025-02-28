@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SuperAIOverlord_Texture_0: 5904477641784477797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

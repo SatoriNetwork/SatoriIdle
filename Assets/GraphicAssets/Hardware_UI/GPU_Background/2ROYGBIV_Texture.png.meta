@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      2ROYGBIV_Texture_0: -27642248774319428
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

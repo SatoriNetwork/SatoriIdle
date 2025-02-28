@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pirate_Texture_0: -2593429971755765837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

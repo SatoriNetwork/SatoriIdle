@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Christmas_Texture_0: 5733095351813108292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

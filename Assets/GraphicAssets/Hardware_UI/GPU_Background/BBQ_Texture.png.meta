@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BBQ_Texture_0: -4394547431086281602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WarMachine_Texture_0: 4635128156947555507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

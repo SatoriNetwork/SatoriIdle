@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Thanksgiving_Texture_0: 6569172069917734275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

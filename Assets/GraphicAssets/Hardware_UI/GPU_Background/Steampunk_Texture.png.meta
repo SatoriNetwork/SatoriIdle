@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Steampunk_Texture_0: 2462000775489205217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BioTech_Texture_0: -1844026530120458332
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
