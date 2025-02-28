@@ -9,10 +9,6 @@ public class SoundManager : MonoBehaviour {
 
 	private void Awake() {
 		instance = this;
-	}
-
-	private void Start() {
-		//MainMenuUI.OnButtonPress += OnButtonPress;
 		Neuron.OnNeuronPressed += OnNeuronPress;
 		Neuron.OnNeuronComplete += Neuron_OnNeuronComplete;
 		BackFunction.HardwareBack += ShelfItem_openHardware;
@@ -20,6 +16,10 @@ public class SoundManager : MonoBehaviour {
 		SettingsMenuManager.onInteract += Hardware_OnButtonPressed;
 		ShelfItem.purchase += Hardware_OnButtonPressed;
 		ShelfItem.openHardware += ShelfItem_openHardware;
+	}
+
+	private void Start() {
+		//MainMenuUI.OnButtonPress += OnButtonPress;
 	}
 
 	private void Neuron_OnNeuronComplete(object sender, System.EventArgs e) {
