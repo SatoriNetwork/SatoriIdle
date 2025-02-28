@@ -17,6 +17,7 @@ public class SoundManager : MonoBehaviour {
 		Neuron.OnNeuronComplete += Neuron_OnNeuronComplete;
 		BackFunction.HardwareBack += ShelfItem_openHardware;
 		Hardware.OnButtonPressed += Hardware_OnButtonPressed;
+		SettingsMenuManager.onInteract += Hardware_OnButtonPressed;
 		ShelfItem.purchase += Hardware_OnButtonPressed;
 		ShelfItem.openHardware += ShelfItem_openHardware;
 	}
@@ -70,5 +71,6 @@ public class SoundManager : MonoBehaviour {
 		Hardware.OnButtonPressed -= Hardware_OnButtonPressed;
 		ShelfItem.purchase -= Hardware_OnButtonPressed;
 		ShelfItem.openHardware -= ShelfItem_openHardware;
+		SettingsMenuManager.onInteract -= Hardware_OnButtonPressed;
 	}
 }
