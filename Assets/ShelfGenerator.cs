@@ -71,6 +71,7 @@ public class ShelfGenerator : MonoBehaviour
 	public void Rebirth()
 	{
 		clearShelf();
+		PlayerPrefs.SetInt("neuronCount" + 0, 1);
 		for (int i = 0; i < GPUSprites.Count; i++) {
 
 			PlayerPrefs.SetInt("PurchasedHW" + i, 0);

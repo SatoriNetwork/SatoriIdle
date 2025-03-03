@@ -1,0 +1,12 @@
+# ninja log v5
+415	1032	7627394681626714	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	b0e3c46fc49eaf16
+1035	1665	7627394687856696	C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/build/intermediates/cxx/Debug/14202c16/obj/arm64-v8a/libswappywrapper.so	e319d4744b44f812
+329	2161	7627394692692104	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	2556ec09c243ba1f
+387	2166	7627394692652147	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f39a1cb9a5a17f48
+375	2179	7627394692962105	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	d1b0221c75a5ecdf
+349	2181	7627394692942130	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1354c078de0b4b6a
+399	2231	7627394693372087	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c02ca35cb81001bd
+2	2299	7627394693962165	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d21a068c80e1e811
+362	2407	7627394695292077	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	bf1c6717255b8e35
+339	2475	7627394696042082	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9e96307c8c5400fc
+2475	3201	7627394703438855	C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/build/intermediates/cxx/Debug/14202c16/obj/arm64-v8a/libgame.so	b11c4f9de47b57bf
