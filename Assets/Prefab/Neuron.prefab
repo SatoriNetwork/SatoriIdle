@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5558683950351539949
 CanvasRenderer:
@@ -97,7 +97,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -110,7 +110,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 0e875aafd0371944988c65569aec7bf0, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -138,6 +138,16 @@ MonoBehaviour:
   progress: {fileID: 1700419081898140121}
   progressTimer: 5
   progressTimerMax: 5
+  working: 0
+  stake: 0
+  critChance: 0
+  enableVisuals: 1
+  NeuronImage: {fileID: 5126626221196430416}
+  DefaultNeuronSprite: {fileID: 21300000, guid: 2cb262aac3b37874ba2c10f4cefe2579, type: 3}
+  ClickedNeuronSprite: {fileID: 21300000, guid: 0e875aafd0371944988c65569aec7bf0, type: 3}
+  StakedNeuronSprite: {fileID: 2955675294773621344, guid: c2d23aa2b68c65b4fa2d05e15c7609ab, type: 3}
+  floatingTextPrefab: {fileID: 3453732982940319534, guid: f58c3c2928ef4b5498ae5115295aa7cf, type: 3}
+  CritfloatingTextPrefab: {fileID: 3453732982940319534, guid: 0dc717296720b594d9613ab274e1e0e6, type: 3}
 --- !u!1 &4872626869718172460
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +271,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.15}
-  m_SizeDelta: {x: 0, y: 6}
+  m_SizeDelta: {x: -1.0000004, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7779285440310172948
 GameObject:
@@ -328,8 +338,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8687733375086451985, guid: 743f6e11c8dd4ec44bcbfbcc989b569f, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 2680689976194692975, guid: 85afc181c6ded9842b4a0d61ab65518a, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -337,7 +347,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!1 &8165379006353012414
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +413,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5072588084526410679, guid: ac810c5b871409d4880d52c492e5eccb, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 5818436697975147694, guid: 4a691bad72ba4f44986fb2c029476993, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -412,4 +422,4 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2

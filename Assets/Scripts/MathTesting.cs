@@ -17,6 +17,8 @@ public class MathTesting : MonoBehaviour
     [SerializeField] Button Load;
     [SerializeField] Button GreaterThan;
     [SerializeField] Button LessThan;
+    [SerializeField] Button squareRoot;
+    [SerializeField] Button Division;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -72,6 +74,17 @@ public class MathTesting : MonoBehaviour
 			BGN A = new BGN(StringValue.text);
 			A.Load(StringValue.text);
 			Output.text = A.ToString();
+		});
+
+		squareRoot.onClick.AddListener(() => {
+			BGN A = new BGN(Convert.ToInt32(AValue.text));
+			Output.text = BGN.Sqrt(A).ToString();
+		});
+
+		Division.onClick.AddListener(() => {
+			BGN A = new BGN(Convert.ToInt32(AValue.text));
+			BGN B = new BGN(Convert.ToInt32(BValue.text));
+			Output.text = (A/B).ToString();
 		});
 	}
 }

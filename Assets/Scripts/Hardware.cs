@@ -1,6 +1,10 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hardware : MonoBehaviour
 {
@@ -9,49 +13,255 @@ public class Hardware : MonoBehaviour
     public RectTransform rect;
     public List<GameObject> connectorPrefabs = new List<GameObject>();
     public List<GameObject> connections = new List<GameObject>();
+    public GameObject connectorsHolder;
     public float neighborhoodThreshhold = 10000;
     public int connectionAmount = 5;
+    public Image[] diskImages;
+    public Image[] RAMImages;
+    
 
     [SerializeField] GameObject NeuronPrefab;
 
+    [SerializeField] TextMeshProUGUI NeuronCostText, NeuronMaxText, MemoryCostText, MemoryMaxText, RamCostText, RamMaxText, DiskCostText, DiskMaxText, StakeCostText, StakeMaxText;
+    public int MaxMemory = 16, MaxRam = 4, MaxDisk = 8, stakedNeurons = 0;
     public int MemorySlots = 1; //max amount of neurons
-    public float RAM = 0f; //progress speed
+    public int RAM = 0; //progress speed
     public float RAMDecreaseAmount = 1f; //progress speed
     public int disk = 1; //offline idle time
-    
+    public float maxCritChance = 75; //Max Crit Chance allowed 
+    public BGN RebirthMultiplier = new BGN(1);
+    //public int GPUMultiplier = 1; //GPU Multiplier value
+    BGN GPUMultiplier = new BGN(1);
+    public BGN NeuronCost = new BGN(1); //max amount of neurons
+    public BGN MemoryCost = new BGN(2); //max amount of neurons
+    public BGN RamCost = new BGN(8); //max amount of neurons
+    public BGN DiskCost = new BGN(1); //max amount of neurons
+    public BGN StakeCost = new BGN(10); //max amount of neurons
+	public BGN InitNeuronCost = new BGN(1); //max amount of neurons
+	public BGN InitMemoryCost = new BGN(2); //max amount of neurons
+	public BGN InitRamCost = new BGN(8); //max amount of neurons
+	public BGN InitDiskCost = new BGN(5); //max amount of neurons
+	public BGN InitStakeCost = new BGN(10); //max amount of neurons
+
+    public BGN upgradeCostMultiplier = new BGN(1);
+
+    public const string NEURON_COUNT = "neuronCount";
+    public const string STAKED_NEURON_COUNT = "StakedNeuronCount";
+    public const string MEMORY_SLOTS = "MemorySlots";
+    public const string MEMORY_COST = "MemoryCost";
+    public const string RAM_AMOUNT = "Ram";
+    public const string RAM_COST = "RamCost";
+    public const string DISK_AMOUNT = "Disk";
+    public const string DISK_COST = "DiskCost";
+    public const string INIT_NEURON_COST = "InitNeuronCost";
+    public const string INIT_MEMORY_COST = "InitMemoryCost";
+    public const string INIT_RAM_COST = "InitRamCost";
+    public const string INIT_DISK_COST = "InitDiskCost";
+    public const string INIT_Stake_COST = "InitStakeCost";
+    int position;
+	[SerializeField] Button AddNeuronBtn, UpgradeMemoryBtn, UpgradeRAMBtn, UpgradeDiskBtn, StakeBtn;
+
+    bool backgroundRunning = true;
+    float progressTimer = 5;
+    float progressTimerMax = 5;
+
+
+	public static event EventHandler OnButtonPressed;
+
+	public void disablNeurons() {
+        foreach (Neuron n in NeuronList) {
+            n.enableVisuals = false;
+        }
+        backgroundRunning = true;
+    }
+
+    public void enableNeurons() {
+		foreach (Neuron n in NeuronList) {
+			n.enableVisuals = true;
+		}
+        backgroundRunning = false;
+	}
+
+	public void Load(int position, double seconds) {
+        MemorySlots = PlayerPrefs.GetInt(MEMORY_SLOTS + position, 1);
+        MemoryCost.Load(MEMORY_COST + position + "n");
+
+        RAM = PlayerPrefs.GetInt(RAM_AMOUNT + position, 0);
+		foreach (Neuron neuron in NeuronList) {
+			neuron.progressTimerMax -= RAMDecreaseAmount * RAM;
+			if (neuron.working == false || neuron.progressTimer > neuron.progressTimerMax) {
+				neuron.progressTimer = neuron.progressTimerMax;
+			}
+		}
+        RamCost.Load(RAM_COST + position + "n");
+
+
+
+        disk = PlayerPrefs.GetInt(DISK_AMOUNT + position, 1);
+        DiskCost.Load(DISK_COST + position + "n");
+
+        seconds = Math.Min(disk * 60 * 60, seconds);
+
+        double timesNeuronEarned = seconds / (5 - RAM * RAMDecreaseAmount);
+
+		int neuronCount = PlayerPrefs.GetInt(NEURON_COUNT + position, 0);
+        for (int i = 0; i < neuronCount; i++) {
+			Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
+			newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM * RAMDecreaseAmount;
+			newNeuron.progressTimer = newNeuron.progressTimerMax;
+			newNeuron.GPUMultiplier = GPUMultiplier * RebirthMultiplier;
+            newNeuron.enableVisuals = false;
+			NeuronList.Add(newNeuron);
+
+			NeuronCost = CalculateCost(NeuronList.Count, InitNeuronCost);
+		}
+		updateCritChance();
+		PlacedNeuronList.Clear();
+		foreach (GameObject connection in connections) {
+			Destroy(connection.gameObject);
+
+		}
+		connections.Clear();
+		PlaceNeuronsInHardware();
+		stakedNeurons = PlayerPrefs.GetInt(STAKED_NEURON_COUNT + position, 0);
+        for (int i = 0; i < stakedNeurons; i++) {
+			foreach (Neuron neuron in NeuronList) {
+				if (!neuron.stake) {
+					neuron.CreateStake();
+					//stakedNeurons++;
+					break;
+				}
+			}
+			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
+		}
+
+        timesNeuronEarned *= stakedNeurons;
+		if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
+	}
+
+    public void SetGPUMultiplier(BGN multiplier, int position) {
+        this.position = position;
+        GPUMultiplier = multiplier;
+		InitNeuronCost *= upgradeCostMultiplier;
+		InitMemoryCost *= upgradeCostMultiplier;
+		InitRamCost *= upgradeCostMultiplier;
+		InitDiskCost *= upgradeCostMultiplier;
+		InitStakeCost *= upgradeCostMultiplier;
+        NeuronCost = InitNeuronCost;
+        MemoryCost = InitMemoryCost;
+        RamCost = InitRamCost; 
+        DiskCost = InitDiskCost;
+        StakeCost = InitStakeCost;
+
+        MemoryCost.Save(MEMORY_COST + position + "n");
+        RamCost.Save(RAM_COST + position + "n");
+        DiskCost.Save(DISK_COST + position + "n");
+    }
 
     private void Start()
     {
         rect = GetComponent<RectTransform>();
-        PlaceNeuronsInHardware();
+
+        updateDiskImages();
+        updateRAMImages();
+    }
+
+	private void Update() {
+		updateShopVisuals();
+        if (backgroundRunning) {
+            progressTimer -= Time.deltaTime;
+            if (progressTimer <= 0) {
+
+                if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons);
+                progressTimer = progressTimerMax;
+			}
+		}
+	}
+
+
+	public void updateShopVisuals() {
+        NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
+        MemoryCostText.text = (MaxMemory > MemorySlots) ? MemoryCost.ToString() : "Maxed";
+        RamCostText.text = (RAM < MaxRam) ? RamCost.ToString() : "Maxed";
+        DiskCostText.text = (disk < MaxDisk) ? DiskCost.ToString() : "Maxed";
+        StakeCostText.text = (stakedNeurons < NeuronList.Count) ? StakeCost.ToString() : "Maxed";
+
+        NeuronMaxText.text = NeuronList.Count + "/" + MemorySlots;
+        MemoryMaxText.text = MemorySlots + "/" + MaxMemory;
+        RamMaxText.text = RAM + "/" + MaxRam;
+        DiskMaxText.text = disk + "/" + MaxDisk;
+        StakeMaxText.text = stakedNeurons + "/" + NeuronList.Count;
+
+        UpgradeMemoryBtn.interactable = (MaxMemory > MemorySlots && GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
+        UpgradeRAMBtn.interactable = (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) ? true : false;
+        UpgradeDiskBtn.interactable = (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) ? true : false;
+        StakeBtn.interactable = (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) ? true : false;
+        AddNeuronBtn.interactable = (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost) ? true : false;
+
+
+    }
+    void updateDiskImages()
+    {
+        for (int i = 0; i < disk; i++)
+        {
+            if (i < diskImages.Length) diskImages[i].color = Color.white;
+        }
+    }
+
+    void updateRAMImages()
+    {
+        for (int i = 0; i < RAM; i++)
+        {
+            if (i < RAMImages.Length) RAMImages[i].color = Color.white;
+        }
+    }
+
+    public BGN CalculateCost(int upgradeLevel, BGN initialCost, float rate = 1.25f) {// make this more complicated later
+        BGN newCost = BGN.PowMultiply(initialCost, rate, upgradeLevel);
+        return newCost;
     }
 
     public void UpgradeMemory()
     {
-        if (MemorySlots < 16)
-        {
-            MemorySlots += 1;
-        }
-        else
-        {
-            Debug.Log("Fully Upgraded");
+        if (GameManager.instance.SatoriPoints >= MemoryCost) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			if (MemorySlots < MaxMemory) {
+                MemorySlots += 1; 
+                GameManager.instance.SatoriPoints -= MemoryCost;
+				MemoryCost = CalculateCost(MemorySlots, InitMemoryCost);
+                MemoryCost.Save(MEMORY_COST + position + "n");
+                PlayerPrefs.SetInt(MEMORY_SLOTS + position, MemorySlots);
+                PlayerPrefs.Save();
+			} else {
+                Debug.Log("Fully Upgraded");
+            }
+
         }
 
     }
     public void UpgradeRAM()
     {
-        if (RAM < 4)
-        {
-            RAM += 1;
+
+        if (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			RAM += 1;
             foreach (Neuron neuron in NeuronList)
             {
                 neuron.progressTimerMax-= RAMDecreaseAmount;
-                if (neuron.working == false)
+                if (neuron.working == false || neuron.progressTimer > neuron.progressTimerMax)
                 {
                     neuron.progressTimer = neuron.progressTimerMax;
                 }
             }
-            Debug.Log("Upgraded RAM");
+            progressTimerMax -= RAMDecreaseAmount;
+            progressTimer = progressTimerMax;
+			GameManager.instance.SatoriPoints -= RamCost;
+			RamCost = CalculateCost((int)RAM, InitRamCost, 2f);
+
+            PlayerPrefs.SetInt(RAM_AMOUNT + position, RAM);
+            RamCost.Save(RAM_COST + position + "n");
+		
+            updateRAMImages();
         }
         else
         {
@@ -61,18 +271,29 @@ public class Hardware : MonoBehaviour
         
     }
     public void UpgradeDisk()
-    { 
-
-        disk += 1;
+    {
+        if (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			disk += 1;
+			GameManager.instance.SatoriPoints -= DiskCost;
+			DiskCost = CalculateCost(disk, InitDiskCost);
+            PlayerPrefs.SetInt(DISK_AMOUNT + position, disk);
+            DiskCost.Save(DISK_COST + position + "n");
+            updateDiskImages();
+		}
     }
     public void addNeuron()
     {
-        if (NeuronList.Count < MemorySlots)
+        if (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost)
         {
-            Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			Neuron newNeuron = Instantiate(NeuronPrefab, transform).GetComponent<Neuron>();
             newNeuron.progressTimerMax = newNeuron.progressTimerMax - RAM*RAMDecreaseAmount;
+            newNeuron.progressTimer = newNeuron.progressTimerMax;
+            newNeuron.GPUMultiplier = GPUMultiplier * RebirthMultiplier;
             NeuronList.Add(newNeuron);
-            PlacedNeuronList.Clear();
+            updateCritChance();
+            //PlacedNeuronList.Clear(); remove to have it random placement 
             foreach (GameObject connection in connections)
             {
                 Destroy(connection.gameObject);
@@ -80,28 +301,47 @@ public class Hardware : MonoBehaviour
             }
             connections.Clear();
             PlaceNeuronsInHardware();
-        }
+			GameManager.instance.SatoriPoints -= NeuronCost;
+			NeuronCost = CalculateCost(NeuronList.Count, InitNeuronCost);
+            PlayerPrefs.SetInt(NEURON_COUNT + position, NeuronList.Count);
+            PlayerPrefs.Save();
+		}
         else
         {
             Debug.Log("Not Enough Memory!");
         }
     }
-    public void StakeNeuron()
+    public void updateCritChance()
     {
         foreach (Neuron neuron in NeuronList)
         {
-            if (!neuron.stake)
-            { 
-                neuron.CreateStake();
-                break;
-            }
+            if (NeuronList.Count > 1) neuron.critChance = (maxCritChance/16) * (NeuronList.Count-1);
+
         }
+    }
+    public void StakeNeuron()
+    {
+        if (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) {
+			OnButtonPressed?.Invoke(this, EventArgs.Empty);
+			foreach (Neuron neuron in NeuronList) {
+                if (!neuron.stake) {
+                    neuron.CreateStake();
+                    stakedNeurons++;
+                    PlayerPrefs.SetInt(STAKED_NEURON_COUNT + position, stakedNeurons);
+                    PlayerPrefs.Save();
+                    break;
+                }
+			}
+			GameManager.instance.SatoriPoints -= StakeCost;
+			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
+		}
     }
 
     public void PlaceNeuronsInHardware()
     {
         foreach (Neuron neuron in NeuronList)
         {
+            if (PlacedNeuronList.Contains(neuron)) continue; // Skip if already placed remove to have it random
             RectTransform neuronRect = neuron.GetComponent<RectTransform>();
             bool validPlace = false;
             int attemptCount = 0;
@@ -110,13 +350,13 @@ public class Hardware : MonoBehaviour
             while (!validPlace && attemptCount < maxAttempts)
             {
                 attemptCount++;
-                // Generate random position within parent bounds
-                float yOffset = Random.Range(0, (rect.rect.height / 2 - neuronRect.rect.height));
-                yOffset *= Random.Range(0, 2) == 0 ? 1 : -1;
+                // Generate UnityEngine.Random position within parent bounds
+                float yOffset = UnityEngine.Random.Range(0, (rect.rect.height / 2 - neuronRect.rect.height));
+                yOffset *= UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1;
                 int y = (int)yOffset;
 
-                float xOffset = Random.Range(0, (rect.rect.width / 2 - neuronRect.rect.width));
-                xOffset *= Random.Range(0, 2) == 0 ? 1 : -1;
+                float xOffset = UnityEngine.Random.Range(0, (rect.rect.width / 2 - neuronRect.rect.width));
+                xOffset *= UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1;
                 int x = (int)xOffset;
 
                 validPlace = true;
@@ -137,6 +377,7 @@ public class Hardware : MonoBehaviour
                         validPlace = false;
                         break;
                     }
+
                 }
 
                 if (validPlace || PlacedNeuronList.Count == 0)
@@ -281,9 +522,9 @@ public class Hardware : MonoBehaviour
                 Vector2 direction = pair.b - pair.a;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                GameObject connector = Instantiate(connectorPrefabs[Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),transform);
+                GameObject connector = Instantiate(connectorPrefabs[UnityEngine.Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
-                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.2f,0.5f);
+                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.5f,0.5f);
 
                 usedAPoints.Add(pair.a);
                 usedBPoints.Add(pair.b);

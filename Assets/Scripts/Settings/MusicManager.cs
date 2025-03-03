@@ -16,7 +16,7 @@ public class MusicManager : MonoBehaviour
 
 	public void ChangeVolume(float Volume) {
 		volume = Volume;
-		//music.volume = volume * baseVolume;
+		music.volume = volume * baseVolume;
 	}
 
 	public float GetVolume() {

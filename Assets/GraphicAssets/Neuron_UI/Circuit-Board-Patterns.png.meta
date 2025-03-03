@@ -1,0 +1,6305 @@
+fileFormatVersion: 2
+guid: 3e62e0a3fd2792d4da5e7a640f5d8893
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2976502178872765367
+    second: Circuit-Board-Patterns_0
+  - first:
+      213: -1483823528692495972
+    second: Circuit-Board-Patterns_1
+  - first:
+      213: -4489892469353471685
+    second: Circuit-Board-Patterns_2
+  - first:
+      213: -1055031595859583357
+    second: Circuit-Board-Patterns_3
+  - first:
+      213: 1073926840764774340
+    second: Circuit-Board-Patterns_4
+  - first:
+      213: 8504661121744167875
+    second: Circuit-Board-Patterns_5
+  - first:
+      213: 8320847175126142326
+    second: Circuit-Board-Patterns_6
+  - first:
+      213: 7465682370938601457
+    second: Circuit-Board-Patterns_7
+  - first:
+      213: -5715678027989994143
+    second: Circuit-Board-Patterns_8
+  - first:
+      213: 1017356502650190048
+    second: Circuit-Board-Patterns_9
+  - first:
+      213: 6661216976454913243
+    second: Circuit-Board-Patterns_10
+  - first:
+      213: -6139965193697948547
+    second: Circuit-Board-Patterns_11
+  - first:
+      213: 6993982233188628799
+    second: Circuit-Board-Patterns_12
+  - first:
+      213: -743147389946812800
+    second: Circuit-Board-Patterns_13
+  - first:
+      213: 2199800742155005762
+    second: Circuit-Board-Patterns_14
+  - first:
+      213: 9097180773690514703
+    second: Circuit-Board-Patterns_15
+  - first:
+      213: 401238962013010450
+    second: Circuit-Board-Patterns_16
+  - first:
+      213: -5736781703613450719
+    second: Circuit-Board-Patterns_17
+  - first:
+      213: 595621108393824569
+    second: Circuit-Board-Patterns_18
+  - first:
+      213: 4058781557947433143
+    second: Circuit-Board-Patterns_19
+  - first:
+      213: -786305800123786441
+    second: Circuit-Board-Patterns_20
+  - first:
+      213: -6306260533700250149
+    second: Circuit-Board-Patterns_21
+  - first:
+      213: 5315150549592118369
+    second: Circuit-Board-Patterns_22
+  - first:
+      213: 9190008900526520304
+    second: Circuit-Board-Patterns_23
+  - first:
+      213: -8732937428669115533
+    second: Circuit-Board-Patterns_24
+  - first:
+      213: -4476920500489083448
+    second: Circuit-Board-Patterns_25
+  - first:
+      213: 5319032581358708019
+    second: Circuit-Board-Patterns_26
+  - first:
+      213: 6168582776336873062
+    second: Circuit-Board-Patterns_27
+  - first:
+      213: 589844575088277372
+    second: Circuit-Board-Patterns_28
+  - first:
+      213: -5884502200157466540
+    second: Circuit-Board-Patterns_29
+  - first:
+      213: 2108720973588080348
+    second: Circuit-Board-Patterns_30
+  - first:
+      213: 6985109987490823058
+    second: Circuit-Board-Patterns_31
+  - first:
+      213: 3002238357550889233
+    second: Circuit-Board-Patterns_32
+  - first:
+      213: -1483812475128599822
+    second: Circuit-Board-Patterns_33
+  - first:
+      213: 1047104927581562396
+    second: Circuit-Board-Patterns_34
+  - first:
+      213: -2794352288139513554
+    second: Circuit-Board-Patterns_35
+  - first:
+      213: -4122591684212269630
+    second: Circuit-Board-Patterns_36
+  - first:
+      213: 4956886730303284166
+    second: Circuit-Board-Patterns_37
+  - first:
+      213: 5605559687888118065
+    second: Circuit-Board-Patterns_38
+  - first:
+      213: 6134025725218307602
+    second: Circuit-Board-Patterns_39
+  - first:
+      213: 5101615506348128128
+    second: Circuit-Board-Patterns_40
+  - first:
+      213: 1430043772075712492
+    second: Circuit-Board-Patterns_41
+  - first:
+      213: 2514410333077905791
+    second: Circuit-Board-Patterns_42
+  - first:
+      213: -2289917743032733486
+    second: Circuit-Board-Patterns_43
+  - first:
+      213: 3541561568592463291
+    second: Circuit-Board-Patterns_44
+  - first:
+      213: 6557294640379865032
+    second: Circuit-Board-Patterns_45
+  - first:
+      213: 207409051945339667
+    second: Circuit-Board-Patterns_46
+  - first:
+      213: 3255196765751766011
+    second: Circuit-Board-Patterns_47
+  - first:
+      213: 8982654502884599094
+    second: Circuit-Board-Patterns_48
+  - first:
+      213: 215642054029631282
+    second: Circuit-Board-Patterns_49
+  - first:
+      213: -4680958530036021018
+    second: Circuit-Board-Patterns_50
+  - first:
+      213: -7579218992350039168
+    second: Circuit-Board-Patterns_51
+  - first:
+      213: -8009561094295385505
+    second: Circuit-Board-Patterns_52
+  - first:
+      213: -1091819429340380836
+    second: Circuit-Board-Patterns_53
+  - first:
+      213: -5142721815940022819
+    second: Circuit-Board-Patterns_54
+  - first:
+      213: -6126031572108580873
+    second: Circuit-Board-Patterns_55
+  - first:
+      213: 2004827716623398215
+    second: Circuit-Board-Patterns_56
+  - first:
+      213: -3469334966957548138
+    second: Circuit-Board-Patterns_57
+  - first:
+      213: 1466941006189734281
+    second: Circuit-Board-Patterns_58
+  - first:
+      213: 4143831156198978352
+    second: Circuit-Board-Patterns_59
+  - first:
+      213: 1801578653049218987
+    second: Circuit-Board-Patterns_60
+  - first:
+      213: -1413308893348049194
+    second: Circuit-Board-Patterns_61
+  - first:
+      213: 3523453594122564186
+    second: Circuit-Board-Patterns_62
+  - first:
+      213: 3284860144901095115
+    second: Circuit-Board-Patterns_63
+  - first:
+      213: 1299269673732462270
+    second: Circuit-Board-Patterns_64
+  - first:
+      213: 6340219566727467023
+    second: Circuit-Board-Patterns_65
+  - first:
+      213: 1847790228455802922
+    second: Circuit-Board-Patterns_66
+  - first:
+      213: -1372743072815224578
+    second: Circuit-Board-Patterns_67
+  - first:
+      213: 5378527488121890792
+    second: Circuit-Board-Patterns_68
+  - first:
+      213: -761225802756898657
+    second: Circuit-Board-Patterns_69
+  - first:
+      213: -6679434531334949942
+    second: Circuit-Board-Patterns_70
+  - first:
+      213: 6208717429481719959
+    second: Circuit-Board-Patterns_71
+  - first:
+      213: -5794153562881780568
+    second: Circuit-Board-Patterns_72
+  - first:
+      213: -1724711857935232131
+    second: Circuit-Board-Patterns_73
+  - first:
+      213: -8596547547726639733
+    second: Circuit-Board-Patterns_74
+  - first:
+      213: 1792669861903646870
+    second: Circuit-Board-Patterns_75
+  - first:
+      213: -2463211924038789074
+    second: Circuit-Board-Patterns_76
+  - first:
+      213: 7342862129849044984
+    second: Circuit-Board-Patterns_77
+  - first:
+      213: -4645686939609150901
+    second: Circuit-Board-Patterns_78
+  - first:
+      213: -7834017305939329635
+    second: Circuit-Board-Patterns_79
+  - first:
+      213: -4943568579373540679
+    second: Circuit-Board-Patterns_80
+  - first:
+      213: -8858614332906016327
+    second: Circuit-Board-Patterns_81
+  - first:
+      213: 206704468473269285
+    second: Circuit-Board-Patterns_82
+  - first:
+      213: -3808849050173309337
+    second: Circuit-Board-Patterns_83
+  - first:
+      213: -3089161938540606161
+    second: Circuit-Board-Patterns_84
+  - first:
+      213: 4618866179429963546
+    second: Circuit-Board-Patterns_85
+  - first:
+      213: -3876920594478253334
+    second: Circuit-Board-Patterns_86
+  - first:
+      213: -2156700818283563725
+    second: Circuit-Board-Patterns_87
+  - first:
+      213: -2855419932491706311
+    second: Circuit-Board-Patterns_88
+  - first:
+      213: 1893448754410334869
+    second: Circuit-Board-Patterns_89
+  - first:
+      213: -8016010000952257361
+    second: Circuit-Board-Patterns_90
+  - first:
+      213: -2721669912919615405
+    second: Circuit-Board-Patterns_91
+  - first:
+      213: -454292382072031001
+    second: Circuit-Board-Patterns_92
+  - first:
+      213: 3797787233807124574
+    second: Circuit-Board-Patterns_93
+  - first:
+      213: 11523941757387446
+    second: Circuit-Board-Patterns_94
+  - first:
+      213: 8207743945378966677
+    second: Circuit-Board-Patterns_95
+  - first:
+      213: -1087181023850094250
+    second: Circuit-Board-Patterns_96
+  - first:
+      213: -517734502801696725
+    second: Circuit-Board-Patterns_97
+  - first:
+      213: -2621575806332781897
+    second: Circuit-Board-Patterns_98
+  - first:
+      213: 7826440199502772086
+    second: Circuit-Board-Patterns_99
+  - first:
+      213: -569306100820122668
+    second: Circuit-Board-Patterns_100
+  - first:
+      213: 7108126586263656653
+    second: Circuit-Board-Patterns_101
+  - first:
+      213: 6137503011368372328
+    second: Circuit-Board-Patterns_102
+  - first:
+      213: 2527469880543867677
+    second: Circuit-Board-Patterns_103
+  - first:
+      213: -486072626766452784
+    second: Circuit-Board-Patterns_104
+  - first:
+      213: -8985382787413926438
+    second: Circuit-Board-Patterns_105
+  - first:
+      213: -6264497059732790604
+    second: Circuit-Board-Patterns_106
+  - first:
+      213: -950907559389525074
+    second: Circuit-Board-Patterns_107
+  - first:
+      213: -293416249864692393
+    second: Circuit-Board-Patterns_108
+  - first:
+      213: 9185903671822753927
+    second: Circuit-Board-Patterns_109
+  - first:
+      213: 8601437813836012056
+    second: Circuit-Board-Patterns_110
+  - first:
+      213: 6981525116843849955
+    second: Circuit-Board-Patterns_111
+  - first:
+      213: 817314710233260792
+    second: Circuit-Board-Patterns_112
+  - first:
+      213: 5164312480904927745
+    second: Circuit-Board-Patterns_113
+  - first:
+      213: -5049035984803140732
+    second: Circuit-Board-Patterns_114
+  - first:
+      213: 1248844464165089380
+    second: Circuit-Board-Patterns_115
+  - first:
+      213: 3061314956129129710
+    second: Circuit-Board-Patterns_116
+  - first:
+      213: 739622330937564120
+    second: Circuit-Board-Patterns_117
+  - first:
+      213: 2018913064278700298
+    second: Circuit-Board-Patterns_118
+  - first:
+      213: -1353901706585655805
+    second: Circuit-Board-Patterns_119
+  - first:
+      213: -7803192870950611705
+    second: Circuit-Board-Patterns_120
+  - first:
+      213: 3079454317228638615
+    second: Circuit-Board-Patterns_121
+  - first:
+      213: -7960973865305013101
+    second: Circuit-Board-Patterns_122
+  - first:
+      213: 5829857528649538749
+    second: Circuit-Board-Patterns_123
+  - first:
+      213: -59050501386744930
+    second: Circuit-Board-Patterns_124
+  - first:
+      213: -4373273461955343311
+    second: Circuit-Board-Patterns_125
+  - first:
+      213: -8567402178757633804
+    second: Circuit-Board-Patterns_126
+  - first:
+      213: 7844690019846772831
+    second: Circuit-Board-Patterns_127
+  - first:
+      213: 892679635146438680
+    second: Circuit-Board-Patterns_128
+  - first:
+      213: -8321614328697348733
+    second: Circuit-Board-Patterns_129
+  - first:
+      213: -7544356858506710225
+    second: Circuit-Board-Patterns_130
+  - first:
+      213: 4106154748061593809
+    second: Circuit-Board-Patterns_131
+  - first:
+      213: -165876435823482013
+    second: Circuit-Board-Patterns_132
+  - first:
+      213: -3427460868672213592
+    second: Circuit-Board-Patterns_133
+  - first:
+      213: 6943196988862938218
+    second: Circuit-Board-Patterns_134
+  - first:
+      213: 5000421020096679366
+    second: Circuit-Board-Patterns_135
+  - first:
+      213: 8008392479560830470
+    second: Circuit-Board-Patterns_136
+  - first:
+      213: 3431678813643492698
+    second: Circuit-Board-Patterns_137
+  - first:
+      213: -7637078751915520212
+    second: Circuit-Board-Patterns_138
+  - first:
+      213: -4673988031371792291
+    second: Circuit-Board-Patterns_139
+  - first:
+      213: -2668879880294372009
+    second: Circuit-Board-Patterns_140
+  - first:
+      213: -7018055158401584306
+    second: Circuit-Board-Patterns_141
+  - first:
+      213: 190888458800428578
+    second: Circuit-Board-Patterns_142
+  - first:
+      213: 1887600950053696364
+    second: Circuit-Board-Patterns_143
+  - first:
+      213: 4203338919240885188
+    second: Circuit-Board-Patterns_144
+  - first:
+      213: 2878991385506214363
+    second: Circuit-Board-Patterns_145
+  - first:
+      213: 3798757481821756452
+    second: Circuit-Board-Patterns_146
+  - first:
+      213: 3592794376532160553
+    second: Circuit-Board-Patterns_147
+  - first:
+      213: 4016326072744603307
+    second: Circuit-Board-Patterns_148
+  - first:
+      213: -850533584109643680
+    second: Circuit-Board-Patterns_149
+  - first:
+      213: -3721129298609525324
+    second: Circuit-Board-Patterns_150
+  - first:
+      213: -6780765315067327386
+    second: Circuit-Board-Patterns_151
+  - first:
+      213: -6041218475142804722
+    second: Circuit-Board-Patterns_152
+  - first:
+      213: -3904885431214819480
+    second: Circuit-Board-Patterns_153
+  - first:
+      213: -968219923374693674
+    second: Circuit-Board-Patterns_154
+  - first:
+      213: 2690206758015121954
+    second: Circuit-Board-Patterns_155
+  - first:
+      213: -6904002462728657201
+    second: Circuit-Board-Patterns_156
+  - first:
+      213: -93632989001055720
+    second: Circuit-Board-Patterns_157
+  - first:
+      213: 2983058433435424994
+    second: Circuit-Board-Patterns_158
+  - first:
+      213: -2966978472785721073
+    second: Circuit-Board-Patterns_159
+  - first:
+      213: -1511540778372366777
+    second: Circuit-Board-Patterns_160
+  - first:
+      213: -825555739440983931
+    second: Circuit-Board-Patterns_161
+  - first:
+      213: 1898305865510132525
+    second: Circuit-Board-Patterns_162
+  - first:
+      213: -7193452925267447485
+    second: Circuit-Board-Patterns_163
+  - first:
+      213: 7254415762486271636
+    second: Circuit-Board-Patterns_164
+  - first:
+      213: 1659026417750489527
+    second: Circuit-Board-Patterns_165
+  - first:
+      213: 8518654517939153621
+    second: Circuit-Board-Patterns_166
+  - first:
+      213: 3176092463469731888
+    second: Circuit-Board-Patterns_167
+  - first:
+      213: 8755449028893948387
+    second: Circuit-Board-Patterns_168
+  - first:
+      213: 3993979172658385830
+    second: Circuit-Board-Patterns_169
+  - first:
+      213: 6942182214213376358
+    second: Circuit-Board-Patterns_170
+  - first:
+      213: 6521054403208485460
+    second: Circuit-Board-Patterns_171
+  - first:
+      213: -832562340819570690
+    second: Circuit-Board-Patterns_172
+  - first:
+      213: -6661053700211099916
+    second: Circuit-Board-Patterns_173
+  - first:
+      213: -8006579781949607
+    second: Circuit-Board-Patterns_174
+  - first:
+      213: 9078154891521506862
+    second: Circuit-Board-Patterns_175
+  - first:
+      213: 5788246380535901563
+    second: Circuit-Board-Patterns_176
+  - first:
+      213: 2289520047887091643
+    second: Circuit-Board-Patterns_177
+  - first:
+      213: 6851374079028257246
+    second: Circuit-Board-Patterns_178
+  - first:
+      213: 7304182545660429570
+    second: Circuit-Board-Patterns_179
+  - first:
+      213: 5658941112068757754
+    second: Circuit-Board-Patterns_180
+  - first:
+      213: 446841632845847780
+    second: Circuit-Board-Patterns_181
+  - first:
+      213: 3640564649136091378
+    second: Circuit-Board-Patterns_182
+  - first:
+      213: -265594420088617977
+    second: Circuit-Board-Patterns_183
+  - first:
+      213: -728974619711687879
+    second: Circuit-Board-Patterns_184
+  - first:
+      213: -246752885273138149
+    second: Circuit-Board-Patterns_185
+  - first:
+      213: -6067237859115412865
+    second: Circuit-Board-Patterns_186
+  - first:
+      213: -5211289070392427802
+    second: Circuit-Board-Patterns_187
+  - first:
+      213: -8182397540444826399
+    second: Circuit-Board-Patterns_188
+  - first:
+      213: -2364127698036724950
+    second: Circuit-Board-Patterns_189
+  - first:
+      213: -6785581966902722262
+    second: Circuit-Board-Patterns_190
+  - first:
+      213: 6062631456094749548
+    second: Circuit-Board-Patterns_191
+  - first:
+      213: 2267956377532697858
+    second: Circuit-Board-Patterns_192
+  - first:
+      213: 6804856676014675477
+    second: Circuit-Board-Patterns_193
+  - first:
+      213: -5144880270843084942
+    second: Circuit-Board-Patterns_194
+  - first:
+      213: 6623736276434845226
+    second: Circuit-Board-Patterns_195
+  - first:
+      213: 2130197154206922459
+    second: Circuit-Board-Patterns_196
+  - first:
+      213: -1546949430478280667
+    second: Circuit-Board-Patterns_197
+  - first:
+      213: -4589026502324309494
+    second: Circuit-Board-Patterns_198
+  - first:
+      213: 877116860604581016
+    second: Circuit-Board-Patterns_199
+  - first:
+      213: 3567403199085894386
+    second: Circuit-Board-Patterns_200
+  - first:
+      213: 5637601785612597524
+    second: Circuit-Board-Patterns_201
+  - first:
+      213: 3962022289925403966
+    second: Circuit-Board-Patterns_202
+  - first:
+      213: -5599576757989004982
+    second: Circuit-Board-Patterns_203
+  - first:
+      213: 1369415420670138696
+    second: Circuit-Board-Patterns_204
+  - first:
+      213: -7661742053707310192
+    second: Circuit-Board-Patterns_205
+  - first:
+      213: -1341627743076191983
+    second: Circuit-Board-Patterns_206
+  - first:
+      213: 1095571216748903660
+    second: Circuit-Board-Patterns_207
+  - first:
+      213: -4900368174982703413
+    second: Circuit-Board-Patterns_208
+  - first:
+      213: -7793497565745870961
+    second: Circuit-Board-Patterns_209
+  - first:
+      213: 3159900394657342792
+    second: Circuit-Board-Patterns_210
+  - first:
+      213: 8116085850674010961
+    second: Circuit-Board-Patterns_211
+  - first:
+      213: 5496165585321936351
+    second: Circuit-Board-Patterns_212
+  - first:
+      213: -3721596750817674583
+    second: Circuit-Board-Patterns_213
+  - first:
+      213: 3755588585584635383
+    second: Circuit-Board-Patterns_214
+  - first:
+      213: 2258560263953752876
+    second: Circuit-Board-Patterns_215
+  - first:
+      213: -6359160008240666459
+    second: Circuit-Board-Patterns_216
+  - first:
+      213: -6119642474317576770
+    second: Circuit-Board-Patterns_217
+  - first:
+      213: 9046174519149225128
+    second: Circuit-Board-Patterns_218
+  - first:
+      213: 9153111115600383375
+    second: Circuit-Board-Patterns_219
+  - first:
+      213: 1131566260524719584
+    second: Circuit-Board-Patterns_220
+  - first:
+      213: -2386151012089873734
+    second: Circuit-Board-Patterns_221
+  - first:
+      213: 7567868139903890136
+    second: Circuit-Board-Patterns_222
+  - first:
+      213: -7383129855663900764
+    second: Circuit-Board-Patterns_223
+  - first:
+      213: 8401940031380916698
+    second: Circuit-Board-Patterns_224
+  - first:
+      213: -5272970211799994814
+    second: Circuit-Board-Patterns_225
+  - first:
+      213: 6700891397874775311
+    second: Circuit-Board-Patterns_226
+  - first:
+      213: -5782513707173171395
+    second: Circuit-Board-Patterns_227
+  - first:
+      213: 6817827243231613954
+    second: Circuit-Board-Patterns_228
+  - first:
+      213: 4635571507307266187
+    second: Circuit-Board-Patterns_229
+  - first:
+      213: 2219273798944670093
+    second: Circuit-Board-Patterns_230
+  - first:
+      213: 7480900899524340575
+    second: Circuit-Board-Patterns_231
+  - first:
+      213: 7537135507995213601
+    second: Circuit-Board-Patterns_232
+  - first:
+      213: 2236263578282828447
+    second: Circuit-Board-Patterns_233
+  - first:
+      213: 1401813733352920489
+    second: Circuit-Board-Patterns_234
+  - first:
+      213: 4761008747369306312
+    second: Circuit-Board-Patterns_235
+  - first:
+      213: -7400587240345385427
+    second: Circuit-Board-Patterns_236
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 740
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb23e426f8ae4920800000000000000
+      internalID: 2976502178872765367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 723
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99caeebc56686be0800000000000000
+      internalID: -1483823528692495972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 693
+        width: 41
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b312c7c6692b0b1c0800000000000000
+      internalID: -4489892469353471685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 725
+        width: 115
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ed9f57a56cb51f0800000000000000
+      internalID: -1055031595859583357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 639
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7ba8295ca57ee00800000000000000
+      internalID: 1073926840764774340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_5
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 745
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3e2a80b30a60670800000000000000
+      internalID: 8504661121744167875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 748
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67dc4b78b66997370800000000000000
+      internalID: 8320847175126142326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 477
+        width: 54
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fff0bdbf8e6b9760800000000000000
+      internalID: 7465682370938601457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_8
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 457
+        width: 74
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165b623dd15dda0b0800000000000000
+      internalID: -5715678027989994143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_9
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 715
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8f56659506e1e00800000000000000
+      internalID: 1017356502650190048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_10
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 566
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc85652c85617c50800000000000000
+      internalID: 6661216976454913243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_11
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 566
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c0f50ff267acaa0800000000000000
+      internalID: -6139965193697948547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_12
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 566
+        width: 191
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39f99e09cd9f0160800000000000000
+      internalID: 6993982233188628799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_13
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 723
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086267ed26fcfa5f0800000000000000
+      internalID: -743147389946812800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_14
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 693
+        width: 41
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f2ac4be13478e10800000000000000
+      internalID: 2199800742155005762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_15
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 725
+        width: 115
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d1659f6bdaf3e70800000000000000
+      internalID: 9097180773690514703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_16
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 639
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21af4d8c5bc719500800000000000000
+      internalID: 401238962013010450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_17
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 745
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126f8227f6bd260b0800000000000000
+      internalID: -5736781703613450719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_18
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 748
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931d98a0e32144800800000000000000
+      internalID: 595621108393824569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_19
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 477
+        width: 54
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b00d569250b35830800000000000000
+      internalID: 4058781557947433143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_20
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 457
+        width: 74
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bdac27a0b7615f0800000000000000
+      internalID: -786305800123786441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_21
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 715
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd53bb3e479ab78a0800000000000000
+      internalID: -6306260533700250149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_22
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 566
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1641924934533c940800000000000000
+      internalID: 5315150549592118369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_23
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 566
+        width: 106
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7bf8e7768798f70800000000000000
+      internalID: 9190008900526520304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_24
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 743
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373d67e7daf5ec680800000000000000
+      internalID: -8732937428669115533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_25
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 756
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c52fa84688ced1c0800000000000000
+      internalID: -4476920500489083448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3356d9883fff0d940800000000000000
+      internalID: 5319032581358708019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 690
+        width: 100
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666f62f3a553b9550800000000000000
+      internalID: 6168582776336873062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_28
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 681
+        width: 101
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77f3d2148c8f2800800000000000000
+      internalID: 589844575088277372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_29
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 661
+        width: 122
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4501c972d6c065ea0800000000000000
+      internalID: -5884502200157466540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_30
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 699
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd622219d8ea34d10800000000000000
+      internalID: 2108720973588080348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_31
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 658
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b7c61668810f060800000000000000
+      internalID: 6985109987490823058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_32
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 690
+        width: 107
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1197fd031e71aa920800000000000000
+      internalID: 3002238357550889233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_33
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 681
+        width: 101
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2faaaaa5a60786be0800000000000000
+      internalID: -1483812475128599822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_34
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 661
+        width: 122
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c166f034260188e00800000000000000
+      internalID: 1047104927581562396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_35
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 699
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21f42826677839d0800000000000000
+      internalID: -2794352288139513554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_36
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 658
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd5c84a4bc99c6c0800000000000000
+      internalID: -4122591684212269630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_37
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 728
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c3239fe7366ac440800000000000000
+      internalID: 4956886730303284166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 668
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13122db26d2facd40800000000000000
+      internalID: 5605559687888118065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 625
+        width: 111
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ebebac5ef602550800000000000000
+      internalID: 6134025725218307602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_40
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 482
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087318406449cc640800000000000000
+      internalID: 5101615506348128128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_41
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 482
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef15d7eb3988d310800000000000000
+      internalID: 1430043772075712492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_42
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 482
+        width: 222
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f712ea240eaf4e220800000000000000
+      internalID: 2514410333077905791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_43
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 629
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d07ba9f1f39830e0800000000000000
+      internalID: -2289917743032733486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_44
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 608
+        width: 61
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5012e8b77262130800000000000000
+      internalID: 3541561568592463291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_45
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 625
+        width: 104
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c72a6fbbb0300b50800000000000000
+      internalID: 6557294640379865032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_46
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 482
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b07601f6dd0e200800000000000000
+      internalID: 207409051945339667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_47
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 482
+        width: 99
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb62a03638cc2d20800000000000000
+      internalID: 3255196765751766011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_48
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 482
+        width: 222
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635ef70adacc8ac70800000000000000
+      internalID: 8982654502884599094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_49
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 629
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f521d3e4d1ef200800000000000000
+      internalID: 215642054029631282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_50
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 608
+        width: 61
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e84ed88405e90fb0800000000000000
+      internalID: -4680958530036021018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_51
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 566
+        width: 99
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083f41e9b7431d690800000000000000
+      internalID: -7579218992350039168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 586
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a0cb70f9258d090800000000000000
+      internalID: -8009561094295385505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_53
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 608
+        width: 105
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c510c43830419d0f0800000000000000
+      internalID: -1091819429340380836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_54
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 592
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd3e3671c161a8b0800000000000000
+      internalID: -5142721815940022819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_55
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 515
+        width: 39
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7e3a50eb6fbfaa0800000000000000
+      internalID: -6126031572108580873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_56
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 565
+        width: 121
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745f13daf2492db10800000000000000
+      internalID: 2004827716623398215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_57
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 608
+        width: 105
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d57a79a327adfc0800000000000000
+      internalID: -3469334966957548138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_58
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 592
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989a46ca21f9b5410800000000000000
+      internalID: 1466941006189734281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_59
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 515
+        width: 39
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033bf6a4b78d18930800000000000000
+      internalID: 4143831156198978352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_60
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 565
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7ece16d3e700910800000000000000
+      internalID: 1801578653049218987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 545
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dec61eac0be26ce0800000000000000
+      internalID: -1413308893348049194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52bf343062d5e030800000000000000
+      internalID: 3523453594122564186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_63
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 319
+        width: 70
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcefaa9d5ea269d20800000000000000
+      internalID: 3284860144901095115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_64
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 319
+        width: 90
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6d24a62eee70210800000000000000
+      internalID: 1299269673732462270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_65
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 455
+        width: 120
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0095c0aa1cfcf750800000000000000
+      internalID: 6340219566727467023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_66
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 500
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28cb8a3c6ba4a910800000000000000
+      internalID: 1847790228455802922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_67
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 513
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef868f8c27903fce0800000000000000
+      internalID: -1372743072815224578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_68
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 513
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7ed28f04e54aa40800000000000000
+      internalID: 5378527488121890792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_69
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 501
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9040d06a259f65f0800000000000000
+      internalID: -761225802756898657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_70
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 501
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac37d43dea1ed43a0800000000000000
+      internalID: -6679434531334949942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_71
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 501
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798c80f5b9bc92650800000000000000
+      internalID: 6208717429481719959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_72
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 545
+        width: 123
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a41e568808079fa0800000000000000
+      internalID: -5794153562881780568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_73
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 501
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73dddff3b79018e0800000000000000
+      internalID: -1724711857935232131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_74
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 501
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d8ff24d8de2b880800000000000000
+      internalID: -8596547547726639733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_75
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 522
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690c05ecdb7d0e810800000000000000
+      internalID: 1792669861903646870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_76
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 319
+        width: 70
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2859254ec9e0ddd0800000000000000
+      internalID: -2463211924038789074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_77
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 319
+        width: 90
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff0254f33617e560800000000000000
+      internalID: 7342862129849044984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_78
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 455
+        width: 120
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4acce2a754378fb0800000000000000
+      internalID: -4645686939609150901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_79
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 500
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d393344caf74390800000000000000
+      internalID: -7834017305939329635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_80
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 513
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba58a7b19ae46bb0800000000000000
+      internalID: -4943568579373540679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_81
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 513
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1f3fcf231ef0580800000000000000
+      internalID: -8858614332906016327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_82
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 501
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cc5d07e9c5ed200800000000000000
+      internalID: 206704468473269285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_83
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 501
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ef55118ff342bc0800000000000000
+      internalID: -3808849050173309337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_84
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 518
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d41af75971125d0800000000000000
+      internalID: -3089161938540606161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 501
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a171df18152891040800000000000000
+      internalID: 4618866179429963546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_86
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 375
+        width: 41
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea3ab79249623ac0800000000000000
+      internalID: -3876920594478253334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_87
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 389
+        width: 41
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335f96f480cd112e0800000000000000
+      internalID: -2156700818283563725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_88
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 375
+        width: 41
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930134733b28f58d0800000000000000
+      internalID: -2855419932491706311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_89
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 389
+        width: 41
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59aa8073c91e64a10800000000000000
+      internalID: 1893448754410334869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_90
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 455
+        width: 126
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa41341ff5961c090800000000000000
+      internalID: -8016010000952257361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_91
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 478
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358de8c52afaa3ad0800000000000000
+      internalID: -2721669912919615405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_92
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 455
+        width: 126
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e83e664c7702b9f0800000000000000
+      internalID: -454292382072031001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_93
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 478
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58469b1e5374b430800000000000000
+      internalID: 3797787233807124574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_94
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 460
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b28cd6c6f0f82000800000000000000
+      internalID: 11523941757387446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_95
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 438
+        width: 143
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c2dafb1a3c7e170800000000000000
+      internalID: 8207743945378966677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_96
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 415
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651aed27e9e89e0f0800000000000000
+      internalID: -1087181023850094250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_97
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 337
+        width: 159
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b289a887633a0d8f0800000000000000
+      internalID: -517734502801696725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_98
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 460
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bab6cf91ba4e9bd0800000000000000
+      internalID: -2621575806332781897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_99
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 438
+        width: 143
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677333b25e91d9c60800000000000000
+      internalID: 7826440199502772086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_100
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 415
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3672c1e1b6918f0800000000000000
+      internalID: -569306100820122668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_101
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 462
+        width: 73
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc851c0487325a260800000000000000
+      internalID: 7108126586263656653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 337
+        width: 46
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8688080987acc2550800000000000000
+      internalID: 6137503011368372328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_103
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 439
+        width: 65
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d13f05a1770631320800000000000000
+      internalID: 2527469880543867677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_104
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 422
+        width: 268
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d76b82758f1149f0800000000000000
+      internalID: -486072626766452784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_105
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 439
+        width: 65
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add984126f18d4380800000000000000
+      internalID: -8985382787413926438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_106
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 422
+        width: 268
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2e52a6d190019a0800000000000000
+      internalID: -6264497059732790604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_107
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 442
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab8a54ec92bdc2f0800000000000000
+      internalID: -950907559389525074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_108
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 407
+        width: 265
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ddc7fa9739debf0800000000000000
+      internalID: -293416249864692393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_109
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 408
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780a3f378b2ea7f70800000000000000
+      internalID: 9185903671822753927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_110
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 407
+        width: 265
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ade4b8e127e5770800000000000000
+      internalID: 8601437813836012056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_111
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 408
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8f1f3aa1c53e060800000000000000
+      internalID: 6981525116843849955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_112
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 422
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2a72d066fa75b00800000000000000
+      internalID: 817314710233260792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_113
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 370
+        width: 105
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a5475f6d25ba740800000000000000
+      internalID: 5164312480904927745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_114
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 339
+        width: 224
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48be4a3d5883ee9b0800000000000000
+      internalID: -5049035984803140732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_115
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 362
+        width: 143
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460f54a6c69c45110800000000000000
+      internalID: 1248844464165089380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_116
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 192
+        width: 180
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4daa9abb9fb7a20800000000000000
+      internalID: 3061314956129129710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_117
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 315
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dbda7f579aa34a00800000000000000
+      internalID: 739622330937564120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_118
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 319
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a013abc3cbe940c10800000000000000
+      internalID: 2018913064278700298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_119
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 370
+        width: 105
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306ba263299f53de0800000000000000
+      internalID: -1353901706585655805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_120
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 339
+        width: 224
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705d02d4d6d75b390800000000000000
+      internalID: -7803192870950611705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_121
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 362
+        width: 143
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791c478c26b6cba20800000000000000
+      internalID: 3079454317228638615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_122
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 192
+        width: 180
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3948354d270f48190800000000000000
+      internalID: -7960973865305013101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_123
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 315
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcda4ec880d7e050800000000000000
+      internalID: 5829857528649538749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_124
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 354
+        width: 23
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bc801c1e53e2ff0800000000000000
+      internalID: -59050501386744930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_125
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 319
+        width: 224
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c428af4f20f43c0800000000000000
+      internalID: -4373273461955343311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_126
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 307
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f85e374c197a1980800000000000000
+      internalID: -8567402178757633804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_127
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 148
+        width: 177
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58d4069200fddc60800000000000000
+      internalID: 7844690019846772831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_128
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 307
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818f027066f636c00800000000000000
+      internalID: 892679635146438680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_129
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 287
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d913c9bdfa38c80800000000000000
+      internalID: -8321614328697348733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_130
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 266
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23fceda86f0d4790800000000000000
+      internalID: -7544356858506710225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_131
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 128
+        width: 70
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0befeecfdfbf830800000000000000
+      internalID: 4106154748061593809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_132
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 281
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b222ea240b2bdf0800000000000000
+      internalID: -165876435823482013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_133
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 319
+        width: 224
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adad39df763f60d0800000000000000
+      internalID: -3427460868672213592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_134
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 307
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cbcbeefd03b5060800000000000000
+      internalID: 6943196988862938218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_135
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 148
+        width: 177
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd4246ac60156540800000000000000
+      internalID: 5000421020096679366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_136
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 307
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e0226a786832f60800000000000000
+      internalID: 8008392479560830470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_137
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 287
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d447ef2b5cf9f20800000000000000
+      internalID: 3431678813643492698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_138
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 266
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f446e8655a30690800000000000000
+      internalID: -7637078751915520212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_139
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 308
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5038a936a8a22fb0800000000000000
+      internalID: -4673988031371792291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 281
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75dedd2a3eb36fad0800000000000000
+      internalID: -2668879880294372009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_141
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 264
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e433065440cda9e90800000000000000
+      internalID: -7018055158401584306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_142
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 263
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226758aba0c26a200800000000000000
+      internalID: 190888458800428578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_143
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 288
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c63f3a9201b123a10800000000000000
+      internalID: 1887600950053696364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_144
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 253
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c36def0a72455a30800000000000000
+      internalID: 4203338919240885188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_145
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 223
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1f18c596b34f720800000000000000
+      internalID: 2878991385506214363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_146
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 288
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42cd7d39dc5e7b430800000000000000
+      internalID: 3798757481821756452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_147
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 234
+        width: 110
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9207834337b2cd130800000000000000
+      internalID: 3592794376532160553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_148
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 209
+        width: 122
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baee414a84bdcb730800000000000000
+      internalID: 4016326072744603307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_149
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 246
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068da99263c4234f0800000000000000
+      internalID: -850533584109643680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_150
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 264
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bda4194e94eb5cc0800000000000000
+      internalID: -3721129298609525324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_151
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 263
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c4f1a3fd1e5e1a0800000000000000
+      internalID: -6780765315067327386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_152
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 288
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b069afdc7492ca0800000000000000
+      internalID: -6041218475142804722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_153
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 253
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867b7d7a36f0fc9c0800000000000000
+      internalID: -3904885431214819480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_154
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 223
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2abca0c113092f0800000000000000
+      internalID: -968219923374693674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_155
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 288
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ab8d70bc8855520800000000000000
+      internalID: 2690206758015121954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_156
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 234
+        width: 110
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6e2a0d65e0030a0800000000000000
+      internalID: -6904002462728657201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_157
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 209
+        width: 122
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8128557ea4953bef0800000000000000
+      internalID: -93632989001055720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_158
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 246
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8d62d17d3f56920800000000000000
+      internalID: 2983058433435424994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_159
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 280
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0940697ccc23d6d0800000000000000
+      internalID: -2966978472785721073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 7
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ef899abade50be0800000000000000
+      internalID: -1511540778372366777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_161
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 214
+        width: 14
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580d550dd690b84f0800000000000000
+      internalID: -825555739440983931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_162
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 244
+        width: 120
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b95c48023285a10800000000000000
+      internalID: 1898305865510132525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_163
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 125
+        width: 139
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34170f05da8bb2c90800000000000000
+      internalID: -7193452925267447485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_164
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 200
+        width: 14
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e1dff43bcdca460800000000000000
+      internalID: 7254415762486271636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_165
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 211
+        width: 14
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9b10facbb060710800000000000000
+      internalID: 1659026417750489527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_166
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 193
+        width: 15
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da2a0a7627583670800000000000000
+      internalID: 8518654517939153621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_167
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 214
+        width: 14
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030a8e2944fb31c20800000000000000
+      internalID: 3176092463469731888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_168
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 244
+        width: 120
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e93340e08a918970800000000000000
+      internalID: 8755449028893948387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_169
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 125
+        width: 139
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a39c9285e67d6730800000000000000
+      internalID: 3993979172658385830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_170
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 200
+        width: 14
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669193c41f5975060800000000000000
+      internalID: 6942182214213376358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_171
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 211
+        width: 14
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a1d300e607f7a50800000000000000
+      internalID: 6521054403208485460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_172
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 193
+        width: 15
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: effe41e46f42274f0800000000000000
+      internalID: -832562340819570690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_173
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 252
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f6bd1193fe2f83a0800000000000000
+      internalID: -6661053700211099916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_174
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9572b30ee0e83eff0800000000000000
+      internalID: -8006579781949607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_175
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 193
+        width: 149
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e3d1596c51cfd70800000000000000
+      internalID: 9078154891521506862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_176
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 93
+        width: 41
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d68486a6bf35050800000000000000
+      internalID: 5788246380535901563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_177
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 145
+        width: 95
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb702786a5206cf10800000000000000
+      internalID: 2289520047887091643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_178
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 166
+        width: 109
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed16ccbbc68f41f50800000000000000
+      internalID: 6851374079028257246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_179
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 184
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205c2b8735bad5560800000000000000
+      internalID: 7304182545660429570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_180
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 0
+        width: 193
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af856b585f8988e40800000000000000
+      internalID: 5658941112068757754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_181
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 193
+        width: 149
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecd1acf810833600800000000000000
+      internalID: 446841632845847780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_182
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 93
+        width: 41
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0f9958242e58230800000000000000
+      internalID: 3640564649136091378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_183
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 145
+        width: 95
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 704ca48384b605cf0800000000000000
+      internalID: -265594420088617977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_184
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 166
+        width: 109
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9333fc5127922e5f0800000000000000
+      internalID: -728974619711687879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_185
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 184
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1cedf5ee8b539cf0800000000000000
+      internalID: -246752885273138149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_186
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 170
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72df9f0057dccba0800000000000000
+      internalID: -6067237859115412865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_187
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 123
+        width: 15
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea32697338cda7b0800000000000000
+      internalID: -5211289070392427802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_188
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 39
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e491c60ac8427e80800000000000000
+      internalID: -8182397540444826399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_189
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 14
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bebd2626ee03fd0800000000000000
+      internalID: -2364127698036724950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_190
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 14
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2187741725c4d1a0800000000000000
+      internalID: -6785581966902722262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_191
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 143
+        width: 109
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6303a8203bc22450800000000000000
+      internalID: 6062631456094749548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_192
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 115
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d0be82f46697f10800000000000000
+      internalID: 2267956377532697858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_193
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 69
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516dc49d715bf6e50800000000000000
+      internalID: 6804856676014675477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_194
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 0
+        width: 69
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f7b7407a6b998b0800000000000000
+      internalID: -5144880270843084942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_195
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 123
+        width: 15
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e74c2ac0d3ceb50800000000000000
+      internalID: 6623736276434845226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_196
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 39
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd63d06860bff8d10800000000000000
+      internalID: 2130197154206922459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_197
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 0
+        width: 14
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52869d660b1288ae0800000000000000
+      internalID: -1546949430478280667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_198
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 0
+        width: 14
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a023b18b5b08050c0800000000000000
+      internalID: -4589026502324309494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_199
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 143
+        width: 109
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89487d633252c2c00800000000000000
+      internalID: 877116860604581016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_200
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 115
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa5b140f46f18130800000000000000
+      internalID: 3567403199085894386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_201
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 0
+        width: 69
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419fb8864f8cc3e40800000000000000
+      internalID: 5637601785612597524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_202
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 0
+        width: 69
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35fe2fe74eebf630800000000000000
+      internalID: 3962022289925403966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_203
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 156
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49288f3b9e4a42b0800000000000000
+      internalID: -5599576757989004982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_204
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8495cf2d114210310800000000000000
+      internalID: 1369415420670138696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_205
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 100
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b9a1022360ca590800000000000000
+      internalID: -7661742053707310192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_206
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 81
+        width: 101
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11172290da4916de0800000000000000
+      internalID: -1341627743076191983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_207
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 61
+        width: 122
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecf5709730443f00800000000000000
+      internalID: 1095571216748903660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_208
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 99
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6d68dab156efbb0800000000000000
+      internalID: -4900368174982703413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_209
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 58
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8788d3714fe7d390800000000000000
+      internalID: -7793497565745870961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_210
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 90
+        width: 107
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845ea25caa83adb20800000000000000
+      internalID: 3159900394657342792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_211
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 81
+        width: 101
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b9fff841122a070800000000000000
+      internalID: 8116085850674010961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_212
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 61
+        width: 122
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd547dbda7d464c40800000000000000
+      internalID: 5496165585321936351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_213
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 99
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aab346197b3a5cc0800000000000000
+      internalID: -3721596750817674583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_214
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 58
+        width: 61
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fda84eabe78e1430800000000000000
+      internalID: 3755588585584635383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_215
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 128
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23a6ccf794085f10800000000000000
+      internalID: 2258560263953752876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_216
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8e1fe2aa9bfb7a0800000000000000
+      internalID: -6359160008240666459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_217
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 111
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb588e5c799a21ba0800000000000000
+      internalID: -6119642474317576770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_218
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a46416ebc77a8d70800000000000000
+      internalID: 9046174519149225128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_219
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d4a0b7012660f70800000000000000
+      internalID: 9153111115600383375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_220
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 153
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed9466c48124bf00800000000000000
+      internalID: 1131566260524719584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_221
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 15
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abab1fffb40b2eed0800000000000000
+      internalID: -2386151012089873734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_222
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 29
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2b7f91af7760960800000000000000
+      internalID: 7567868139903890136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_223
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 8
+        width: 61
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a77296838ad98990800000000000000
+      internalID: -7383129855663900764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_224
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 25
+        width: 104
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9089271ffa99470800000000000000
+      internalID: 8401940031380916698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_225
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 0
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ee17e9785a2d6b0800000000000000
+      internalID: -5272970211799994814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_226
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 0
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05fbc839395efc50800000000000000
+      internalID: 6700891397874775311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_227
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 0
+        width: 153
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fad1f9b6260cfa0800000000000000
+      internalID: -5782513707173171395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_228
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 0
+        width: 15
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2041dcc51c9cd9e50800000000000000
+      internalID: 6817827243231613954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_229
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 29
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80c8ffb9bbd45040800000000000000
+      internalID: 4635571507307266187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_230
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 8
+        width: 61
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81cd6d03c17cce10800000000000000
+      internalID: 2219273798944670093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_231
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 0
+        width: 69
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b6c0c8bbf71d760800000000000000
+      internalID: 7480900899524340575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_232
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12fb902afc8499860800000000000000
+      internalID: 7537135507995213601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_233
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 8
+        width: 105
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9221bf40edc80f10800000000000000
+      internalID: 2236263578282828447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_234
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 104
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5d3c1d92e347310800000000000000
+      internalID: 1401813733352920489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_235
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 8
+        width: 105
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c899771b30821240800000000000000
+      internalID: 4761008747369306312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circuit-Board-Patterns_236
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 104
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26cce96d15db4990800000000000000
+      internalID: -7400587240345385427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Circuit-Board-Patterns_0: 2976502178872765367
+      Circuit-Board-Patterns_1: -1483823528692495972
+      Circuit-Board-Patterns_10: 6661216976454913243
+      Circuit-Board-Patterns_100: -569306100820122668
+      Circuit-Board-Patterns_101: 7108126586263656653
+      Circuit-Board-Patterns_102: 6137503011368372328
+      Circuit-Board-Patterns_103: 2527469880543867677
+      Circuit-Board-Patterns_104: -486072626766452784
+      Circuit-Board-Patterns_105: -8985382787413926438
+      Circuit-Board-Patterns_106: -6264497059732790604
+      Circuit-Board-Patterns_107: -950907559389525074
+      Circuit-Board-Patterns_108: -293416249864692393
+      Circuit-Board-Patterns_109: 9185903671822753927
+      Circuit-Board-Patterns_11: -6139965193697948547
+      Circuit-Board-Patterns_110: 8601437813836012056
+      Circuit-Board-Patterns_111: 6981525116843849955
+      Circuit-Board-Patterns_112: 817314710233260792
+      Circuit-Board-Patterns_113: 5164312480904927745
+      Circuit-Board-Patterns_114: -5049035984803140732
+      Circuit-Board-Patterns_115: 1248844464165089380
+      Circuit-Board-Patterns_116: 3061314956129129710
+      Circuit-Board-Patterns_117: 739622330937564120
+      Circuit-Board-Patterns_118: 2018913064278700298
+      Circuit-Board-Patterns_119: -1353901706585655805
+      Circuit-Board-Patterns_12: 6993982233188628799
+      Circuit-Board-Patterns_120: -7803192870950611705
+      Circuit-Board-Patterns_121: 3079454317228638615
+      Circuit-Board-Patterns_122: -7960973865305013101
+      Circuit-Board-Patterns_123: 5829857528649538749
+      Circuit-Board-Patterns_124: -59050501386744930
+      Circuit-Board-Patterns_125: -4373273461955343311
+      Circuit-Board-Patterns_126: -8567402178757633804
+      Circuit-Board-Patterns_127: 7844690019846772831
+      Circuit-Board-Patterns_128: 892679635146438680
+      Circuit-Board-Patterns_129: -8321614328697348733
+      Circuit-Board-Patterns_13: -743147389946812800
+      Circuit-Board-Patterns_130: -7544356858506710225
+      Circuit-Board-Patterns_131: 4106154748061593809
+      Circuit-Board-Patterns_132: -165876435823482013
+      Circuit-Board-Patterns_133: -3427460868672213592
+      Circuit-Board-Patterns_134: 6943196988862938218
+      Circuit-Board-Patterns_135: 5000421020096679366
+      Circuit-Board-Patterns_136: 8008392479560830470
+      Circuit-Board-Patterns_137: 3431678813643492698
+      Circuit-Board-Patterns_138: -7637078751915520212
+      Circuit-Board-Patterns_139: -4673988031371792291
+      Circuit-Board-Patterns_14: 2199800742155005762
+      Circuit-Board-Patterns_140: -2668879880294372009
+      Circuit-Board-Patterns_141: -7018055158401584306
+      Circuit-Board-Patterns_142: 190888458800428578
+      Circuit-Board-Patterns_143: 1887600950053696364
+      Circuit-Board-Patterns_144: 4203338919240885188
+      Circuit-Board-Patterns_145: 2878991385506214363
+      Circuit-Board-Patterns_146: 3798757481821756452
+      Circuit-Board-Patterns_147: 3592794376532160553
+      Circuit-Board-Patterns_148: 4016326072744603307
+      Circuit-Board-Patterns_149: -850533584109643680
+      Circuit-Board-Patterns_15: 9097180773690514703
+      Circuit-Board-Patterns_150: -3721129298609525324
+      Circuit-Board-Patterns_151: -6780765315067327386
+      Circuit-Board-Patterns_152: -6041218475142804722
+      Circuit-Board-Patterns_153: -3904885431214819480
+      Circuit-Board-Patterns_154: -968219923374693674
+      Circuit-Board-Patterns_155: 2690206758015121954
+      Circuit-Board-Patterns_156: -6904002462728657201
+      Circuit-Board-Patterns_157: -93632989001055720
+      Circuit-Board-Patterns_158: 2983058433435424994
+      Circuit-Board-Patterns_159: -2966978472785721073
+      Circuit-Board-Patterns_16: 401238962013010450
+      Circuit-Board-Patterns_160: -1511540778372366777
+      Circuit-Board-Patterns_161: -825555739440983931
+      Circuit-Board-Patterns_162: 1898305865510132525
+      Circuit-Board-Patterns_163: -7193452925267447485
+      Circuit-Board-Patterns_164: 7254415762486271636
+      Circuit-Board-Patterns_165: 1659026417750489527
+      Circuit-Board-Patterns_166: 8518654517939153621
+      Circuit-Board-Patterns_167: 3176092463469731888
+      Circuit-Board-Patterns_168: 8755449028893948387
+      Circuit-Board-Patterns_169: 3993979172658385830
+      Circuit-Board-Patterns_17: -5736781703613450719
+      Circuit-Board-Patterns_170: 6942182214213376358
+      Circuit-Board-Patterns_171: 6521054403208485460
+      Circuit-Board-Patterns_172: -832562340819570690
+      Circuit-Board-Patterns_173: -6661053700211099916
+      Circuit-Board-Patterns_174: -8006579781949607
+      Circuit-Board-Patterns_175: 9078154891521506862
+      Circuit-Board-Patterns_176: 5788246380535901563
+      Circuit-Board-Patterns_177: 2289520047887091643
+      Circuit-Board-Patterns_178: 6851374079028257246
+      Circuit-Board-Patterns_179: 7304182545660429570
+      Circuit-Board-Patterns_18: 595621108393824569
+      Circuit-Board-Patterns_180: 5658941112068757754
+      Circuit-Board-Patterns_181: 446841632845847780
+      Circuit-Board-Patterns_182: 3640564649136091378
+      Circuit-Board-Patterns_183: -265594420088617977
+      Circuit-Board-Patterns_184: -728974619711687879
+      Circuit-Board-Patterns_185: -246752885273138149
+      Circuit-Board-Patterns_186: -6067237859115412865
+      Circuit-Board-Patterns_187: -5211289070392427802
+      Circuit-Board-Patterns_188: -8182397540444826399
+      Circuit-Board-Patterns_189: -2364127698036724950
+      Circuit-Board-Patterns_19: 4058781557947433143
+      Circuit-Board-Patterns_190: -6785581966902722262
+      Circuit-Board-Patterns_191: 6062631456094749548
+      Circuit-Board-Patterns_192: 2267956377532697858
+      Circuit-Board-Patterns_193: 6804856676014675477
+      Circuit-Board-Patterns_194: -5144880270843084942
+      Circuit-Board-Patterns_195: 6623736276434845226
+      Circuit-Board-Patterns_196: 2130197154206922459
+      Circuit-Board-Patterns_197: -1546949430478280667
+      Circuit-Board-Patterns_198: -4589026502324309494
+      Circuit-Board-Patterns_199: 877116860604581016
+      Circuit-Board-Patterns_2: -4489892469353471685
+      Circuit-Board-Patterns_20: -786305800123786441
+      Circuit-Board-Patterns_200: 3567403199085894386
+      Circuit-Board-Patterns_201: 5637601785612597524
+      Circuit-Board-Patterns_202: 3962022289925403966
+      Circuit-Board-Patterns_203: -5599576757989004982
+      Circuit-Board-Patterns_204: 1369415420670138696
+      Circuit-Board-Patterns_205: -7661742053707310192
+      Circuit-Board-Patterns_206: -1341627743076191983
+      Circuit-Board-Patterns_207: 1095571216748903660
+      Circuit-Board-Patterns_208: -4900368174982703413
+      Circuit-Board-Patterns_209: -7793497565745870961
+      Circuit-Board-Patterns_21: -6306260533700250149
+      Circuit-Board-Patterns_210: 3159900394657342792
+      Circuit-Board-Patterns_211: 8116085850674010961
+      Circuit-Board-Patterns_212: 5496165585321936351
+      Circuit-Board-Patterns_213: -3721596750817674583
+      Circuit-Board-Patterns_214: 3755588585584635383
+      Circuit-Board-Patterns_215: 2258560263953752876
+      Circuit-Board-Patterns_216: -6359160008240666459
+      Circuit-Board-Patterns_217: -6119642474317576770
+      Circuit-Board-Patterns_218: 9046174519149225128
+      Circuit-Board-Patterns_219: 9153111115600383375
+      Circuit-Board-Patterns_22: 5315150549592118369
+      Circuit-Board-Patterns_220: 1131566260524719584
+      Circuit-Board-Patterns_221: -2386151012089873734
+      Circuit-Board-Patterns_222: 7567868139903890136
+      Circuit-Board-Patterns_223: -7383129855663900764
+      Circuit-Board-Patterns_224: 8401940031380916698
+      Circuit-Board-Patterns_225: -5272970211799994814
+      Circuit-Board-Patterns_226: 6700891397874775311
+      Circuit-Board-Patterns_227: -5782513707173171395
+      Circuit-Board-Patterns_228: 6817827243231613954
+      Circuit-Board-Patterns_229: 4635571507307266187
+      Circuit-Board-Patterns_23: 9190008900526520304
+      Circuit-Board-Patterns_230: 2219273798944670093
+      Circuit-Board-Patterns_231: 7480900899524340575
+      Circuit-Board-Patterns_232: 7537135507995213601
+      Circuit-Board-Patterns_233: 2236263578282828447
+      Circuit-Board-Patterns_234: 1401813733352920489
+      Circuit-Board-Patterns_235: 4761008747369306312
+      Circuit-Board-Patterns_236: -7400587240345385427
+      Circuit-Board-Patterns_24: -8732937428669115533
+      Circuit-Board-Patterns_25: -4476920500489083448
+      Circuit-Board-Patterns_26: 5319032581358708019
+      Circuit-Board-Patterns_27: 6168582776336873062
+      Circuit-Board-Patterns_28: 589844575088277372
+      Circuit-Board-Patterns_29: -5884502200157466540
+      Circuit-Board-Patterns_3: -1055031595859583357
+      Circuit-Board-Patterns_30: 2108720973588080348
+      Circuit-Board-Patterns_31: 6985109987490823058
+      Circuit-Board-Patterns_32: 3002238357550889233
+      Circuit-Board-Patterns_33: -1483812475128599822
+      Circuit-Board-Patterns_34: 1047104927581562396
+      Circuit-Board-Patterns_35: -2794352288139513554
+      Circuit-Board-Patterns_36: -4122591684212269630
+      Circuit-Board-Patterns_37: 4956886730303284166
+      Circuit-Board-Patterns_38: 5605559687888118065
+      Circuit-Board-Patterns_39: 6134025725218307602
+      Circuit-Board-Patterns_4: 1073926840764774340
+      Circuit-Board-Patterns_40: 5101615506348128128
+      Circuit-Board-Patterns_41: 1430043772075712492
+      Circuit-Board-Patterns_42: 2514410333077905791
+      Circuit-Board-Patterns_43: -2289917743032733486
+      Circuit-Board-Patterns_44: 3541561568592463291
+      Circuit-Board-Patterns_45: 6557294640379865032
+      Circuit-Board-Patterns_46: 207409051945339667
+      Circuit-Board-Patterns_47: 3255196765751766011
+      Circuit-Board-Patterns_48: 8982654502884599094
+      Circuit-Board-Patterns_49: 215642054029631282
+      Circuit-Board-Patterns_5: 8504661121744167875
+      Circuit-Board-Patterns_50: -4680958530036021018
+      Circuit-Board-Patterns_51: -7579218992350039168
+      Circuit-Board-Patterns_52: -8009561094295385505
+      Circuit-Board-Patterns_53: -1091819429340380836
+      Circuit-Board-Patterns_54: -5142721815940022819
+      Circuit-Board-Patterns_55: -6126031572108580873
+      Circuit-Board-Patterns_56: 2004827716623398215
+      Circuit-Board-Patterns_57: -3469334966957548138
+      Circuit-Board-Patterns_58: 1466941006189734281
+      Circuit-Board-Patterns_59: 4143831156198978352
+      Circuit-Board-Patterns_6: 8320847175126142326
+      Circuit-Board-Patterns_60: 1801578653049218987
+      Circuit-Board-Patterns_61: -1413308893348049194
+      Circuit-Board-Patterns_62: 3523453594122564186
+      Circuit-Board-Patterns_63: 3284860144901095115
+      Circuit-Board-Patterns_64: 1299269673732462270
+      Circuit-Board-Patterns_65: 6340219566727467023
+      Circuit-Board-Patterns_66: 1847790228455802922
+      Circuit-Board-Patterns_67: -1372743072815224578
+      Circuit-Board-Patterns_68: 5378527488121890792
+      Circuit-Board-Patterns_69: -761225802756898657
+      Circuit-Board-Patterns_7: 7465682370938601457
+      Circuit-Board-Patterns_70: -6679434531334949942
+      Circuit-Board-Patterns_71: 6208717429481719959
+      Circuit-Board-Patterns_72: -5794153562881780568
+      Circuit-Board-Patterns_73: -1724711857935232131
+      Circuit-Board-Patterns_74: -8596547547726639733
+      Circuit-Board-Patterns_75: 1792669861903646870
+      Circuit-Board-Patterns_76: -2463211924038789074
+      Circuit-Board-Patterns_77: 7342862129849044984
+      Circuit-Board-Patterns_78: -4645686939609150901
+      Circuit-Board-Patterns_79: -7834017305939329635
+      Circuit-Board-Patterns_8: -5715678027989994143
+      Circuit-Board-Patterns_80: -4943568579373540679
+      Circuit-Board-Patterns_81: -8858614332906016327
+      Circuit-Board-Patterns_82: 206704468473269285
+      Circuit-Board-Patterns_83: -3808849050173309337
+      Circuit-Board-Patterns_84: -3089161938540606161
+      Circuit-Board-Patterns_85: 4618866179429963546
+      Circuit-Board-Patterns_86: -3876920594478253334
+      Circuit-Board-Patterns_87: -2156700818283563725
+      Circuit-Board-Patterns_88: -2855419932491706311
+      Circuit-Board-Patterns_89: 1893448754410334869
+      Circuit-Board-Patterns_9: 1017356502650190048
+      Circuit-Board-Patterns_90: -8016010000952257361
+      Circuit-Board-Patterns_91: -2721669912919615405
+      Circuit-Board-Patterns_92: -454292382072031001
+      Circuit-Board-Patterns_93: 3797787233807124574
+      Circuit-Board-Patterns_94: 11523941757387446
+      Circuit-Board-Patterns_95: 8207743945378966677
+      Circuit-Board-Patterns_96: -1087181023850094250
+      Circuit-Board-Patterns_97: -517734502801696725
+      Circuit-Board-Patterns_98: -2621575806332781897
+      Circuit-Board-Patterns_99: 7826440199502772086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
