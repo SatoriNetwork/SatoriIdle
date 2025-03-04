@@ -567,4 +567,13 @@ public class Hardware : MonoBehaviour
 
         return points;
     }
+
+	public void ResetHW() {
+        PlayerPrefs.SetInt(NEURON_COUNT + 0, 1);
+        PlayerPrefs.SetInt(MEMORY_SLOTS + 0, 1);
+        PlayerPrefs.SetInt(RAM_AMOUNT + 0, 0);
+        PlayerPrefs.SetInt(DISK_AMOUNT + 0, 1);
+        PlayerPrefs.SetInt(STAKED_NEURON_COUNT + 0, 0);
+
+	}
 }

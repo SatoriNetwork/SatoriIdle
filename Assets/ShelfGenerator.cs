@@ -60,7 +60,9 @@ public class ShelfGenerator : MonoBehaviour
 			int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
 			if (purchased == 1 || i == 0) {
 				si.PurchaseHW();
-				PlayerPrefs.SetInt("neuronCount" + 0, PlayerPrefs.GetInt("neuronCount" + 0, 1));
+				if (i == 0) {
+					si.ResetHW();
+				}
 				si.Load(seconds);
 			}
 			
