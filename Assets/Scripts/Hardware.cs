@@ -93,6 +93,8 @@ public class Hardware : MonoBehaviour
 				neuron.progressTimer = neuron.progressTimerMax;
 			}
 		}
+        progressTimerMax = 5 - (RAMDecreaseAmount * RAM);
+        progressTimer = progressTimerMax;
         RamCost.Load(RAM_COST + position + "n");
 
 
