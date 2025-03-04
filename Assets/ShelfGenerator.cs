@@ -60,7 +60,7 @@ public class ShelfGenerator : MonoBehaviour
 			int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
 			if (purchased == 1 || i == 0) {
 				si.PurchaseHW();
-				if (i == 0) {
+				if (i == 0 && purchased == 0) {
 					si.ResetHW();
 				}
 				si.Load(seconds);
