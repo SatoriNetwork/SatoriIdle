@@ -1,7 +1,7 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -575,5 +575,16 @@ public class Hardware : MonoBehaviour
         PlayerPrefs.SetInt(DISK_AMOUNT + 0, 1);
         PlayerPrefs.SetInt(STAKED_NEURON_COUNT + 0, 0);
 
-	}
+
+    }
+
+    public void firstTime()
+    {
+        Debug.Log("step2");
+        if (PlacedNeuronList.Count == 1 ) GameManager.instance.TutorialManager.tutorialSteps[1].targetElement = PlacedNeuronList[0].GetComponent<Neuron>().GetComponent<RectTransform>();
+        if (PlacedNeuronList.Count == 1) GameManager.instance.TutorialManager.tutorialSteps[1].targetButton = PlacedNeuronList[0].GetComponent<Neuron>().GetComponentInParent<Button>();
+        GameManager.instance.TutorialManager.tutorialSteps[1].message = "First Neuron.";
+
+    }
+
 }
