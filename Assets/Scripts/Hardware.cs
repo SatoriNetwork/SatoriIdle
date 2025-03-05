@@ -73,13 +73,18 @@ public class Hardware : MonoBehaviour
         }
         backgroundRunning = true;
         progressTimer = progressTimerMax - UnityEngine.Random.Range(0.0f, progressTimerMax);
-    }
+		GameManager.instance.OnShelf = false;
+        GameManager.instance.totalSPPerSec += ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax);
+
+	}
 
     public void enableNeurons() {
 		foreach (Neuron n in NeuronList) {
 			n.enableVisuals = true;
 		}
         backgroundRunning = false;
+        GameManager.instance.OnShelf = true;
+        GameManager.instance.totalSPPerSec -= ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons)/new BGN((int)progressTimerMax);
 	}
 
 	public void Load(int position, double seconds) {
@@ -137,7 +142,9 @@ public class Hardware : MonoBehaviour
 			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
 		}
         timesNeuronEarned *= stakedNeurons;
-		if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
+		GameManager.instance.totalSPPerSec += ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax);
+
+		if (NeuronList.Count != 0) GameManager.instance.addPoints( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 	}
 
     public void SetGPUMultiplier(BGN multiplier, int position) {
@@ -173,10 +180,12 @@ public class Hardware : MonoBehaviour
             progressTimer -= Time.deltaTime;
             if (progressTimer <= 0) {
 
-                if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons);
+                if (NeuronList.Count != 0) GameManager.instance.addPoints((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons);
                 progressTimer = progressTimerMax;
-			}
-		}
+            }
+        } else {
+            GameManager.instance.updateSPPerSec(( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
+        }
 	}
 
 
