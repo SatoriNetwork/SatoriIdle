@@ -10,9 +10,10 @@ using static BGN;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance { get; private set; }
+    [SerializeField] public TutorialManager TutorialManager;
 
-	//base economy setup
-	[SerializeField] float startingMoneysFloat = 5;
+    //base economy setup
+    [SerializeField] float startingMoneysFloat = 5;
 	[SerializeField] Structures startingMoneysStructure = Structures.NONE;
     [SerializeField] public BGN SatoriPoints = new BGN(5);
 	[SerializeField] public BGN SatoriPointsTotal = new BGN(5);
@@ -46,23 +47,27 @@ public class GameManager : MonoBehaviour {
 	private const string SATORI_POINTS_PP = "SatoriPointsPP";
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
+
+    
 	private void Awake() {
         instance = this; 
-		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
+		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);    
+
 		if (firstTime == 0) {
 			SatoriPoints = new BGN(startingMoneysFloat,startingMoneysStructure);
-			//SatoriPoints = new BGN((int)startingMoneysFloat);
-
+            //SatoriPoints = new BGN((int)startingMoneysFloat);
+            StartCoroutine(TutorialManager.startAfterTime(0.1f));
             SatoriPointsTotal = new BGN(startingMoneysFloat,startingMoneysStructure);
             //SatoriPointsTotal = new BGN((int)startingMoneysFloat);
-			PlayerPrefs.SetInt("FIRSTTIME", 1);
+			
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
-			popup = false;
+      popup = false;
+        } else {
+            TutorialManager.EndTutorial();
+            SatoriPoints.Load(SATORI_POINTS_PP);
 
-		} else {
-			SatoriPoints.Load(SATORI_POINTS_PP);
-			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
+			      SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier.Load(REBIRTH_MULTIPLIER_PP);
 	}
@@ -159,8 +164,8 @@ public class GameManager : MonoBehaviour {
 	public void resetSave()
 	{
 		PlayerPrefs.DeleteAll();
-		SceneManager.LoadScene("ShelfTesting");
-	}
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     private async Task RunCalculateRebirthLoop()
     {
         while (true)
