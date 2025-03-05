@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 	//ui
 	[SerializeField] TextMeshProUGUI SPText;
+	[SerializeField] TextMeshProUGUI SPPerSecText;
 	[SerializeField] TextMeshProUGUI RebirthText;
 	[SerializeField] GameObject RebirthButton;
 	[SerializeField] ShelfGenerator shelfGenerator;
@@ -37,9 +38,10 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] public Image SettingButtonImg;
 	[SerializeField] public Sprite[] ConnectedImages;
 	[SerializeField] public TMP_InputField playerAddressText;
-
-    //save
-    private const string SATORI_POINTS_PP = "SatoriPointsPP";
+	public bool OnShelf;
+	public BGN totalSPPerSec = new BGN(0);
+	//save
+	private const string SATORI_POINTS_PP = "SatoriPointsPP";
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
 	private void Awake() {
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour {
 			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier.Load(REBIRTH_MULTIPLIER_PP);
-    }
+	}
 
 	private void Start() {
 
@@ -120,6 +122,7 @@ public class GameManager : MonoBehaviour {
 	public void addPoints(BGN sp) {
 		SatoriPoints += sp;
 		SatoriPointsTotal += sp;
+
     }
 
 	private void FixedUpdate() {
@@ -186,12 +189,18 @@ public class GameManager : MonoBehaviour {
         return rebirths;
     }
 
+	public void updateSPPerSec( BGN bgn) {
+		SPPerSecText.text = (bgn.ToString()) + " SP/S";
+
+	}
+
 
     private void Update() {
-		RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
         SatoriPoints.Save(SATORI_POINTS_PP);
 		SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
-
+		if (!OnShelf) {
+			updateSPPerSec(totalSPPerSec);
+		}
 		
     }
 
