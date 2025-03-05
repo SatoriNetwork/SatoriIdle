@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,10 +22,10 @@ public class ShelfGenerator : MonoBehaviour
 	[SerializeField] int multiInital = 10;
 
 	private const string PLAYER_PREFS_DATE = "date";
-
     private void Start()
     {
 		Generate();
+      
     }
 
     private void Generate() {
@@ -57,17 +56,36 @@ public class ShelfGenerator : MonoBehaviour
 			BGN upgradeTemp = new BGN(upgradeCostInital);
 			upgradeCost = upgradeTemp * BGN.Pow(upgradeCostIncrease, i);
 
-			int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
+
+            int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
+            if (firstTime == 0 && i == 0)
+            {
+				Debug.Log("step1");
+                GameManager.instance.TutorialManager.tutorialSteps[0].targetElement = ShelfGO[0].GetComponentInChildren<RectTransform>();
+                GameManager.instance.TutorialManager.tutorialSteps[0].targetButton = ShelfGO[0].GetComponentInChildren<UnityEngine.UI.Button>();
+                GameManager.instance.TutorialManager.tutorialSteps[0].message = "This is the first GPU you can buy. Click on it to buy it.";
+            }
+
+
+            int purchased = PlayerPrefs.GetInt("PurchasedHW" + i, 0);
 			if (purchased == 1 || i == 0) {
 				si.PurchaseHW();
 				if (i == 0 && purchased == 0) {
 					si.ResetHW();
 				}
 				si.Load(seconds);
-			}
-			
-			//add GPU
-		}
+				if (firstTime == 0)
+                {
+                    si.hwScript.firstTime();
+                }
+            }
+
+
+
+
+
+                //add GPU
+            }
 	}
 
 	public void Rebirth()

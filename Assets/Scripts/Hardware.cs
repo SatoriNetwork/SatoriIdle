@@ -1,7 +1,7 @@
-
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +20,7 @@ public class Hardware : MonoBehaviour
     
 
     [SerializeField] GameObject NeuronPrefab;
-
+    [SerializeField] GameObject NeuronOBJ, MemoryOBJ, RamOBJ, DiskOBJ, StakeOBJ, BackButton;
     [SerializeField] TextMeshProUGUI NeuronCostText, NeuronMaxText, MemoryCostText, MemoryMaxText, RamCostText, RamMaxText, DiskCostText, DiskMaxText, StakeCostText, StakeMaxText;
     public int MaxMemory = 16, MaxRam = 4, MaxDisk = 8, stakedNeurons = 0;
     public int MemorySlots = 1; //max amount of neurons
@@ -143,7 +143,7 @@ public class Hardware : MonoBehaviour
 		}
         timesNeuronEarned *= stakedNeurons;
 		GameManager.instance.totalSPPerSec += ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax);
-
+        GameManager.instance.offlineEarning += ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 		if (NeuronList.Count != 0) GameManager.instance.addPoints( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 	}
 
@@ -534,7 +534,7 @@ public class Hardware : MonoBehaviour
 
                 GameObject connector = Instantiate(connectorPrefabs[UnityEngine.Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
                 connections.Add(connector);
-                connector.transform.localScale = new Vector3(0.1f * (pair.dist / 2) / 5,0.5f,0.5f);
+                connector.transform.localScale = new Vector3(0.15f * (pair.dist / 2) / 5,0.5f,0.5f);
 
                 usedAPoints.Add(pair.a);
                 usedBPoints.Add(pair.b);
@@ -586,5 +586,39 @@ public class Hardware : MonoBehaviour
         PlayerPrefs.SetInt(DISK_AMOUNT + 0, 1);
         PlayerPrefs.SetInt(STAKED_NEURON_COUNT + 0, 0);
 
-	}
+
+    }
+
+    public void firstTime()
+    {
+
+        GameManager.instance.TutorialManager.tutorialSteps[1].targetElement = PlacedNeuronList[0].GetComponent<Neuron>().GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[1].targetButton = PlacedNeuronList[0].GetComponent<Neuron>().GetComponentInParent<Button>();
+        GameManager.instance.TutorialManager.tutorialSteps[1].message = "Neurons are the source of Satori. Press them to get more Satori points";
+
+        GameManager.instance.TutorialManager.tutorialSteps[3].targetElement = MemoryOBJ.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[3].targetButton = MemoryOBJ.GetComponent<Button>();
+        GameManager.instance.TutorialManager.tutorialSteps[3].message = "Memory allows you to buy more Neurons. More Neurons will increase an individual Neuron's Crit Chance.";
+
+
+        GameManager.instance.TutorialManager.tutorialSteps[4].targetElement = NeuronOBJ.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[4].targetButton = NeuronOBJ.GetComponent<Button>();
+        GameManager.instance.TutorialManager.tutorialSteps[4].message = "Here is where you buy more Neurons. The more Neurons you have, the more Satori Points you will earn.";
+
+
+        GameManager.instance.TutorialManager.tutorialSteps[5].targetElement = RamOBJ.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[5].message = "RAM increases the speed of your Neurons. The more RAM you have, the faster your Neurons will generate Satori Points.";
+
+        GameManager.instance.TutorialManager.tutorialSteps[6].targetElement = DiskOBJ.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[6].message = "Disk allows your Neurons to generate Satori Points while you are offline. The more Disk you have, the more Satori Points you will earn";
+        
+        
+        GameManager.instance.TutorialManager.tutorialSteps[7].targetElement = StakeOBJ.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[7].message = "Stake allows you to automate the earning of Satori. Automating your Neurons will significantly speed up your production of Satori.";
+
+        GameManager.instance.TutorialManager.tutorialSteps[7].targetElement = BackButton.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[7].targetButton = BackButton.GetComponent<Button>();
+        GameManager.instance.TutorialManager.tutorialSteps[7].message = ""; 
+    }
+
 }

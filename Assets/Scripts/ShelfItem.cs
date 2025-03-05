@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,7 @@ public class ShelfItem : MonoBehaviour
     [SerializeField] BGN.Structures costStructure;
     [SerializeField] GameObject diskImages;
     [SerializeField] GameObject RAMImages;
-    Hardware hwScript;
+    public Hardware hwScript;
     public int position;
 	BGN Cost;
     public BGN Multiplier;
@@ -58,6 +59,8 @@ public class ShelfItem : MonoBehaviour
     }
 
     public void PurchaseHW() {
+
+
         Purchased = true;
 		HardwareButton.interactable = true;
 		PurchaseButton.gameObject.SetActive(false);
@@ -76,7 +79,9 @@ public class ShelfItem : MonoBehaviour
         imgs[2].color = new Color(1, 1, 1, 1);
 		PlayerPrefs.SetInt("PurchasedHW" + position, 1);
         PlayerPrefs.Save();
-	}
+
+
+    }
 
     public void setPrice(BGN price) {
         Cost = price;
