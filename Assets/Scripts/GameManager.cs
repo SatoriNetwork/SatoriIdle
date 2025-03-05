@@ -24,13 +24,15 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] GameObject RebirthButton;
 	[SerializeField] ShelfGenerator shelfGenerator;
 
+	[SerializeField] GameObject OfflineEarningGO;
+	[SerializeField] TextMeshProUGUI OfflineEarningText;
 	//rebirth
     [SerializeField] private BGN RebirthMultiplier = new BGN(1);
     [SerializeField] public int RebirthCost = 10000;
     private BGN rebirths = new BGN(0);
     private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-
-
+	private bool popup = true;
+	public BGN offlineEarning = new BGN(0);
     //neuron connection
     [SerializeField] public string UserAddress = "";
 	[SerializeField] public int SatoriConnectionMultiplier = 1;
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour {
 			PlayerPrefs.SetInt("FIRSTTIME", 1);
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
+			popup = false;
 
 		} else {
 			SatoriPoints.Load(SATORI_POINTS_PP);
@@ -126,6 +129,12 @@ public class GameManager : MonoBehaviour {
     }
 
 	private void FixedUpdate() {
+		if (Time.frameCount > 5 && popup) {
+			popup = false;
+			OfflineEarningGO.SetActive(true);
+			OfflineEarningText.text = "You've Earned " + offlineEarning.ToString() + " While Away!";
+
+		}
         SPText.text = SatoriPoints.ToString();
 
     }

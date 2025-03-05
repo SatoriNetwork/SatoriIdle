@@ -143,7 +143,7 @@ public class Hardware : MonoBehaviour
 		}
         timesNeuronEarned *= stakedNeurons;
 		GameManager.instance.totalSPPerSec += ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax);
-
+        GameManager.instance.offlineEarning += ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 		if (NeuronList.Count != 0) GameManager.instance.addPoints( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 	}
 
