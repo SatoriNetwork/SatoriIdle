@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private RectTransform bottomPanel;
     [SerializeField] private RectTransform leftPanel;
     [SerializeField] private RectTransform rightPanel;
+    [SerializeField] private TMP_Text tutorialText;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private Button fullScreenButton; // Add this field
 
     [Header("Fade Settings")]
     [SerializeField] private float fadeDuration = 0.5f;
@@ -22,7 +25,7 @@ public class TutorialManager : MonoBehaviour
     [System.Serializable]
     public class TutorialStep
     {
-        public RectTransform targetElement;
+        public RectTransform targetElement; 
         public Button targetButton;
         public string message;
     }
@@ -33,6 +36,7 @@ public class TutorialManager : MonoBehaviour
     private void Awake()
     {
         InitializeCanvasGroups();
+        fullScreenButton.gameObject.SetActive(false); // Start with fullscreen button disabled
 
     }
     public void StartTutorial()
@@ -56,20 +60,36 @@ public class TutorialManager : MonoBehaviour
             return;
         }
 
+        int previousStep = currentStep;
         currentStep = stepIndex;
         TutorialStep step = tutorialSteps[currentStep];
 
-        ClearPreviousListeners();
+        ClearPreviousListeners(previousStep);
         ConfigurePanels(step.targetElement);
+        tutorialText.text = step.message;
+
+        // Clear any existing fullscreen button listeners
+        fullScreenButton.onClick.RemoveAllListeners();
+        fullScreenButton.gameObject.SetActive(false);
 
         if (step.targetButton != null)
+        {
             step.targetButton.onClick.AddListener(NextStep);
+        }
+        else
+        {
+            // Enable fullscreen button if no target button is assigned
+            fullScreenButton.gameObject.SetActive(true);
+            fullScreenButton.onClick.AddListener(NextStep);
+        }
     }
 
-    private void ClearPreviousListeners()
+    private void ClearPreviousListeners(int previousStep)
     {
-        if (currentStep >= 0 && tutorialSteps[currentStep].targetButton != null)
-            tutorialSteps[currentStep].targetButton.onClick.RemoveListener(NextStep);
+        if (previousStep >= 0 && tutorialSteps[previousStep].targetButton != null)
+        {
+            tutorialSteps[previousStep].targetButton.onClick.RemoveListener(NextStep);
+        }
     }
 
     public void NextStep() => ShowStep(currentStep + 1);
@@ -77,6 +97,7 @@ public class TutorialManager : MonoBehaviour
      public void EndTutorial() {
 
         SetPanelsVisibility(false);
+        fullScreenButton.gameObject.SetActive(false);
         shelfCanvasScroll.vertical = true;
         PlayerPrefs.SetInt("FIRSTTIME", 1);
         PlayerPrefs.Save();
@@ -90,13 +111,14 @@ public class TutorialManager : MonoBehaviour
         panelCanvasGroups[1] = bottomPanel.GetComponent<CanvasGroup>();
         panelCanvasGroups[2] = leftPanel.GetComponent<CanvasGroup>();
         panelCanvasGroups[3] = rightPanel.GetComponent<CanvasGroup>();
+
     }
 
     private void ConfigurePanels(RectTransform target)
     {
         SetPanelsVisibility(true);
         if (currentFadeRoutine != null) StopCoroutine(currentFadeRoutine);
-        currentFadeRoutine = StartCoroutine(FadePanels(0.3f, 0.75f));
+        currentFadeRoutine = StartCoroutine(FadePanels(0.3f, 0.9f));
         // Get canvas dimensions
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();
         Vector2 canvasSize = canvasRect.rect.size;
@@ -187,5 +209,6 @@ public class TutorialManager : MonoBehaviour
         bottomPanel.gameObject.SetActive(visible);
         leftPanel.gameObject.SetActive(visible);
         rightPanel.gameObject.SetActive(visible);
+        tutorialText.gameObject.SetActive(visible);
     }
 }

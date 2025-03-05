@@ -47,13 +47,12 @@ public class GameManager : MonoBehaviour {
     
 	private void Awake() {
         instance = this; 
-		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
-        PlayerPrefs.DeleteAll();    
-        firstTime = 0;
+		int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);    
+
 		if (firstTime == 0) {
 			SatoriPoints = new BGN(startingMoneysFloat,startingMoneysStructure);
             //SatoriPoints = new BGN((int)startingMoneysFloat);
-            StartCoroutine(TutorialManager.startAfterTime(1.0f));
+            StartCoroutine(TutorialManager.startAfterTime(0.1f));
             SatoriPointsTotal = new BGN(startingMoneysFloat,startingMoneysStructure);
             //SatoriPointsTotal = new BGN((int)startingMoneysFloat);
 			
