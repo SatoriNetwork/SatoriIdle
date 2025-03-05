@@ -58,16 +58,15 @@ public class GameManager : MonoBehaviour {
             //SatoriPoints = new BGN((int)startingMoneysFloat);
             StartCoroutine(TutorialManager.startAfterTime(0.1f));
             SatoriPointsTotal = new BGN(startingMoneysFloat,startingMoneysStructure);
-            //SatoriPointsTotal = new BGN((int)startingMoneysFloat);
-			
+			//SatoriPointsTotal = new BGN((int)startingMoneysFloat);
+			RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
 			SatoriPoints.Save(SATORI_POINTS_PP);
 			SatoriPointsTotal.Save(SATORI_POINTS_TOTAL_PP);
-      popup = false;
+			popup = false;
         } else {
             TutorialManager.EndTutorial();
             SatoriPoints.Load(SATORI_POINTS_PP);
-
-			      SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
+			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
 		RebirthMultiplier.Load(REBIRTH_MULTIPLIER_PP);
 	}
