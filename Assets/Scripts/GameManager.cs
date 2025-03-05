@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour {
 			SatoriPoints.Load(SATORI_POINTS_PP);
 			SatoriPointsTotal.Load(SATORI_POINTS_TOTAL_PP);
 		}
-		RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
+		RebirthMultiplier.Load(REBIRTH_MULTIPLIER_PP);
     }
 
 	private void Start() {

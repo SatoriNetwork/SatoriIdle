@@ -1,4 +1,4 @@
-using NUnit.Framework;
+
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -72,6 +72,7 @@ public class Hardware : MonoBehaviour
             n.enableVisuals = false;
         }
         backgroundRunning = true;
+        progressTimer = progressTimerMax - UnityEngine.Random.Range(0.0f, progressTimerMax);
     }
 
     public void enableNeurons() {
@@ -92,6 +93,8 @@ public class Hardware : MonoBehaviour
 				neuron.progressTimer = neuron.progressTimerMax;
 			}
 		}
+        progressTimerMax = 5 - (RAMDecreaseAmount * RAM);
+        progressTimer = progressTimerMax;
         RamCost.Load(RAM_COST + position + "n");
 
 
@@ -133,7 +136,6 @@ public class Hardware : MonoBehaviour
 			}
 			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
 		}
-
         timesNeuronEarned *= stakedNeurons;
 		if (NeuronList.Count != 0) GameManager.instance.addPoints(NeuronList[0].worth * (new BGN(2)) * NeuronList[0].GPUMultiplier * GameManager.instance.SatoriConnectionMultiplier * timesNeuronEarned);
 	}
@@ -567,4 +569,13 @@ public class Hardware : MonoBehaviour
 
         return points;
     }
+
+    public void ResetHW() {
+        PlayerPrefs.SetInt(NEURON_COUNT + 0, 1);
+        PlayerPrefs.SetInt(MEMORY_SLOTS + 0, 1);
+        PlayerPrefs.SetInt(RAM_AMOUNT + 0, 0);
+        PlayerPrefs.SetInt(DISK_AMOUNT + 0, 1);
+        PlayerPrefs.SetInt(STAKED_NEURON_COUNT + 0, 0);
+
+	}
 }

@@ -86,6 +86,10 @@ public class ShelfItem : MonoBehaviour
 		hwScript.Load(position, seconds);
 	}
 
+    public void ResetHW() {
+        hwScript.ResetHW();
+    }
+
 	// Update is called once per frame
 	void Update()
     {
