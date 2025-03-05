@@ -314,8 +314,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Satori Idle is related to Satori, using terms and concepts from the company.
-    \r\nThe mechanics of the items in the game are not reflective of the actual product."
+  m_text: "Satori Idle is a game loosely simulating some concepts behind the Satori
+    Network. \r\nThe mechanics of the items in the game are not reflective of the
+    actual product."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

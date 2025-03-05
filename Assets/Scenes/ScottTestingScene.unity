@@ -796,7 +796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 425.7, y: -36.2}
+  m_AnchoredPosition: {x: 425.69995, y: -36.200195}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221835647
@@ -7455,12 +7455,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03ffefbada47084cbaa2bfd4fc8ec18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TutorialManager: {fileID: 0}
   startingMoneysFloat: 5
   startingMoneysStructure: 0
   SPText: {fileID: 1185152873}
+  SPPerSecText: {fileID: 0}
   RebirthText: {fileID: 582092440}
   RebirthButton: {fileID: 378064627}
   shelfGenerator: {fileID: 791731719}
+  OfflineEarningGO: {fileID: 0}
+  OfflineEarningText: {fileID: 0}
   RebirthCost: 15000000
   UserAddress: ETU972nu9naUffZuUkVFoHGpq2AZJdBjFi
   SatoriConnectionMultiplier: 1
@@ -7471,6 +7475,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4b50b63c2558e7148b168b2df623f29d, type: 3}
   - {fileID: 21300000, guid: 201fa278f9226c649b5cf89117470004, type: 3}
   playerAddressText: {fileID: 407149427}
+  OnShelf: 0
 --- !u!4 &1863337266
 Transform:
   m_ObjectHideFlags: 0
