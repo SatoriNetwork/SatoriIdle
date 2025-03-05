@@ -3394,7 +3394,7 @@ MonoBehaviour:
   connections: []
   connectorsHolder: {fileID: 9176969965538904345}
   neighborhoodThreshhold: 1000
-  connectionAmount: 4
+  connectionAmount: 6
   diskImages: []
   RAMImages: []
   NeuronPrefab: {fileID: 749861032566126157, guid: 2e8225eda4ddab3409707c3d7971ca95, type: 3}
