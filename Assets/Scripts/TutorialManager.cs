@@ -28,6 +28,7 @@ public class TutorialManager : MonoBehaviour
         public RectTransform targetElement; 
         public Button targetButton;
         public string message;
+        public bool textLocationTop = true;
     }
 
     [SerializeField] public List<TutorialStep> tutorialSteps = new List<TutorialStep>();
@@ -67,6 +68,25 @@ public class TutorialManager : MonoBehaviour
         ClearPreviousListeners(previousStep);
         ConfigurePanels(step.targetElement);
         tutorialText.text = step.message;
+
+        RectTransform textRect = tutorialText.GetComponentInParent<RectTransform>();
+        if (step.textLocationTop)
+        {
+            // Anchor to top center
+            textRect.anchorMin = new Vector2(0.5f, 1f);
+            textRect.anchorMax = new Vector2(0.5f, 1f);
+            textRect.pivot = new Vector2(0.5f, 1f);
+            textRect.anchoredPosition = new Vector2(0f, -100f); 
+        }
+        else
+        {
+            // Anchor to bottom center
+            textRect.anchorMin = new Vector2(0.5f, 0f);
+            textRect.anchorMax = new Vector2(0.5f, 0f);
+            textRect.pivot = new Vector2(0.5f, 0f);
+            textRect.anchoredPosition = new Vector2(0f, 500f); 
+        }
+
 
         // Clear any existing fullscreen button listeners
         fullScreenButton.onClick.RemoveAllListeners();

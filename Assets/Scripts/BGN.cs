@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -21,6 +22,10 @@ public class BGN {
 		Nov, UnNov, DuNov, TrNov, QaNov, QiNov, SxNov, SpNov, OcNov, NoNov,
 		Cent
 	}
+
+
+
+
 
 	public static BGN PowMultiply(BGN baseValue, float multiplier, int exponent) {
 		if (exponent < 0) throw new ArgumentException("Exponent must be non-negative.");
@@ -96,6 +101,29 @@ public class BGN {
 		}
 
 		return x0;
+	}
+
+	public static BGN Trim(BGN bgn) {
+		while (bgn.list.LastOrDefault() == 0) {
+			bgn.list.RemoveAt(bgn.list.Count()-1);
+		}
+		return bgn;
+	}
+
+	public static float DivideF(BGN lhs, BGN rhs) {
+		lhs = Trim(lhs);
+		rhs = Trim(rhs);
+
+		if (lhs.list.Count == rhs.list.Count) {
+			return lhs.list.LastOrDefault() / rhs.list.LastOrDefault();
+		} else if (lhs.list.Count > rhs.list.Count) {
+			int diff = lhs.list.Count - rhs.list.Count;
+			return (lhs.list.LastOrDefault() * Mathf.Pow(1000, diff)) / rhs.list.LastOrDefault();
+		} else if (lhs.list.Count < rhs.list.Count) {
+			int diff = rhs.list.Count - lhs.list.Count;
+			return (lhs.list.LastOrDefault()) / (rhs.list.LastOrDefault() * Mathf.Pow(1000, diff));
+		}
+		return 0f;
 	}
 
 	public static BGN operator /(BGN lhs, BGN rhs) {
