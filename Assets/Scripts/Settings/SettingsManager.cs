@@ -6,9 +6,9 @@ public class SettingsManager : MonoBehaviour {
 	public float masterVolume { get; private set; } = 1f;
 	public float sfxVolume { get; private set; } = 1f;
 	public float musicVolume { get; private set; } = 1f;
-	private const string PLAYER_PREF_MASTER_VOLUME = "MASTERVOLUME";
-	private const string PLAYER_PREF_SFX_VOLUME = "SFXVOLUME";
-	private const string PLAYER_PREF_MUSIC_VOLUME = "MUSICVOLUME";
+	public const string PLAYER_PREF_MASTER_VOLUME = "MASTERVOLUME";
+	public const string PLAYER_PREF_SFX_VOLUME = "SFXVOLUME";
+	public const string PLAYER_PREF_MUSIC_VOLUME = "MUSICVOLUME";
 	private const string PLAYER_PREF_QUALITY = "QUALITY";
 
 	[SerializeField] Slider MasterSlider;
