@@ -423,7 +423,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 116.35
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6259,7 +6259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1313103438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8667,6 +8667,8 @@ MonoBehaviour:
   SPPerSecText: {fileID: 0}
   RebirthText: {fileID: 582092440}
   RebirthButton: {fileID: 378064627}
+  RebirthNeededSlider: {fileID: 0}
+  RebirthGO: {fileID: 0}
   shelfGenerator: {fileID: 791731719}
   OfflineEarningGO: {fileID: 0}
   OfflineEarningText: {fileID: 0}
