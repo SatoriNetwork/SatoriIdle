@@ -583,7 +583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Open: {fileID: 1130410388}
-  Close: {fileID: 1402451670}
   Menu: {fileID: 363418507}
 --- !u!114 &363418511
 MonoBehaviour:
@@ -7112,34 +7111,44 @@ MonoBehaviour:
   - targetElement: {fileID: 0}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 0}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 279158467}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 279158467}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 279158467}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 279158467}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 279158467}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 279158467}
     targetButton: {fileID: 0}
     message: 
+    textLocationTop: 1
   - targetElement: {fileID: 1130410391}
     targetButton: {fileID: 1130410388}
     message: Settings
+    textLocationTop: 1
   - targetElement: {fileID: 1566670787}
     targetButton: {fileID: 0}
     message: 'Here is the setting where you can adjust volume and enter your Satori
       Address. '
+    textLocationTop: 1
 --- !u!1 &1897637375
 GameObject:
   m_ObjectHideFlags: 0
