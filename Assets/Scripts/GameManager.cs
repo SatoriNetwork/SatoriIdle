@@ -162,7 +162,14 @@ public class GameManager : MonoBehaviour {
 	}
 	public void resetSave()
 	{
+		float master = PlayerPrefs.GetFloat(SettingsManager.PLAYER_PREF_MASTER_VOLUME);
+		float sfx = PlayerPrefs.GetFloat(SettingsManager.PLAYER_PREF_SFX_VOLUME);
+		float music = PlayerPrefs.GetFloat(SettingsManager.PLAYER_PREF_MUSIC_VOLUME);
 		PlayerPrefs.DeleteAll();
+		PlayerPrefs.SetFloat(SettingsManager.PLAYER_PREF_MASTER_VOLUME, master);
+		PlayerPrefs.SetFloat(SettingsManager.PLAYER_PREF_SFX_VOLUME, sfx);
+		PlayerPrefs.SetFloat(SettingsManager.PLAYER_PREF_MUSIC_VOLUME, music);
+		PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private async Task RunCalculateRebirthLoop()
