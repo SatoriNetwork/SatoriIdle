@@ -616,9 +616,9 @@ public class Hardware : MonoBehaviour
         GameManager.instance.TutorialManager.tutorialSteps[7].targetElement = StakeOBJ.GetComponent<RectTransform>();
         GameManager.instance.TutorialManager.tutorialSteps[7].message = "Stake allows you to automate the earning of Satori. Automating your Neurons will significantly speed up your production of Satori.";
 
-        GameManager.instance.TutorialManager.tutorialSteps[7].targetElement = BackButton.GetComponent<RectTransform>();
-        GameManager.instance.TutorialManager.tutorialSteps[7].targetButton = BackButton.GetComponent<Button>();
-        GameManager.instance.TutorialManager.tutorialSteps[7].message = ""; 
+        GameManager.instance.TutorialManager.tutorialSteps[8].targetElement = BackButton.GetComponent<RectTransform>();
+        GameManager.instance.TutorialManager.tutorialSteps[8].targetButton = BackButton.GetComponent<Button>();
+        GameManager.instance.TutorialManager.tutorialSteps[8].message = ""; 
     }
 
 }
