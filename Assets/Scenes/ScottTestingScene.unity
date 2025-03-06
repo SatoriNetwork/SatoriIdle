@@ -952,11 +952,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7268866}
-  m_Father: {fileID: 1566670787}
+  m_Father: {fileID: 363418508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 437, y: -40}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221835647
@@ -1417,6 +1417,7 @@ RectTransform:
   - {fileID: 1402451669}
   - {fileID: 1566670787}
   - {fileID: 227742070}
+  - {fileID: 221835646}
   m_Father: {fileID: 1848288330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1452,7 +1453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Open: {fileID: 1130410388}
-  Close: {fileID: 1402451670}
   Menu: {fileID: 363418507}
 --- !u!114 &363418511
 MonoBehaviour:
@@ -5798,10 +5798,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You can find your Satori Address [instructions to find address]
+  m_text: 'You can find your Satori Address by opening your Satori Neuron and go
+    to your Vault to copy your Vault Address.
 
-    *Neuron
-    has to be running to gain bonuses'
+    *Neuron has to be running to gain
+    bonuses'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91fcfd8860149b143a4c5fd53db2df0e, type: 2}
   m_sharedMaterial: {fileID: 8157035252494768884, guid: 91fcfd8860149b143a4c5fd53db2df0e, type: 2}
@@ -6259,7 +6260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1313103438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6356,7 +6357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Open: {fileID: 34823573}
-  Close: {fileID: 853391502}
   Menu: {fileID: 1313103437}
 --- !u!1 &1368113487
 GameObject:
@@ -7482,7 +7482,6 @@ RectTransform:
   - {fileID: 1780942610}
   - {fileID: 458728172}
   - {fileID: 1428088340}
-  - {fileID: 221835646}
   m_Father: {fileID: 363418508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8667,6 +8666,7 @@ MonoBehaviour:
   SPPerSecText: {fileID: 0}
   RebirthText: {fileID: 582092440}
   RebirthButton: {fileID: 378064627}
+  RebirthNeededSlider: {fileID: 0}
   shelfGenerator: {fileID: 791731719}
   OfflineEarningGO: {fileID: 0}
   OfflineEarningText: {fileID: 0}
