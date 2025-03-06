@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] TextMeshProUGUI SPPerSecText;
 	[SerializeField] TextMeshProUGUI RebirthText;
 	[SerializeField] GameObject RebirthButton;
+	[SerializeField] Slider RebirthNeededSlider;
 	[SerializeField] ShelfGenerator shelfGenerator;
 
 	[SerializeField] GameObject OfflineEarningGO;
@@ -174,10 +175,15 @@ public class GameManager : MonoBehaviour {
     }
     private async Task RunCalculateRebirthLoop()
     {
+
         while (true)
         {
+
+            
+
             await calculateRebirth(cancellationTokenSource.Token);
             await Task.Delay(1000);
+            Debug.Log(BGN.DivideF(SatoriPointsTotal, rebirths));
         }
     }
 
