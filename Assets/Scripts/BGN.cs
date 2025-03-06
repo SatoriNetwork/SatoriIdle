@@ -103,29 +103,16 @@ public class BGN {
 	}
 
 	public static float DivideF(BGN lhs, BGN rhs) {
-		if (rhs == new BGN(0)) throw new DivideByZeroException("Cannot divide by zero!");
-
-		float quotient = 0;
-		BGN remainder = lhs;  // Make a copy of lhs for reduction
-		BGN one = new BGN(1);
-
-		// Ensure we are iterating over valid parts
-		while (remainder >= rhs) {
-			float multiplier = 0;
-			BGN temp = rhs;
-
-			// Find the largest multiplier where (rhs * multiplier) <= remainder
-			while (temp <= remainder) {
-				temp = temp + rhs;
-				multiplier = multiplier + 1;
-			}
-
-			// Subtract the last valid multiple
-			remainder = remainder - (rhs * (multiplier));
-			quotient = quotient + (multiplier);
+		if (lhs.list.Count == rhs.list.Count) {
+			return lhs.list[lhs.list.Count - 1] / rhs.list[rhs.list.Count - 1];
+		} else if (lhs.list.Count > rhs.list.Count) {
+			int diff = lhs.list.Count - rhs.list.Count;
+			return (lhs.list[lhs.list.Count - 1] * Mathf.Pow(1000, diff)) / rhs.list[rhs.list.Count - 1];
+		} else if (lhs.list.Count < rhs.list.Count) {
+			int diff = rhs.list.Count - lhs.list.Count;
+			return (lhs.list[lhs.list.Count - 1]) / (rhs.list[rhs.list.Count - 1] * Mathf.Pow(1000, diff));
 		}
-
-		return quotient;
+		return 0f;
 	}
 
 	public static BGN operator /(BGN lhs, BGN rhs) {
