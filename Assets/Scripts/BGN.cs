@@ -115,13 +115,13 @@ public class BGN {
 		rhs = Trim(rhs);
 
 		if (lhs.list.Count == rhs.list.Count) {
-			return lhs.list.LastOrDefault() / rhs.list.LastOrDefault();
+			return (float)lhs.list.LastOrDefault() / (float)rhs.list.LastOrDefault();
 		} else if (lhs.list.Count > rhs.list.Count) {
 			int diff = lhs.list.Count - rhs.list.Count;
-			return (lhs.list.LastOrDefault() * Mathf.Pow(1000, diff)) / rhs.list.LastOrDefault();
+			return (float)(lhs.list.LastOrDefault() * Mathf.Pow(1000, diff)) / (float)rhs.list.LastOrDefault();
 		} else if (lhs.list.Count < rhs.list.Count) {
 			int diff = rhs.list.Count - lhs.list.Count;
-			return (lhs.list.LastOrDefault()) / (rhs.list.LastOrDefault() * Mathf.Pow(1000, diff));
+			return (float)(lhs.list.LastOrDefault()) / (float)(rhs.list.LastOrDefault() * Mathf.Pow(1000, diff));
 		}
 		return 0f;
 	}
