@@ -184,12 +184,12 @@ public class Hardware : MonoBehaviour
                 progressTimer = progressTimerMax;
             }
         } else {
-            GameManager.instance.updateSPPerSec(( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
         }
 	}
 
 
 	public void updateShopVisuals() {
+            GameManager.instance.updateSPPerSec(( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
         NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
         MemoryCostText.text = (MaxMemory > MemorySlots) ? MemoryCost.ToString() : "Maxed";
         RamCostText.text = (RAM < MaxRam) ? RamCost.ToString() : "Maxed";
