@@ -175,7 +175,7 @@ public class Hardware : MonoBehaviour
     }
 
 	private void Update() {
-		updateShopVisuals();
+		
         if (backgroundRunning) {
             progressTimer -= Time.deltaTime;
             if (progressTimer <= 0) {
@@ -184,6 +184,7 @@ public class Hardware : MonoBehaviour
                 progressTimer = progressTimerMax;
             }
         } else {
+            updateShopVisuals();
         }
 	}
 
