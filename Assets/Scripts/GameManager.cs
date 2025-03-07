@@ -159,9 +159,9 @@ public class GameManager : MonoBehaviour {
             RebirthButton.SetActive(false);
             RebirthMultiplier += rebirths;
 			RebirthText.text = "Rebirth Progress";
+            shelfGenerator.Rebirth();
             SatoriPoints = new BGN(5);
             SatoriPointsTotal = new BGN(5);
-            shelfGenerator.Rebirth();
             RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
             _ = RunCalculateRebirthLoop();
         }
