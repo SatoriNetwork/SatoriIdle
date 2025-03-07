@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour {
         rebirthNeeded = rebirthNeeded * RebirthMultiplier;
 		if (SatoriPointsTotal >= rebirthNeeded)
 		{
-
+			totalSPPerSec = new BGN(0);
 			cancellationTokenSource.Cancel();
             cancellationTokenSource = new CancellationTokenSource();
             RebirthButton.SetActive(false);
