@@ -86,7 +86,8 @@ public class Hardware : MonoBehaviour
         backgroundRunning = false;
         GameManager.instance.OnShelf = true;
         GameManager.instance.totalSPPerSec -= ((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons)/new BGN((int)progressTimerMax);
-	}
+	    updateShopVisuals();
+    }
 
 	public void Load(int position, double seconds) {
         MemorySlots = PlayerPrefs.GetInt(MEMORY_SLOTS + position, 1);
@@ -185,25 +186,26 @@ public class Hardware : MonoBehaviour
                 progressTimer = progressTimerMax;
             }
         } else {
-            updateShopVisuals();
-            if (updatePerSecTimer <= 0)
-            {
-                if (progressTimerMax == 1f) {
-                GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons));
-                } else {
-                GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
-                }
-                updatePerSecTimer = 2.5f;
-            }
-            updatePerSecTimer -= Time.deltaTime;
+
+			UpgradeMemoryBtn.interactable = (MaxMemory > MemorySlots && GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
+			UpgradeRAMBtn.interactable = (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) ? true : false;
+			UpgradeDiskBtn.interactable = (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) ? true : false;
+			StakeBtn.interactable = (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) ? true : false;
+			AddNeuronBtn.interactable = (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost) ? true : false;
+
         }
 
     }
 
 
 	public void updateShopVisuals() {
-        
-        NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
+		if (progressTimerMax == 1f) {
+			GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons));
+		} else {
+			GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
+		}
+		updatePerSecTimer = 2.5f;
+		NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
         MemoryCostText.text = (MaxMemory > MemorySlots) ? MemoryCost.ToString() : "Maxed";
         RamCostText.text = (RAM < MaxRam) ? RamCost.ToString() : "Maxed";
         DiskCostText.text = (disk < MaxDisk) ? DiskCost.ToString() : "Maxed";
@@ -215,11 +217,7 @@ public class Hardware : MonoBehaviour
         DiskMaxText.text = disk + "/" + MaxDisk;
         StakeMaxText.text = stakedNeurons + "/" + NeuronList.Count;
 
-        UpgradeMemoryBtn.interactable = (MaxMemory > MemorySlots && GameManager.instance.SatoriPoints >= MemoryCost) ? true : false;
-        UpgradeRAMBtn.interactable = (RAM < MaxRam && GameManager.instance.SatoriPoints >= RamCost) ? true : false;
-        UpgradeDiskBtn.interactable = (disk < MaxDisk && GameManager.instance.SatoriPoints >= DiskCost) ? true : false;
-        StakeBtn.interactable = (stakedNeurons < NeuronList.Count && GameManager.instance.SatoriPoints >= StakeCost) ? true : false;
-        AddNeuronBtn.interactable = (NeuronList.Count < MemorySlots && GameManager.instance.SatoriPoints >= NeuronCost) ? true : false;
+
 
 
     }
@@ -255,6 +253,7 @@ public class Hardware : MonoBehaviour
                 MemoryCost.Save(MEMORY_COST + position + "n");
                 PlayerPrefs.SetInt(MEMORY_SLOTS + position, MemorySlots);
                 PlayerPrefs.Save();
+                updateShopVisuals();
 			} else {
                 Debug.Log("Fully Upgraded");
             }
@@ -283,8 +282,9 @@ public class Hardware : MonoBehaviour
 
             PlayerPrefs.SetInt(RAM_AMOUNT + position, RAM);
             RamCost.Save(RAM_COST + position + "n");
-		
-            updateRAMImages();
+
+			updateShopVisuals();
+			updateRAMImages();
         }
         else
         {
@@ -303,6 +303,7 @@ public class Hardware : MonoBehaviour
             PlayerPrefs.SetInt(DISK_AMOUNT + position, disk);
             DiskCost.Save(DISK_COST + position + "n");
             updateDiskImages();
+			updateShopVisuals();
 		}
     }
     public void addNeuron()
@@ -328,6 +329,7 @@ public class Hardware : MonoBehaviour
 			NeuronCost = CalculateCost(NeuronList.Count, InitNeuronCost);
             PlayerPrefs.SetInt(NEURON_COUNT + position, NeuronList.Count);
             PlayerPrefs.Save();
+			updateShopVisuals();
 		}
         else
         {
@@ -357,6 +359,7 @@ public class Hardware : MonoBehaviour
 			}
 			GameManager.instance.SatoriPoints -= StakeCost;
 			StakeCost = CalculateCost(stakedNeurons, InitStakeCost);
+			updateShopVisuals();
 		}
     }
 
