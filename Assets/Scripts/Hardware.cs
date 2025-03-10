@@ -191,9 +191,9 @@ public class Hardware : MonoBehaviour
                 updatePerSecTimer = 2.5f;
                 GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
             }
+            updatePerSecTimer -= Time.deltaTime;
         }
 
-        updatePerSecTimer -= Time.deltaTime;
     }
 
 
