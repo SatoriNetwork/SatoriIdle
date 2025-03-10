@@ -69,6 +69,10 @@ public class BGN {
         list.Add(0);
         addInt(num);
 	}
+	public BGN(double num) {
+		list.Add(0);
+		addInt(num);
+	}
 
 	public BGN(string saveName) {
 		Load(saveName);
@@ -135,10 +139,10 @@ public class BGN {
 			return new BGN((int)((float)lhs.list.LastOrDefault() / (float)rhs.list.LastOrDefault()));
 		} else if (lhs.list.Count > rhs.list.Count) {
 			int diff = lhs.list.Count - rhs.list.Count;
-			return new BGN((int)((float)(lhs.list.LastOrDefault() * Mathf.Pow(1000, diff)) / (float)rhs.list.LastOrDefault()));
+			return new BGN(((double)(lhs.list.LastOrDefault() * Mathf.Pow(1000, diff)) / (double)rhs.list.LastOrDefault()));
 		} else if (lhs.list.Count < rhs.list.Count) {
 			int diff = rhs.list.Count - lhs.list.Count;
-			return new BGN((int)((float)(lhs.list.LastOrDefault()) / (float)(rhs.list.LastOrDefault() * Mathf.Pow(1000, diff))));
+			return new BGN(((double)(lhs.list.LastOrDefault()) / (double)(rhs.list.LastOrDefault() * Mathf.Pow(1000, diff))));
 		}
 		return new BGN(0);
 		//BGN quotient = new BGN();
@@ -164,7 +168,26 @@ public class BGN {
 		//return quotient;
 	}
 
+	public void addInt(double num) {
+		bool adding = true;
+		int index = 0;
+		while (adding) {
+			if (index > list.Count - 1) {
+				list.Add(0);
+			}
+			if (num > 999) {
+				double temp = (num + list[index]) % 1000;
+				list[index] = (short)temp;
+				num = num - temp;
 
+				num /= 1000;
+				index++;
+			} else {
+				list[index] += (short)num;
+				adding = false;
+			}
+		}
+	}
 
 	public void addInt(int num) {
         bool adding = true;
