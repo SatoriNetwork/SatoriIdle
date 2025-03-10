@@ -188,8 +188,12 @@ public class Hardware : MonoBehaviour
             updateShopVisuals();
             if (updatePerSecTimer <= 0)
             {
-                updatePerSecTimer = 2.5f;
+                if (progressTimerMax == 1f) {
+                GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons));
+                } else {
                 GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
+                }
+                updatePerSecTimer = 2.5f;
             }
             updatePerSecTimer -= Time.deltaTime;
         }
