@@ -91,7 +91,7 @@ public class Hardware : MonoBehaviour
 
 	public void Load(int position, double seconds) {
         MemorySlots = PlayerPrefs.GetInt(MEMORY_SLOTS + position, 1);
-        MemoryCost.Load(MEMORY_COST + position + "n");
+        MemoryCost = CalculateCost(MemorySlots, InitMemoryCost);
 
         RAM = PlayerPrefs.GetInt(RAM_AMOUNT + position, 0);
 		foreach (Neuron neuron in NeuronList) {
@@ -102,12 +102,12 @@ public class Hardware : MonoBehaviour
 		}
         progressTimerMax = 5 - (RAMDecreaseAmount * RAM);
         progressTimer = progressTimerMax;
-        RamCost.Load(RAM_COST + position + "n");
+        RamCost = CalculateCost(RAM, InitRamCost, 2f);
 
 
 
         disk = PlayerPrefs.GetInt(DISK_AMOUNT + position, 1);
-        DiskCost.Load(DISK_COST + position + "n");
+        DiskCost = CalculateCost(disk, InitDiskCost);
 
         seconds = Math.Min(disk * 60 * 60, seconds);
 
