@@ -163,9 +163,6 @@ public class Hardware : MonoBehaviour
         DiskCost = InitDiskCost;
         StakeCost = InitStakeCost;
 
-        MemoryCost.Save(MEMORY_COST + position + "n");
-        RamCost.Save(RAM_COST + position + "n");
-        DiskCost.Save(DISK_COST + position + "n");
     }
 
     private void Start()
