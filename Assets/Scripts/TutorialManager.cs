@@ -76,7 +76,7 @@ public class TutorialManager : MonoBehaviour
             textRect.anchorMin = new Vector2(0.5f, 1f);
             textRect.anchorMax = new Vector2(0.5f, 1f);
             textRect.pivot = new Vector2(0.5f, 1f);
-            textRect.anchoredPosition = new Vector2(0f, -100f); 
+            textRect.anchoredPosition = new Vector2(0f, -150f); 
         }
         else
         {
