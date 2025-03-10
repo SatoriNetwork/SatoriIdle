@@ -104,7 +104,7 @@ public class BGN {
 	}
 
 	public static BGN Trim(BGN bgn) {
-		while (bgn.list.LastOrDefault() == 0) {
+		while (bgn.list.LastOrDefault() == 0 && bgn.list.Count != 0) {
 			bgn.list.RemoveAt(bgn.list.Count()-1);
 		}
 		return bgn;
