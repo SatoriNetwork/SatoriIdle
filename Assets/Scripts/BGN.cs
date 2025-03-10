@@ -466,8 +466,12 @@ public class BGN {
 		double mainValue = list[temp]; // Most significant part
 		double fraction = (temp > 0) ? list[temp - 1] / 1000.0 : 0; // Next part as fraction
 		double finalValue = mainValue + fraction; // Merge both parts
-
-		string formatted = finalValue.ToString("0.0#"); // Keeps up to 2 decimal places, max 3 digits total
+		string formatted = "";
+		if (temp == 0) {
+			formatted = finalValue.ToString("0"); // Keeps up to 2 decimal places, max 3 digits total
+		} else {
+			formatted = finalValue.ToString("0.0#"); // Keeps up to 2 decimal places, max 3 digits total
+		}
 		int enumlen = Enum.GetNames(typeof(Structures)).Length;
 		if (temp < enumlen) {
 			return temp > 0 ? $"{formatted}{(Structures)temp}" : formatted; // Append suffix if in range
