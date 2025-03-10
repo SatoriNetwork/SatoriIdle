@@ -7995,7 +7995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialManager: {fileID: 1863337267}
   startingMoneysFloat: 5
-  startingMoneysStructure: 101
+  startingMoneysStructure: 0
   SPText: {fileID: 1185152873}
   SPPerSecText: {fileID: 505201835}
   RebirthText: {fileID: 582092440}
