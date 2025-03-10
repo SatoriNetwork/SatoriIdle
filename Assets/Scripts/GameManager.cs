@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] TextMeshProUGUI RebirthText;
 	[SerializeField] GameObject RebirthButton;
 	[SerializeField] Slider RebirthNeededSlider;
+	[SerializeField] GameObject RebirthGO;
 	[SerializeField] ShelfGenerator shelfGenerator;
 
 	[SerializeField] GameObject OfflineEarningGO;
@@ -141,6 +142,9 @@ public class GameManager : MonoBehaviour {
 
 		}
         SPText.text = SatoriPoints.ToString();
+        BGN rebirthNeeded = new BGN(RebirthCost);
+        rebirthNeeded *= RebirthMultiplier;
+        RebirthNeededSlider.value = Mathf.Clamp01(BGN.DivideF(SatoriPointsTotal, rebirthNeeded));
 
     }
 	public void Rebirth()
@@ -149,11 +153,12 @@ public class GameManager : MonoBehaviour {
         rebirthNeeded = rebirthNeeded * RebirthMultiplier;
 		if (SatoriPointsTotal >= rebirthNeeded)
 		{
+
 			cancellationTokenSource.Cancel();
             cancellationTokenSource = new CancellationTokenSource();
             RebirthButton.SetActive(false);
             RebirthMultiplier += rebirths;
-            Debug.Log(RebirthMultiplier);
+			RebirthText.text = "Rebirth Progress";
             SatoriPoints = new BGN(5);
             SatoriPointsTotal = new BGN(5);
             shelfGenerator.Rebirth();
@@ -175,15 +180,14 @@ public class GameManager : MonoBehaviour {
     }
     private async Task RunCalculateRebirthLoop()
     {
-
+        
         while (true)
         {
 
-            
 
             await calculateRebirth(cancellationTokenSource.Token);
             await Task.Delay(1000);
-            Debug.Log(BGN.DivideF(SatoriPointsTotal, rebirths));
+
         }
     }
 
