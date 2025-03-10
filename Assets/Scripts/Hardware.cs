@@ -63,6 +63,7 @@ public class Hardware : MonoBehaviour
     bool backgroundRunning = true;
     float progressTimer = 5;
     float progressTimerMax = 5;
+    private float updatePerSecTimer = 2.5f;
 
 
 	public static event EventHandler OnButtonPressed;
@@ -185,12 +186,19 @@ public class Hardware : MonoBehaviour
             }
         } else {
             updateShopVisuals();
+            if (updatePerSecTimer <= 0)
+            {
+                updatePerSecTimer = 2.5f;
+                GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
+            }
         }
-	}
+
+        updatePerSecTimer -= Time.deltaTime;
+    }
 
 
 	public void updateShopVisuals() {
-            GameManager.instance.updateSPPerSec(( (new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
+        
         NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
         MemoryCostText.text = (MaxMemory > MemorySlots) ? MemoryCost.ToString() : "Maxed";
         RamCostText.text = (RAM < MaxRam) ? RamCost.ToString() : "Maxed";
