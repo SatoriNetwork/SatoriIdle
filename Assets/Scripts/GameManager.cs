@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour {
 	private const string SATORI_POINTS_PP = "SatoriPointsPP";
 	private const string SATORI_POINTS_TOTAL_PP = "SatoriPointsTotalPP";
 	private const string REBIRTH_MULTIPLIER_PP = "RebirthMultiplierPP";
-
+	private float progressbarTimer = 10;
     
 	private void Awake() {
         instance = this; 
@@ -142,9 +142,14 @@ public class GameManager : MonoBehaviour {
 
 		}
         SPText.text = SatoriPoints.ToString();
-        BGN rebirthNeeded = new BGN(RebirthCost);
-        rebirthNeeded *= RebirthMultiplier;
-        RebirthNeededSlider.value = Mathf.Clamp01(BGN.DivideF(SatoriPointsTotal, rebirthNeeded));
+		if (progressbarTimer < 0 )
+		{
+            BGN rebirthNeeded = new BGN(RebirthCost);
+            rebirthNeeded *= RebirthMultiplier;
+            RebirthNeededSlider.value = Mathf.Clamp01(BGN.DivideF(SatoriPointsTotal, rebirthNeeded));
+			progressbarTimer = 10;
+        }
+		progressbarTimer -= Time.deltaTime;
 
     }
 	public void Rebirth()
@@ -153,15 +158,15 @@ public class GameManager : MonoBehaviour {
         rebirthNeeded = rebirthNeeded * RebirthMultiplier;
 		if (SatoriPointsTotal >= rebirthNeeded)
 		{
-
+			totalSPPerSec = new BGN(0);
 			cancellationTokenSource.Cancel();
             cancellationTokenSource = new CancellationTokenSource();
             RebirthButton.SetActive(false);
             RebirthMultiplier += rebirths;
 			RebirthText.text = "Rebirth Progress";
+            shelfGenerator.Rebirth();
             SatoriPoints = new BGN(5);
             SatoriPointsTotal = new BGN(5);
-            shelfGenerator.Rebirth();
             RebirthMultiplier.Save(REBIRTH_MULTIPLIER_PP);
             _ = RunCalculateRebirthLoop();
         }
