@@ -128,28 +128,40 @@ public class BGN {
 
 	public static BGN operator /(BGN lhs, BGN rhs) {
 		if (rhs == new BGN(0)) throw new DivideByZeroException("Cannot divide by zero!");
+		lhs = Trim(lhs);
+		rhs = Trim(rhs);
 
-		BGN quotient = new BGN();
-		BGN remainder = lhs;  // Make a copy of lhs for reduction
-		BGN one = new BGN(1);
-
-		// Ensure we are iterating over valid parts
-		while (remainder >= rhs) {
-			BGN multiplier = new BGN(0);
-			BGN temp = rhs;
-
-			// Find the largest multiplier where (rhs * multiplier) <= remainder
-			while (temp <= remainder) {
-				temp = temp + rhs;
-				multiplier = multiplier + one;
-			}
-
-			// Subtract the last valid multiple
-			remainder = remainder - (rhs * (multiplier));
-			quotient = quotient + (multiplier);
+		if (lhs.list.Count == rhs.list.Count) {
+			return new BGN((int)((float)lhs.list.LastOrDefault() / (float)rhs.list.LastOrDefault()));
+		} else if (lhs.list.Count > rhs.list.Count) {
+			int diff = lhs.list.Count - rhs.list.Count;
+			return new BGN((int)((float)(lhs.list.LastOrDefault() * Mathf.Pow(1000, diff)) / (float)rhs.list.LastOrDefault()));
+		} else if (lhs.list.Count < rhs.list.Count) {
+			int diff = rhs.list.Count - lhs.list.Count;
+			return new BGN((int)((float)(lhs.list.LastOrDefault()) / (float)(rhs.list.LastOrDefault() * Mathf.Pow(1000, diff))));
 		}
+		return new BGN(0);
+		//BGN quotient = new BGN();
+		//BGN remainder = lhs;  // Make a copy of lhs for reduction
+		//BGN one = new BGN(1);
 
-		return quotient;
+		//// Ensure we are iterating over valid parts
+		//while (remainder >= rhs) {
+		//	BGN multiplier = new BGN(0);
+		//	BGN temp = rhs;
+
+		//	// Find the largest multiplier where (rhs * multiplier) <= remainder
+		//	while (temp <= remainder) {
+		//		temp = temp + rhs;
+		//		multiplier = multiplier + one;
+		//	}
+
+		//	// Subtract the last valid multiple
+		//	remainder = remainder - (rhs * (multiplier));
+		//	quotient = quotient + (multiplier);
+		//}
+
+		//return quotient;
 	}
 
 
