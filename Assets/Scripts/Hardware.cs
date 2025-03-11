@@ -64,9 +64,10 @@ public class Hardware : MonoBehaviour
     float progressTimer = 5;
     float progressTimerMax = 5;
     private float updatePerSecTimer = 2.5f;
+    [SerializeField] Sprite goldenBtn;
+    [SerializeField] Sprite normalBtn;
 
-
-	public static event EventHandler OnButtonPressed;
+    public static event EventHandler OnButtonPressed;
 
 	public void disablNeurons() {
         foreach (Neuron n in NeuronList) {
@@ -201,18 +202,82 @@ public class Hardware : MonoBehaviour
 		} else {
 			GameManager.instance.updateSPPerSec(((new BGN(2)) * GPUMultiplier * RebirthMultiplier * GameManager.instance.SatoriConnectionMultiplier * stakedNeurons) / new BGN((int)progressTimerMax));
 		}
-		updatePerSecTimer = 2.5f;
-		NeuronCostText.text = (NeuronList.Count < MemorySlots) ? NeuronCost.ToString() : "Maxed";
-        MemoryCostText.text = (MaxMemory > MemorySlots) ? MemoryCost.ToString() : "Maxed";
-        RamCostText.text = (RAM < MaxRam) ? RamCost.ToString() : "Maxed";
-        DiskCostText.text = (disk < MaxDisk) ? DiskCost.ToString() : "Maxed";
-        StakeCostText.text = (stakedNeurons < NeuronList.Count) ? StakeCost.ToString() : "Maxed";
 
         NeuronMaxText.text = NeuronList.Count + "/" + MemorySlots;
         MemoryMaxText.text = MemorySlots + "/" + MaxMemory;
         RamMaxText.text = RAM + "/" + MaxRam;
         DiskMaxText.text = disk + "/" + MaxDisk;
         StakeMaxText.text = stakedNeurons + "/" + NeuronList.Count;
+
+        updatePerSecTimer = 2.5f;
+        if (NeuronList.Count >= MemorySlots && MaxMemory <= MemorySlots)
+        {
+            NeuronCostText.text = "";
+            NeuronMaxText.text = "";
+            SpriteState spriteState = AddNeuronBtn.spriteState;
+            spriteState.disabledSprite = goldenBtn;
+            AddNeuronBtn.spriteState = spriteState; }
+        else if (NeuronList.Count < MemorySlots)
+        {
+            NeuronCostText.text = NeuronCost.ToString();
+            SpriteState spriteState = AddNeuronBtn.spriteState;
+            spriteState.disabledSprite = normalBtn;
+            AddNeuronBtn.spriteState = spriteState;
+        } 
+        else {
+            NeuronCostText.text = "MAXED";
+        }
+
+        if (MaxMemory > MemorySlots)
+        {
+            MemoryCostText.text = MemoryCost.ToString();
+        } else {
+            MemoryCostText.text = "";
+            MemoryMaxText.text = "";    
+            SpriteState spriteState = UpgradeMemoryBtn.spriteState;
+            spriteState.disabledSprite = goldenBtn;
+            UpgradeMemoryBtn.spriteState = spriteState;
+
+        }
+
+        if (RAM < MaxRam)
+        {
+            RamCostText.text = RamCost.ToString();   
+        } else {
+            RamCostText.text = "";
+            RamMaxText.text = "";
+            SpriteState spriteState = UpgradeRAMBtn.spriteState;
+            spriteState.disabledSprite = goldenBtn;
+            UpgradeRAMBtn.spriteState = spriteState;
+        }
+
+        if (disk < MaxDisk)
+        {
+            DiskCostText.text = DiskCost.ToString();
+        } else{
+            DiskCostText.text = "";
+            DiskMaxText.text = "";
+            SpriteState spriteState = UpgradeDiskBtn.spriteState;
+            spriteState.disabledSprite = goldenBtn;
+            UpgradeDiskBtn.spriteState = spriteState;
+        }
+
+        if (stakedNeurons >= NeuronList.Count && NeuronList.Count >= MemorySlots)
+        {
+            StakeCostText.text = "";
+            StakeMaxText.text = "";
+            SpriteState spriteState = StakeBtn.spriteState;
+            spriteState.disabledSprite = goldenBtn;
+            StakeBtn.spriteState = spriteState;
+        } else if (stakedNeurons < NeuronList.Count) {
+            StakeCostText.text = StakeCost.ToString();
+            SpriteState spriteState = StakeBtn.spriteState;
+            spriteState.disabledSprite = normalBtn;
+            StakeBtn.spriteState = spriteState;
+        } else {
+            StakeCostText.text = "MAXED";
+        }
+
 
 
 

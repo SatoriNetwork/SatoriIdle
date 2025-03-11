@@ -60,7 +60,6 @@ public class ShelfGenerator : MonoBehaviour
             int firstTime = PlayerPrefs.GetInt("FIRSTTIME", 0);
             if (firstTime == 0 && i == 0)
             {
-				Debug.Log("step1");
                 GameManager.instance.TutorialManager.tutorialSteps[0].targetElement = ShelfGO[0].GetComponentInChildren<RectTransform>();
                 GameManager.instance.TutorialManager.tutorialSteps[0].targetButton = ShelfGO[0].GetComponentInChildren<UnityEngine.UI.Button>();
                 GameManager.instance.TutorialManager.tutorialSteps[0].message = "This is the first GPU you can buy. Click on it to buy it.";
