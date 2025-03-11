@@ -1,0 +1,8 @@
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Neumont/Enterprise/CryptoMiner/Cryptominer/Cryptominer/.utmp/RelWithDebInfo/4s705937/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
