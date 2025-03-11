@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5126626221196430416}
   - component: {fileID: 3754601452094857080}
   - component: {fileID: 3311735951067058415}
+  - component: {fileID: 418050230040484204}
   m_Layer: 5
   m_Name: Neuron
   m_TagString: Untagged
@@ -148,6 +149,21 @@ MonoBehaviour:
   StakedNeuronSprite: {fileID: 2955675294773621344, guid: c2d23aa2b68c65b4fa2d05e15c7609ab, type: 3}
   floatingTextPrefab: {fileID: 3453732982940319534, guid: f58c3c2928ef4b5498ae5115295aa7cf, type: 3}
   CritfloatingTextPrefab: {fileID: 3453732982940319534, guid: 0dc717296720b594d9613ab274e1e0e6, type: 3}
+--- !u!114 &418050230040484204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749861032566126157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.33333334}
+  m_EffectDistance: {x: 8, y: -8}
+  m_UseGraphicAlpha: 1
 --- !u!1 &4872626869718172460
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,8 +199,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 45, y: 15}
+  m_AnchoredPosition: {x: 2.1738, y: -35.7135}
+  m_SizeDelta: {x: 82.8857, y: 26.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1700419081898140121
 MonoBehaviour:
@@ -270,8 +286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.15}
-  m_SizeDelta: {x: -1.0000004, y: 6}
+  m_AnchoredPosition: {x: 0, y: -0.0000060797}
+  m_SizeDelta: {x: 0, y: 13.245}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7779285440310172948
 GameObject:

@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour {
 	private void Awake() {
 		instance = this;
 		Neuron.OnNeuronPressed += OnNeuronPress;
-		//Neuron.OnNeuronComplete += Neuron_OnNeuronComplete;
+		Neuron.OnNeuronComplete += Neuron_OnNeuronComplete;
 		BackFunction.HardwareBack += ShelfItem_openHardware;
 		Hardware.OnButtonPressed += Hardware_OnButtonPressed;
 		SettingsMenuManager.onInteract += Hardware_OnButtonPressed;
@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	private void Neuron_OnNeuronComplete(object sender, System.EventArgs e) {
-		PlaySound(sounds.coinPickUp, Camera.allCameras[0].transform.position, sounds.coinPickupVolume);
+		PlaySound(sounds.coinPickUp, Camera.allCameras[0].transform.position, sounds.coinPickupVolume - Random.Range(-0.25f, 0.25f));
 	}
 
 	private void ShelfItem_openHardware(object sender, System.EventArgs e) {
@@ -66,7 +66,7 @@ public class SoundManager : MonoBehaviour {
 	private void OnDestroy() {
 		//MainMenuUI.OnButtonPress -= OnButtonPress;
 		Neuron.OnNeuronPressed -= OnNeuronPress;
-		//Neuron.OnNeuronComplete -= Neuron_OnNeuronComplete;
+		Neuron.OnNeuronComplete -= Neuron_OnNeuronComplete;
 		BackFunction.HardwareBack -= ShelfItem_openHardware;
 		Hardware.OnButtonPressed -= Hardware_OnButtonPressed;
 		ShelfItem.purchase -= Hardware_OnButtonPressed;
