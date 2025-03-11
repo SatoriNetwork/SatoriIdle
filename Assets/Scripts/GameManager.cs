@@ -236,8 +236,14 @@ public class GameManager : MonoBehaviour {
 		if (!OnShelf) {
 			updateSPPerSec(totalSPPerSec);
 		}
-		
-    }
+			if (Application.platform == RuntimePlatform.Android) {
+
+				if (Input.GetKeyUp(KeyCode.Escape)) {
+					Application.Quit();
+					return;
+				}
+			}
+	}
 
 
 }
