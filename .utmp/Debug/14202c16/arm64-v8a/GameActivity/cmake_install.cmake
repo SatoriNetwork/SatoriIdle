@@ -1,4 +1,4 @@
-# Install script for directory: C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/src/main/cpp/GameActivity
+# Install script for directory: C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/src/main/cpp"
+			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a"
+			"value" : "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -967,7 +967,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a"
+			"value" : "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/src/main/cpp"
+			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp"
 		},
 		{
 			"name" : "game-activity_DIR",
@@ -1323,7 +1323,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/src/main/cpp/GameActivity"
+			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity"
 		},
 		{
 			"name" : "games-frame-pacing_DIR",
@@ -1383,7 +1383,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/PramData/AndroidApplicationController/Cache/com.DefaultCompany.com.unity.template.mobile2D/gradle-project/unityLibrary/src/main/cpp/FramePacing"
+			"value" : "C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing"
 		}
 	],
 	"kind" : "cache",

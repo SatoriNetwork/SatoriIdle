@@ -1,1 +1,1 @@
-C:\Satori\SatoriIdle\SatoriIdle\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\build\intermediates\cxx\Debug\14202c16\obj\arm64-v8a
+C:\Satori\SatoriIdle\SatoriIdle\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\14202c16\obj\arm64-v8a

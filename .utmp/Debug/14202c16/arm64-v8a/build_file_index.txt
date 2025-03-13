@@ -1,3 +1,3 @@
-C:\Satori\SatoriIdle\SatoriIdle\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\src\main\cpp\CMakeLists.txt
-C:\Satori\SatoriIdle\SatoriIdle\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\src\main\cpp\FramePacing\CMakeLists.txt
-C:\Satori\SatoriIdle\SatoriIdle\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
+C:\Satori\SatoriIdle\SatoriIdle\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Satori\SatoriIdle\SatoriIdle\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\FramePacing\CMakeLists.txt
+C:\Satori\SatoriIdle\SatoriIdle\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

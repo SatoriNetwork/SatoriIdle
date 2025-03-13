@@ -1,8 +1,8 @@
 {
   "buildFiles": [
-    "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
-    "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\src\\main\\cpp\\FramePacing\\CMakeLists.txt",
-    "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
+    "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\FramePacing\\CMakeLists.txt",
+    "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
@@ -23,14 +23,14 @@
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
       "artifactName": "game",
-      "output": "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a\\libgame.so",
+      "output": "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a\\libgame.so",
       "runtimeFiles": []
     },
     "swappywrapper::@7e25bd1f32ce224db4e9": {
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
       "artifactName": "swappywrapper",
-      "output": "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a\\libswappywrapper.so",
+      "output": "C:\\Satori\\SatoriIdle\\SatoriIdle\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\Debug\\14202c16\\obj\\arm64-v8a\\libswappywrapper.so",
       "runtimeFiles": []
     }
   },

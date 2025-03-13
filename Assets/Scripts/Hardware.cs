@@ -577,12 +577,15 @@ public class Hardware : MonoBehaviour
     }
     void ConnectNeurons(Neuron neuronA, Neuron neuronB)
     {
+        const float BASE_CONNECTOR_LENGTH = 1250f; // Match this to your prefab's length at scale 1
+        const float CONNECTOR_THICKNESS = 0.05f;
+
         List<Vector2> aPoints = GetPerimeterPointsExCorner(neuronA);
         List<Vector2> bPoints = GetPerimeterPointsExCorner(neuronB);
 
-        // Generate all possible pairs with their distances
         List<(Vector2 a, Vector2 b, float dist)> allPairs = new List<(Vector2, Vector2, float)>();
 
+        // Generate pairs with world space distances
         foreach (Vector2 aPoint in aPoints)
         {
             foreach (Vector2 bPoint in bPoints)
@@ -592,7 +595,7 @@ public class Hardware : MonoBehaviour
             }
         }
 
-        // Sort pairs by distance
+        // Sort by distance
         allPairs.Sort((x, y) => x.dist.CompareTo(y.dist));
 
         HashSet<Vector2> usedAPoints = new HashSet<Vector2>();
@@ -605,15 +608,28 @@ public class Hardware : MonoBehaviour
 
             if (!usedAPoints.Contains(pair.a) && !usedBPoints.Contains(pair.b))
             {
-                // Create connection
-                Vector2 midpoint = Vector2.Lerp(pair.a, pair.b, 0.5f);
-                Vector2 direction = pair.b - pair.a;
+                // Calculate connection parameters in world space
+                Vector2 midpoint = (pair.a + pair.b) / 2f;
+                Vector2 direction = (pair.b - pair.a).normalized;
+                float distance = Vector2.Distance(pair.a, pair.b);
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                GameObject connector = Instantiate(connectorPrefabs[UnityEngine.Random.Range(0, connectorPrefabs.Count)],midpoint,Quaternion.Euler(0, 0, angle),connectorsHolder.transform);
-                connections.Add(connector);
-                connector.transform.localScale = new Vector3(0.15f * (pair.dist / 2) / 5,0.5f,0.5f);
+                // Create and configure connector
+                GameObject connector = Instantiate(
+                    connectorPrefabs[UnityEngine.Random.Range(0, connectorPrefabs.Count)],
+                    midpoint,
+                    Quaternion.Euler(0, 0, angle),
+                    connectorsHolder.transform
+                );
 
+                // Set scale based on actual world distance
+                connector.transform.localScale = new Vector3(
+                    distance / BASE_CONNECTOR_LENGTH,
+                    CONNECTOR_THICKNESS,
+                    1f
+                );
+
+                connections.Add(connector);
                 usedAPoints.Add(pair.a);
                 usedBPoints.Add(pair.b);
                 connectionsMade++;
@@ -621,37 +637,41 @@ public class Hardware : MonoBehaviour
         }
     }
 
-    List<Vector2> GetPerimeterPointsExCorner(Neuron neuron, float segmentLength = 10f, float cornerOffset = 25f)
+    List<Vector2> GetPerimeterPointsExCorner(Neuron neuron, float segmentLength = 0.5f, float cornerOffset = 0.25f)
     {
         List<Vector2> points = new List<Vector2>();
         RectTransform rect = neuron.GetComponent<RectTransform>();
-        float startpointYB = (neuron.transform.position.y - rect.rect.height / 2) + 1f;
-        float startpointYT = (neuron.transform.position.y + rect.rect.height / 2) - 1f;
-        float startpointXL = (neuron.transform.position.x - rect.rect.width / 2) + 1f;
-        float startpointXR = (neuron.transform.position.x + rect.rect.width / 2) - 1f;
+        Vector3[] corners = new Vector3[4];
+        rect.GetWorldCorners(corners);
 
-        // Left wall (excluding corners)
-        for (float i = cornerOffset; i < rect.rect.height - cornerOffset; i += segmentLength)
+        // Calculate world positions from corners
+        float left = corners[0].x;
+        float right = corners[2].x;
+        float bottom = corners[0].y;
+        float top = corners[1].y;
+
+        // Left edge (excluding corners)
+        for (float y = bottom + cornerOffset; y < top - cornerOffset; y += segmentLength)
         {
-            points.Add(new Vector2(startpointXL, startpointYB + i));
+            points.Add(new Vector2(left, y));
         }
 
-        // Right wall (excluding corners)
-        for (float i = cornerOffset; i < rect.rect.height - cornerOffset; i += segmentLength)
+        // Right edge (excluding corners)
+        for (float y = bottom + cornerOffset; y < top - cornerOffset; y += segmentLength)
         {
-            points.Add(new Vector2(startpointXR, startpointYB + i));
+            points.Add(new Vector2(right, y));
         }
 
-        // Top wall (excluding corners)
-        for (float i = cornerOffset; i < rect.rect.width - cornerOffset; i += segmentLength)
+        // Top edge (excluding corners)
+        for (float x = left + cornerOffset; x < right - cornerOffset; x += segmentLength)
         {
-            points.Add(new Vector2(startpointXL + i, startpointYT));
+            points.Add(new Vector2(x, top));
         }
 
-        // Bottom wall (excluding corners)
-        for (float i = cornerOffset; i < rect.rect.width - cornerOffset; i += segmentLength)
+        // Bottom edge (excluding corners)
+        for (float x = left + cornerOffset; x < right - cornerOffset; x += segmentLength)
         {
-            points.Add(new Vector2(startpointXL + i, startpointYB));
+            points.Add(new Vector2(x, bottom));
         }
 
         return points;
