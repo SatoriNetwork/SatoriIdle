@@ -262,7 +262,7 @@ public class Hardware : MonoBehaviour
             UpgradeDiskBtn.spriteState = spriteState;
         }
 
-        if (stakedNeurons >= NeuronList.Count && NeuronList.Count >= MemorySlots)
+        if (stakedNeurons >= NeuronList.Count && NeuronList.Count >= MaxMemory)
         {
             StakeCostText.text = "";
             StakeMaxText.text = "";
