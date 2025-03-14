@@ -1,0 +1,12 @@
+# ninja log v5
+544	1027	7636099875185857	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5d2f44fb2859f8d6
+1032	2671	7636099887684863	C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f27165b6/obj/arm64-v8a/libswappywrapper.so	9512bdf9df41bd12
+457	3669	7636099900195524	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	537feda51891979c
+2	3682	7636099901683330	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	7dae89ad11969422
+505	3737	7636099902554862	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	cd7df56b2e1cff57
+526	3885	7636099903941190	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bd229f740b413531
+490	3893	7636099903601200	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	db7b5996d3fa1c85
+442	4069	7636099905869056	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	891b9a62a0d84e6f
+471	4509	7636099910290909	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ab2444609412669d
+427	4755	7636099912540839	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	445b532a834164c8
+4755	5600	7636099921381376	C:/Satori/SatoriIdle/SatoriIdle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f27165b6/obj/arm64-v8a/libgame.so	a7d32e8215f5e7de
