@@ -1,0 +1,6 @@
+docker run --rm -it --name satorineuron -p 127.0.0.1:24601:24601 -v c:\repos\Satori\SatoriIdle:/Satori/SatoriIdle satorinet/satorineuron:latest bas
+apt update -y
+apt install openjdk-17-jdk -y
+keytool -genkeypair -v -keystore /Satori/SatoriIdle/builds/debug.keystore -keyalg RSA -keysize 2048 -validity 10000 -alias androiddebugkey
+cd /Satori/SatoriIdle/builds/
+jarsigner -keystore /Satori/SatoriIdle/builds/debug.keystore -storepass <android_password> -keypass <android_password> -signedjar SatoriIdle_1.0.0_signed.aab SatoriIdle_1.0.0.aab androiddebugkey
